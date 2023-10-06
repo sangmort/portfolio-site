@@ -1,76 +1,60 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>About</title>
-  </head>
-  <body>
-    <Header />
-    <header>
-      <h1>About</h1>
-    </header>
-    <section>
-      <h2>Introduction</h2>
-      <p>
-        I'm a freelance web developer, logo designer, and illustrator, constantly seeking opportunities to expand my
-        skills and knowledge in technology-related domains. My passion lies in optimizing systems for improved
-        performance and customer satisfaction.
-      </p>
-    </section>
-    <section>
-      <h2>Expertise</h2>
-      <ul>
-        <li>
-          <strong>Web Development:</strong> I excel in front-end development, particularly in increasing customer
-          conversion rates.
-        </li>
-        <li>
-          <strong>User Experience (UX) Design:</strong> I prioritize creating seamless and intuitive user experiences.
-        </li>
-        <li>
-          <strong>Problem Solver:</strong> I thrive on tackling complex challenges and finding efficient solutions.
-        </li>
-        <li>
-          <strong>Continuous Learning:</strong> I'm committed to staying up-to-date with the latest industry trends and
-          technologies.
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>My Journey</h2>
-      <p>
-        My journey in web development began when I was 10, creating fun fansites for the video games I loved. Since
-        then, I have had the opportunity to work with diverse clients and projects, honing my skills and expanding my
-        knowledge.
-      </p>
-    </section>
-    <section>
-      <h2>Portfolio</h2>
-      <p>
-        You can explore my work in my <a href="#new">portfolio</a> section.
-      </p>
-    </section>
-    <section>
-      <h2>Let's Collaborate</h2>
-      <p>
-        I am always open to new opportunities and collaborations. Whether you have a project in mind or just want to
-        connect, don't hesitate to <a href="#contact">contact me</a>.
-      </p>
-    </section>
-    <footer>
-      <p>You've made it this far? I'm flattered! Don't hesitate to reach out:</p>
-      <p>
-        <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="mailto:#">Email</a>
-      </p>
-    </footer>
-    <Footer />
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      I'm a freelance web developer, logo designer, and illustrator, constantly seeking opportunities to expand my
+      skills and knowledge in technology-related domains. My passion lies in optimizing systems for improved performance
+      and customer satisfaction.
+    </p>
+  </section>
+  <section>
+    <h2>Expertise</h2>
+    <ul>
+      <li>
+        <strong>Web Development:</strong> I excel in front-end development, particularly in increasing customer
+        conversion rates.
+      </li>
+      <li>
+        <strong>User Experience (UX) Design:</strong> I prioritize creating seamless and intuitive user experiences.
+      </li>
+      <li>
+        <strong>Problem Solver:</strong> I thrive on tackling complex challenges and finding efficient solutions.
+      </li>
+      <li>
+        <strong>Continuous Learning:</strong> I'm committed to staying up-to-date with the latest industry trends and
+        technologies.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>My Journey</h2>
+    <p>
+      My journey in web development began when I was 10, creating fun fansites for the video games I loved. Since then,
+      I have had the opportunity to work with diverse clients and projects, honing my skills and expanding my knowledge.
+    </p>
+  </section>
+  <section>
+    <h2>Portfolio</h2>
+    <p>
+      You can explore my work in my <a href="#new">portfolio</a> section.
+    </p>
+  </section>
+  <section>
+    <h2>Let's Collaborate</h2>
+    <p>
+      I am always open to new opportunities and collaborations. Whether you have a project in mind or just want to
+      connect, don't hesitate to <a href="#contact">contact me</a>.
+    </p>
+  </section>
+  <footer>
+    <p>You've made it this far? I'm flattered! Don't hesitate to reach out:</p>
+    <p>
+      <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="mailto:#">Email</a>
+    </p>
+  </footer>
+</BaseLayout>
