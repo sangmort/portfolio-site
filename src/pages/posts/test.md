@@ -4,7 +4,7 @@ title: "Hello World"
 pubDate: 2023-10-06
 description: "First blog test post."
 author: "Osy"
-tags: ["css", "html"]
+tags: ["CSS", "HTML"]
 ---
 
 Welcome to my _blog_.
