@@ -76,6 +76,31 @@ h1 {
     display: unset;
 }
 
+/* tags */
+.tags-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin-right: 0.5rem;
+}
+
+.tag>a {
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: .5rem 1.25rem;
+    background-color: var(--primary-color);
+    border-radius: .4rem;
+    font-size: 1.15rem;
+}
+
+.tag>a:hover {
+    color: var(--dark-color);
+    text-decoration: none;
+    background-color: var(--secondary-color);
+}
+
 @media screen and (min-width: 636px) {
     .header-links {
         display: flex;
