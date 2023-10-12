@@ -19,7 +19,7 @@ html {
     font-size: 18px;
 }
 
-html.dark {
+html.light-theme {
     background-color: var(--dark-color);
     color: var(--light-color);
 }
