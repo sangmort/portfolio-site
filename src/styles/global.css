@@ -24,6 +24,11 @@ html.light-theme {
     color: var(--light-color);
 }
 
+/* Control content width */
+#wrapper {
+    margin: 0 auto;
+    width: calc(80vw - 2rem);
+}
 
 body {
     margin: 0 auto;
@@ -108,10 +113,6 @@ nav {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
-
-
-
 
 @media screen and (max-width: 1200px) {
     .header-links {
