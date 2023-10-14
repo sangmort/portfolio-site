@@ -108,7 +108,7 @@ nav {
     margin: 0 auto;
 }
 
-.skills-layout>section {
+.skills-layout .skills {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
