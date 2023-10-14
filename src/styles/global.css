@@ -73,6 +73,11 @@ nav {
 }
 
 
+*+section {
+    margin-top: 5rem;
+}
+
+
 /* tags */
 .tags-layout {
     display: flex;
