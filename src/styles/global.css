@@ -98,6 +98,15 @@ nav {
     margin-bottom: 7rem;
 }
 
+/* emphasis & strong */
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
 /* Lists */
 ul,
 ol {
