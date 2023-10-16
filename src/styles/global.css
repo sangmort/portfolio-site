@@ -125,6 +125,22 @@ ol {
     list-style-type: decimal-leading-zero;
 }
 
+/* Blockquote */
+
+blockquote,
+q {
+    quotes: none;
+    margin-left: 1rem;
+    border-left: 2px solid red;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+blockquote p {
+    margin-bottom: .25rem;
+}
+
+
 /* Code Block */
 pre.astro-code.github-dark {
     padding: 1rem;
