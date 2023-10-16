@@ -148,6 +148,14 @@ pre.astro-code.github-dark {
     margin-bottom: 2rem;
 }
 
+/* Inline code */
+p code {
+    display: inline-block;
+    background-color: #24292e;
+    padding: .05rem .4rem;
+    border-radius: .25rem;
+}
+
 
 /* Hamburger Menu */
 .hamburger {
