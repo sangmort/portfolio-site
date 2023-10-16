@@ -36,10 +36,22 @@ body {
     line-height: 1.5rem;
 }
 
+/* Headings */
 h1 {
-    margin: 5rem 0;
+    margin: 5rem 0 4rem 0;
     font-size: 2.5rem;
 }
+
+/* Section Spacing */
+*+section {
+    margin-bottom: 5rem;
+}
+
+/* Paragraph Spacing */
+*+p {
+    margin-bottom: 1rem;
+}
+
 
 nav {
     height: 3rem;
@@ -70,9 +82,6 @@ nav {
     background-color: var(--secondary-color);
 }
 
-*+section {
-    margin-top: 5rem;
-}
 
 /* tags */
 .tags-layout {
