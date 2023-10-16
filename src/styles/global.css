@@ -87,6 +87,10 @@ h6 {
     margin-bottom: 1rem;
 }
 
+p+p {
+    margin-bottom: 1rem;
+}
+
 
 nav {
     height: 3rem;
