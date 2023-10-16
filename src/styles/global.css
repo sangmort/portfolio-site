@@ -98,7 +98,6 @@ nav {
 
 /* Lists */
 
-
 ul,
 ol {
     list-style-position: inside;
@@ -124,6 +123,12 @@ ul>li>ul>li::before {
 
 ol {
     list-style-type: decimal-leading-zero;
+}
+
+/* Code Block */
+pre.astro-code.github-dark {
+    padding: 1rem;
+    border-radius: 0.25rem;
 }
 
 
