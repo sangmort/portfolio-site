@@ -25,7 +25,7 @@ I don't have every single HTML5 element implemented throughout the website right
 
 ###### h6
 
-### Headings with Paragraphs3
+### Headings with Paragraphs
 
 # h1
 
