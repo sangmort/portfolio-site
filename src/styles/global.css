@@ -83,7 +83,8 @@ h6 {
 }
 
 /* Paragraph Spacing */
-*+p, p+* {
+*+p,
+p+* {
     margin-bottom: 1rem;
 }
 
@@ -91,8 +92,10 @@ p+p {
     margin-bottom: 1rem;
 }
 
+/* navigation */
 nav {
     height: 3rem;
+    margin-bottom: 7rem;
 }
 
 /* Lists */
