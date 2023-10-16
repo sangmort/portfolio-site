@@ -26,7 +26,7 @@ html.light-theme {
 /* Control content width */
 #wrapper {
     margin: 0 auto;
-    width: calc(80vw - 2rem);
+    width: calc(70dvw - 7rem);
 }
 
 body {
@@ -114,7 +114,7 @@ nav {
     padding: 20px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     html {
         font-size: 17px;
     }
