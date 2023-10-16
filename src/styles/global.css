@@ -91,17 +91,15 @@ p+p {
     margin-bottom: 1rem;
 }
 
-
 nav {
     height: 3rem;
 }
 
 /* Lists */
-
 ul,
 ol {
-    list-style-position: inside;
     margin-left: 1rem;
+    list-style-position: inside;
 }
 
 ul>li,
@@ -111,14 +109,14 @@ ol>li {
 
 /* long dash for unordered list items */
 ul>li::before {
-    content: "—";
     margin: 0 .5rem 0 0;
+    content: "—";
 }
 
 /* long dash for sublist items */
 ul>li>ul>li::before {
-    content: "—";
     margin: 0 .5rem 0 0;
+    content: "—";
 }
 
 ol {
@@ -126,36 +124,33 @@ ol {
 }
 
 /* Blockquote */
-
 blockquote,
 q {
-    quotes: none;
+    margin-bottom: 2rem;
     margin-left: 1rem;
     border-left: 2px solid red;
     padding-left: 1rem;
-    margin-bottom: 2rem;
+    quotes: none;
 }
 
 blockquote p {
     margin-bottom: .25rem;
 }
 
-
 /* Code Block */
 pre.astro-code.github-dark {
-    padding: 1rem;
-    border-radius: 0.25rem;
     margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
 }
 
 /* Inline code */
 p code {
     display: inline-block;
+    border-radius: .25rem;
     background-color: #24292e;
     padding: .05rem .4rem;
-    border-radius: .25rem;
 }
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -181,7 +176,6 @@ p code {
 .header-links a:focus {
     background-color: var(--secondary-color);
 }
-
 
 /* tags */
 .tags-layout {
