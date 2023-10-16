@@ -96,6 +96,37 @@ nav {
     height: 3rem;
 }
 
+/* Lists */
+
+
+ul,
+ol {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+ul>li,
+ol>li {
+    margin-left: .75rem;
+}
+
+/* long dash for unordered list items */
+ul>li::before {
+    content: "—";
+    margin: 0 .5rem 0 0;
+}
+
+/* long dash for sublist items */
+ul>li>ul>li::before {
+    content: "—";
+    margin: 0 .5rem 0 0;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
