@@ -92,6 +92,7 @@ p+p {
     margin-bottom: 2rem;
 }
 
+
 /* navigation */
 nav {
     height: 3rem;
@@ -117,6 +118,14 @@ ol {
 ul>li,
 ol>li {
     margin-left: .75rem;
+    .
+}
+
+/* Spacing for last list item */
+ul>li:last-child,
+ol>li {
+    margin-bottom: 1rem;
+    .
 }
 
 /* long dash for unordered list items */
