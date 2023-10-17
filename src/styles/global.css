@@ -184,6 +184,7 @@ p code {
     border-radius: .25rem;
     background-color: #24292e;
     padding: .05rem .4rem;
+    color: var(--light-color);
 }
 
 /* Hamburger Menu */
