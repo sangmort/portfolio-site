@@ -37,38 +37,6 @@ body {
 }
 
 /* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 1rem;
-}
-
-/* Add » before each heading */
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-    content: "»";
-    margin-right: 0.25rem;
-    display: inline-block;
-    vertical-align: 7%;
-}
-
-/* Add spacing after every paragraph before a heading */
-h1+p,
-h2+p,
-h3+p,
-h4+p,
-h5+p,
-h6+p {
-    margin-bottom: 3rem;
-}
-
 
 h1 {
     margin-bottom: 2.125rem;
@@ -101,19 +69,28 @@ h6 {
     font-weight: bold;
 }
 
+/* Add » before each heading */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+    content: "»";
+    margin-right: 0.25rem;
+    display: inline-block;
+    vertical-align: 7%;
+}
+
 /* Section Spacing */
 *+section {
     margin-bottom: 5rem;
 }
 
 /* Paragraph Spacing */
-*+p,
-p+* {
-    margin-bottom: 1rem;
-}
 
-p+p {
-    margin-bottom: 2rem;
+p {
+    margin-bottom: 1.5rem;
 }
 
 
@@ -133,6 +110,11 @@ strong {
 }
 
 /* Lists */
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
 ul,
 ol {
     margin-left: 1rem;
@@ -144,10 +126,10 @@ ol>li {
     margin-left: .75rem;
 }
 
-/* Spacing for last list item */
-ul>li:last-child,
-ol>li {
-    margin-bottom: 1rem;
+/* Spacing after last list item */
+ol>li:last-child:not(ol > li > ol > li),
+ul>li:last-child:not(ul > li > ul > li) {
+    margin-bottom: 2rem;
 }
 
 /* long dash for unordered list items */
@@ -160,10 +142,6 @@ ul>li::before {
 ul>li>ul>li::before {
     margin: 0 .5rem 0 0;
     content: "—";
-}
-
-ol {
-    list-style-type: decimal-leading-zero;
 }
 
 /* Blockquote */
