@@ -33,6 +33,7 @@ body {
     margin: 0 auto;
     padding: 1rem;
     width: auto;
+    height: 100dvh;
     line-height: 1.5rem;
 }
 
@@ -272,7 +273,9 @@ p code {
 }
 
 .copyright {
-    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     font-size: .75rem;
     bottom: 0;
 
