@@ -117,6 +117,8 @@ p {
 nav {
     height: 3rem;
     margin-bottom: 7rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* emphasis & strong */
