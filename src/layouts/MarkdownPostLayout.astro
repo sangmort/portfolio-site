@@ -11,13 +11,16 @@ const { frontmatter } = Astro.props;
 
   <slot />
 
-  <div class="tags-layout">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+  <footer>
+    <h3>Tags</h3>
+    <div class="tags-layout">
+      {
+        frontmatter.tags.map((tag) => (
+          <p class="tag">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
+  </footer>
 </BaseLayout>
