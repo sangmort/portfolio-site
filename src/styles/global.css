@@ -271,6 +271,13 @@ p code {
     min-height: 24rem;
 }
 
+.copyright {
+    position: absolute;
+    font-size: .75rem;
+    bottom: 0;
+
+}
+
 @media screen and (max-width: 1200px) {
     html {
         font-size: 17px;
