@@ -242,7 +242,7 @@ p code {
 /* About Skills Sections */
 .skills-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-gap: 1rem;
     margin: 0 auto;
     max-width: calc(100vw - 2rem);
@@ -251,10 +251,11 @@ p code {
 .skills-layout .skills {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px;
+    padding: 1.5rem;
+    min-height: 24rem;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     html {
         font-size: 17px;
     }
@@ -309,7 +310,7 @@ p code {
     }
 
     .skills-layout {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
