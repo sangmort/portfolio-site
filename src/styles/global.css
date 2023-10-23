@@ -128,12 +128,15 @@ ol {
     list-style-type: decimal-leading-zero;
 }
 
-ul,
 ol {
     margin-left: 1rem;
 }
 
-ul>li,
+ul>li {
+    display: flex;
+    flex-direction: row;
+}
+
 ol>li {
     margin-left: .75rem;
 }
