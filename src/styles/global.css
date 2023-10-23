@@ -103,7 +103,7 @@ p:not(:last-of-type)+h6 {
 /* Paragraph Spacing */
 
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 
