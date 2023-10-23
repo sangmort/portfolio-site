@@ -29,14 +29,13 @@ p:not(:last-of-type) + h6 {
 
 - `p` is a type selector and selects all `<p>` (paragraph) elements in the HTML document.
 
-- `:not(:last-of-type)` A pseudo-class selector that selects all `<p>` elements that are **not** the last `<p>` element of their respective parent containers. In other words, it **excludes** the **last paragraph** in **each container**. *EX: if you have multiple paragraphs within a `<div>`, it will select all paragraphs except the last one in each `<div>`*
+- `:not(:last-of-type)` A pseudo-class selector that selects all `<p>` elements that are **not** the last `<p>` element of their respective parent containers. In other words, it **excludes** the **last paragraph** in **each container**. _EX: if you have multiple paragraphs within a `<div>`, it will select all paragraphs except the last one in each `<div>`_
 
 - `+` Acombinator selector called the adjacent sibling combinator. It selects an element that is immediately preceded by a specified element. In this case, it's looking for an `<h1>` element that comes immediately after the selected `<p:not(:last-of-type)>`.
 
-- `h1` Another type selector, and it selects all `<h1>` heading elements in the HTML document. In this case, we've repeated the rule so it also  targets the headings (h1 to h6) that directly follow the selected paragraphs.
+- `h1` Another type selector, and it selects all `<h1>` heading elements in the HTML document. In this case, we've repeated the rule so it also targets the headings (h1 to h6) that directly follow the selected paragraphs.
 
-- `padding-top: 2rem;`Rule that applies a top padding of `2 rems` to the selected headings.
-
+- `padding-top: 2rem;` Rule that applies a top padding of `2 rems` to the selected headings.
 
 ### Use Case Scenarios
 
@@ -46,10 +45,8 @@ This CSS code is particularly useful in various scenarios, such as:
 
 2. **Improving Readability**: Adding padding ensures that headings don't appear cramped or cluttered, improving the overall readability of your web content.
 
-3. **Styling Related Content**: It can be used to style and differentiate headings when they are related to specific paragraphs or sections, allowing you to emphasize content relationships.
-
-4. **Enhancing User Experience**: By controlling the spacing between paragraphs and headings, you can create a more pleasant and intuitive user experience on your website.
+3. **Enhancing User Experience**: When content is more visually seperated in the layout, making it easier to read, it ultimately leads to better UX.
 
 ## Why padding, and not margin?
 
-A simple way to avoid <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing" target="_blank" alt="MDN Web Docs  on Margin Collapsing">Margin Collapse</a>.
+A simple way to avoid margin collapse. For more information on Margin Collapse, check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing" target="_blank" alt="MDN Web Docs  on Margin Collapsing">MDN Web Docs - Margin Collapse</a>.
