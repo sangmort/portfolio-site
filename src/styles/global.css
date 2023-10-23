@@ -337,8 +337,19 @@ p code {
 
     /* Show close button in mobile menu only */
     nav>div.header-links.expanded>.close-navigation {
-        display: block;
-        font-size: 10rem;
+        display: flex;
+        font-size: 6rem;
+        font-weight: bold;
+        /* position: absolute; */
+        top: 0;
+        right: 0;
+        padding: 3rem 2rem;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    nav>div.header-links.expanded>.close-navigation:hover {
+        cursor: pointer;
     }
 
     .skills-layout {
