@@ -247,7 +247,7 @@ p code {
 
 /* Header Logo */
 #header-logo {
-    fill: var(--primary-bg-color);
+    fill: var(--primary-font-color);
 }
 
 /* tags */
