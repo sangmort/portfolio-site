@@ -6,6 +6,14 @@
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
 
+:root .darktheme {
+    --primary-color: #ff0000;
+    --secondary-color: #00ff9d;
+    --light-color: #eeeeee;
+    --dark-color: #020202;
+    --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -35,6 +43,11 @@ body {
     width: auto;
     height: 100dvh;
     line-height: 1.5rem;
+}
+
+/* Links */
+a {
+    color: red;
 }
 
 /* Headings */
@@ -257,6 +270,11 @@ p code {
 }
 
 /* About Skills Sections */
+
+.skills>h3 {
+    font-size: 1.25rem;
+}
+
 .skills-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
