@@ -1,34 +1,35 @@
-:root {
+:root,
+html[data-theme='light'] {
     --primary-color: #00a2ff;
     --secondary-color: #00ff9d;
-    --light-color: #eeeeee;
-    --dark-color: #020202;
+    --primary-font-color: #292929;
+    --secondary-font-color: #cccccc;
+    --primary-bg-color: #d8d8d8;
+    --secondary-bg-color: #d3d3d3;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
 
-:root .darktheme {
-    --primary-color: #ff0000;
+html[data-theme='dark'] {
+    --primary-color: #00a2ff;
     --secondary-color: #00ff9d;
-    --light-color: #eeeeee;
-    --dark-color: #020202;
+    --primary-font-color: #eeeeee;
+    --secondary-font-color: #cccccc;
+    --primary-bg-color: #252525;
+    --secondary-bg-color: #313131;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
+
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    background-color: var(--light-color);
+    background-color: var(--primary-bg-color);
     width: var(--100-device-width);
-    color: var(--dark-color);
+    color: var(--primary-font-color);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-}
-
-html.dark-theme {
-    background-color: var(--dark-color);
-    color: var(--light-color);
 }
 
 /* Control content width */
@@ -47,7 +48,8 @@ body {
 
 /* Links */
 a {
-    color: red;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 /* Headings */
@@ -208,7 +210,7 @@ p code {
     border-radius: .25rem;
     background-color: #24292e;
     padding: .05rem .4rem;
-    color: var(--light-color);
+    color: var(--primary-font-color);
 }
 
 /* Hamburger Menu */
@@ -234,14 +236,18 @@ p code {
 .header-links a {
     display: inline-block;
     padding: .75rem 1.5rem;
-    text-decoration: none;
 }
 
 .header-links a:hover,
 .header-links a:focus {
-    color: var(--light-color);
-    background-color: var(--dark-color);
+    color: var(--primary-bg-color);
+    background-color: var(--primary-font-color);
     border-radius: .2rem;
+}
+
+/* Header Logo */
+#header-logo {
+    fill: var(--primary-bg-color);
 }
 
 /* tags */
@@ -259,14 +265,14 @@ p code {
     background-color: var(--primary-color);
     padding: .5rem 1.25rem;
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--primary-bg-color);
     font-size: 1.15rem;
 }
 
 .tag>a:hover {
     background-color: var(--secondary-color);
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--primary-bg-color);
 }
 
 /* About Skills Sections */
