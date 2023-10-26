@@ -16,7 +16,17 @@ function initializeTheme() {
   }
 }
 
+function toggleSunAndMoon() {
+  const sun = document.querySelector('.sun');
+  const moon = document.querySelector('.moon');
+  sun.classList.toggle('visible');
+  moon.classList.toggle('visible');
+}
+
 const toggle = document.getElementById("theme-toggle");
-toggle.addEventListener("click", toggleTheme);
+toggle.addEventListener('click', () => {
+  toggleTheme();
+  toggleSunAndMoon();
+});
 
 initializeTheme();
