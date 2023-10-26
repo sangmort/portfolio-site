@@ -18,7 +18,7 @@ html {
     font-size: 18px;
 }
 
-html.light-theme {
+html.dark-theme {
     background-color: var(--dark-color);
     color: var(--light-color);
 }
