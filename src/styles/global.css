@@ -139,7 +139,6 @@ nav {
     display: flex;
     height: fit-content;
     position: relative;
-    padding: 1rem 0.75rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -152,10 +151,10 @@ nav {
     padding: 2rem 2rem;
     height: 3rem;
     font-size: 1rem;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--primary-bg-color);
     border-radius: 0rem 0rem .5rem .5rem;
     margin-top: 0rem;
-    width: 105%;
+    width: 108%;
     display: flex;
     justify-self: center;
     animation: navbarEntrance .15s linear 0s 1 normal none;
@@ -181,22 +180,12 @@ nav {
 /* Header Logo */
 #header-logo {
     fill: var(--secondary-font-color);
-    margin: 1rem 0;
+    margin: 2rem 0;
     height: 6.5rem;
 }
 
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-}
-
-/* Close hamburger menu */
-.close-navigation {
-    display: none;
-}
-
-/* top navigation style */
+/* top navigation links */
 .navbar-links {
     display: flex;
     position: static;
@@ -204,8 +193,10 @@ nav {
     justify-content: center;
     align-items: center;
     background: none;
-    width: auto;
-
+    width: 100%;
+    border-top: 2px solid var(--secondary-bg-color);
+    border-bottom: 2px solid var(--secondary-bg-color);
+    padding: .5rem 0;
 }
 
 .navbar-links a {
@@ -220,6 +211,18 @@ nav {
     border-radius: .25rem;
     background-color: var(--primary-font-color);
     color: var(--primary-bg-color);
+    transition: all .2s;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+}
+
+/* Close hamburger menu */
+.close-navigation {
+    display: none;
 }
 
 /* Theme Icon Toggle */
@@ -235,6 +238,7 @@ nav {
     width: 2rem;
     height: 3rem;
 }
+
 
 #theme-toggle:hover {
     cursor: pointer;
