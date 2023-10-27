@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   const navbar = document.querySelector(".navbar-default");
-  const scrollThreshold = 100;
+  const scrollThreshold = 300;
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > scrollThreshold) {
