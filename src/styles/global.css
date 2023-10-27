@@ -121,10 +121,9 @@ p {
     margin-bottom: 1.25rem;
 }
 
+/* Header to allow centering the navbar after scroll*/
 header {
-    top: 0;
-    z-index: 999;
-    background-color: var(--primary-bg-color);
+    display: grid;
 }
 
 /* navigation */
@@ -137,22 +136,55 @@ nav {
 }
 
 .navbar-default {
-    position: relative;
-    padding: 1rem 0 1rem .75rem;
+    display: flex;
     height: fit-content;
-    font-size: 1.25rem;
+    position: relative;
+    padding: 1rem 0.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    font-size: 1.125rem;
 }
 
 .navbar-shrink {
     position: sticky;
-    padding: 1.75rem 0 1.75rem .75rem;
+    padding: 2rem 2rem;
     height: 3rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    background-color: var(--secondary-bg-color);
+    border-radius: 0rem 0rem .5rem .5rem;
+    margin-top: 0rem;
+    width: 105%;
+    display: flex;
+    justify-self: center;
+    animation: navbarEntrance .15s linear 0s 1 normal none;
+}
+
+@keyframes navbarEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navbar-shrink>#header-logo {
-    height: 1.75rem;
+    height: 2.25rem;
 }
+
+
+/* Header Logo */
+#header-logo {
+    fill: var(--secondary-font-color);
+    margin: 1rem 0;
+    height: 6.5rem;
+}
+
 
 /* Hamburger Menu */
 .hamburger {
@@ -170,25 +202,24 @@ nav {
     position: static;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     background: none;
     width: auto;
+
 }
 
 .header-links a {
     display: inline-block;
-    padding: .75rem 1.5rem;
+    padding: .5rem 1rem;
+    color: var(--secondary-font-color);
+    font-weight: 500;
 }
 
 .header-links a:hover,
 .header-links a:focus {
-    border-radius: .2rem;
+    border-radius: .25rem;
     background-color: var(--primary-font-color);
     color: var(--primary-bg-color);
-}
-
-/* Header Logo */
-#header-logo {
-    fill: var(--primary-font-color);
 }
 
 /* Theme Icon Toggle */
@@ -197,11 +228,11 @@ nav {
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-left: .75rem;
+    margin-left: .25rem;
     border: 0px solid var(--primary-color);
     border-radius: .5rem;
     background: none;
-    width: 3rem;
+    width: 2rem;
     height: 3rem;
 }
 
@@ -210,7 +241,12 @@ nav {
 }
 
 /* Theme Icon SVG's */
-#sun,
+#sun {
+    height: 1.75rem;
+    margin-top: .25rem;
+}
+
+
 #moon {
     height: 2rem;
 }
@@ -242,8 +278,6 @@ nav {
 .moon.visible {
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
     opacity: 1;
-    width: 2rem;
-    height: 2rem;
     pointer-events: auto;
 }
 
