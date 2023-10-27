@@ -273,12 +273,11 @@ p code {
     fill: var(--primary-font-color);
 }
 
-/* Theme Toggle */
+/* Theme Icons Toggle */
 #theme-toggle {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
     box-sizing: border-box;
-    padding: 12px;
     background: none;
     border: none;
     display: flex;
@@ -288,26 +287,11 @@ p code {
 }
 
 .sun {
-    width: 50%;
-    height: 50%;
     position: absolute;
     pointer-events: none;
     opacity: 0;
     transform: scale(0.6) rotate(0deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-
-    /*  white transparent for Safari  */
-    background: radial-gradient(circle, rgba(41, 0, 0, 0) 50%, rgb(0, 0, 0)0 50%);
-}
-
-.sun:before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #363636 30%, rgb(255, 255, 255) 30%, rgba(255, 0, 0, 0) 50%, #000000 50%);
-    transform: rotate(45deg);
 }
 
 .sun.visible {
@@ -317,19 +301,33 @@ p code {
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
 
-.moon {
-    width: 50%;
-    height: 50%;
-    pointer-events: none;
-    position: absolute;
-    left: 12.5%;
-    top: 18.75%;
-    background-color: rgba(0, 0, 0, 0);
+#sun {
+    height: 3rem;
+}
+
+svg#sun path {
+    fill: var(--primary-font-color);
     border-radius: 50%;
-    box-shadow: 9px 3px 0px 0px #f0f0f0;
+}
+
+
+.moon {
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+    border-radius: 50%;
     opacity: 0;
     transform: scale(0.3) rotate(65deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+}
+
+#moon {
+    height: 3rem;
+}
+
+svg#moon path {
+    fill: var(--primary-font-color);
+    border-radius: 50%;
 }
 
 .moon.visible {
@@ -339,13 +337,6 @@ p code {
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
 
-
-
-
-.moon.visible .star.small {
-    opacity: .7;
-    transform: scale(0.45) rotate(35deg);
-}
 
 /* tags */
 .tags-layout {
