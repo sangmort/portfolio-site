@@ -1,19 +1,19 @@
 :root,
 html[data-theme='light'] {
-    --primary-color: #00a2ff;
-    --secondary-color: #00ff9d;
-    --primary-font-color: #292929;
-    --secondary-font-color: #cccccc;
-    --primary-bg-color: #d8d8d8;
-    --secondary-bg-color: #d3d3d3;
+    --primary-color: #b30000;
+    --secondary-color: #0099ff;
+    --primary-font-color: #0e0e0e;
+    --secondary-font-color: #1b1b1b;
+    --primary-bg-color: #e4e4e4;
+    --secondary-bg-color: #c9c9c9;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
 
 html[data-theme='dark'] {
-    --primary-color: #00a2ff;
-    --secondary-color: #00ff9d;
+    --primary-color: #df0000;
+    --secondary-color: #00aeff;
     --primary-font-color: #eeeeee;
-    --secondary-font-color: #cccccc;
+    --secondary-font-color: #c4c4c4;
     --primary-bg-color: #252525;
     --secondary-bg-color: #313131;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
@@ -154,77 +154,6 @@ nav {
     height: 1.75rem;
 }
 
-/* emphasis & strong */
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
-}
-
-/* Lists */
-ol {
-    margin-left: 1rem;
-}
-
-ul>li {
-    display: flex;
-    flex-direction: row;
-}
-
-ol>li {
-    margin-left: .75rem;
-}
-
-/* Spacing after last list item */
-ol>li:last-child:not(ol > li > ol > li),
-ul>li:last-child:not(ul > li > ul > li) {
-    margin-bottom: 2rem;
-}
-
-/* long dash for unordered list items */
-ul>li::before {
-    margin: 0 .5rem 0 0;
-    content: "—";
-}
-
-/* long dash for sublist items */
-ul>li>ul>li::before {
-    margin: 0 .5rem 0 0;
-    content: "—";
-}
-
-/* Blockquote */
-blockquote,
-q {
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    border-left: 2px solid red;
-    padding-left: 1rem;
-    quotes: none;
-}
-
-blockquote p {
-    margin-bottom: .25rem;
-}
-
-/* Code Block */
-pre.astro-code.github-dark {
-    margin-bottom: 2rem;
-    border-radius: 0.25rem;
-    padding: 1rem;
-}
-
-/* Inline code */
-p code {
-    display: inline-block;
-    border-radius: .25rem;
-    background-color: #24292e;
-    padding: .05rem .4rem;
-    color: var(--primary-font-color);
-}
-
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -325,6 +254,78 @@ p code {
 .moon.visible {
     transform: scale(1) rotate(0deg);
 }
+
+/* emphasis & strong */
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Lists */
+ol {
+    margin-left: 1rem;
+}
+
+ul>li {
+    display: flex;
+    flex-direction: row;
+}
+
+ol>li {
+    margin-left: .75rem;
+}
+
+/* Spacing after last list item */
+ol>li:last-child:not(ol > li > ol > li),
+ul>li:last-child:not(ul > li > ul > li) {
+    margin-bottom: 2rem;
+}
+
+/* long dash for unordered list items */
+ul>li::before {
+    margin: 0 .5rem 0 0;
+    content: "—";
+}
+
+/* long dash for sublist items */
+ul>li>ul>li::before {
+    margin: 0 .5rem 0 0;
+    content: "—";
+}
+
+/* Blockquote */
+blockquote,
+q {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    border-left: 2px solid red;
+    padding-left: 1rem;
+    quotes: none;
+}
+
+blockquote p {
+    margin-bottom: .25rem;
+}
+
+/* Code Block */
+pre.astro-code.github-dark {
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+/* Inline code */
+p code {
+    display: inline-block;
+    border-radius: .25rem;
+    background-color: #24292e;
+    padding: .05rem .4rem;
+    color: var(--primary-font-color);
+}
+
 
 /* tags */
 .tags-layout {
