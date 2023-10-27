@@ -273,68 +273,69 @@ p code {
     fill: var(--primary-font-color);
 }
 
-/* Theme Icons Toggle */
+/* Theme Icon Toggle */
 #theme-toggle {
-    width: 48px;
-    height: 48px;
-    box-sizing: border-box;
+    margin-left: .75rem;
+    height: 3rem;
+    width: 3rem;
     background: none;
-    border: none;
+    border: 0px solid var(--primary-color);
+    border-radius: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.sun {
+#theme-toggle:hover {
+    cursor: pointer;
+}
+
+/* Theme Icon SVG's */
+#sun,
+#moon {
+    height: 2rem;
+}
+
+#sun path,
+#moon path {
+    fill: var(--primary-font-color);
+}
+
+/* Animations */
+.sun,
+.moon {
     position: absolute;
     pointer-events: none;
     opacity: 0;
+}
+
+.sun {
     transform: scale(0.6) rotate(0deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
 
-.sun.visible {
+.moon {
+    transform: scale(0.6) rotate(0deg);
+    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+}
+
+.sun.visible,
+.moon.visible {
+    height: 2rem;
+    width: 2rem;
     pointer-events: auto;
     opacity: 1;
+    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+}
+
+.sun.visible {
     transform: scale(1) rotate(180deg);
-    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-}
 
-#sun {
-    height: 3rem;
-}
-
-svg#sun path {
-    fill: var(--primary-font-color);
-    border-radius: 50%;
-}
-
-
-.moon {
-    width: 48px;
-    height: 48px;
-    pointer-events: none;
-    border-radius: 50%;
-    opacity: 0;
-    transform: scale(0.3) rotate(65deg);
-    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-}
-
-#moon {
-    height: 3rem;
-}
-
-svg#moon path {
-    fill: var(--primary-font-color);
-    border-radius: 50%;
 }
 
 .moon.visible {
-    pointer-events: auto;
-    opacity: 1;
     transform: scale(1) rotate(0deg);
-    transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
 
 
