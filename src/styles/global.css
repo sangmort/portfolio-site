@@ -40,7 +40,6 @@ html {
 
 body {
     margin: 0 auto;
-    padding: 1rem;
     width: auto;
     height: 100dvh;
     line-height: 1.5rem;
@@ -53,7 +52,6 @@ a {
 }
 
 /* Headings */
-
 h1 {
     margin-bottom: 2.125rem;
     line-height: 2rem;
@@ -128,14 +126,45 @@ p {
     margin-bottom: 1.25rem;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-bg-color);
+    z-index: 999;
+}
 
 /* navigation */
-nav {
-    height: 3rem;
-    margin-bottom: 7rem;
+.navbar-default,
+.navbar-shrink {
+    height: fit-content;
+}
+
+.navbar-default {
+    height: fit-content;
+    padding: 1rem 0 1rem .75rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    text-transform: uppercase;
 }
+
+.navbar-shrink {
+    height: 3rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.navbar-shrink>#header-logo {
+    height: 1.75rem;
+}
+
 
 /* emphasis & strong */
 em {
@@ -262,9 +291,9 @@ p code {
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  
-  .sun {
+}
+
+.sun {
     width: 50%;
     height: 50%;
     position: absolute;
@@ -272,12 +301,12 @@ p code {
     opacity: 0;
     transform: scale(0.6) rotate(0deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-    
-  /*  white transparent for Safari  */
-    background: radial-gradient(circle, rgba(41, 0, 0, 0) 50%,rgb(0, 0, 0)0 50%);
-  }
-  
-  .sun:before {
+
+    /*  white transparent for Safari  */
+    background: radial-gradient(circle, rgba(41, 0, 0, 0) 50%, rgb(0, 0, 0)0 50%);
+}
+
+.sun:before {
     content: "";
     position: absolute;
     display: block;
@@ -285,16 +314,16 @@ p code {
     height: 100%;
     background: radial-gradient(circle, #363636 30%, rgb(255, 255, 255) 30%, rgba(255, 0, 0, 0) 50%, #000000 50%);
     transform: rotate(45deg);
-  }
-  
-  .sun.visible {
+}
+
+.sun.visible {
     pointer-events: auto;
     opacity: 1;
     transform: scale(1) rotate(180deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-      
-  .moon {
+}
+
+.moon {
     width: 50%;
     height: 50%;
     pointer-events: none;
@@ -307,22 +336,22 @@ p code {
     opacity: 0;
     transform: scale(0.3) rotate(65deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-  
-  .moon.visible {
+}
+
+.moon.visible {
     pointer-events: auto;
     opacity: 1;
     transform: scale(1) rotate(0deg);
     transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-  
+}
 
 
-  
-  .moon.visible .star.small {
+
+
+.moon.visible .star.small {
     opacity: .7;
     transform: scale(0.45) rotate(35deg);
-  }
+}
 
 /* tags */
 .tags-layout {
