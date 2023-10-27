@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("navbar-shrink");
       header.style.position = "sticky";
       header.style.top = "0";
-    } else {
+    }
+    if (window.scrollY < scrollThreshold) {
       navbar.classList.remove("navbar-shrink");
       header.style.position = "relative";
       header.style.top = "initial";

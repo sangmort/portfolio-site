@@ -127,7 +127,6 @@ p {
 }
 
 header {
-    position: sticky;
     top: 0;
     background-color: var(--primary-bg-color);
     z-index: 999;
@@ -141,6 +140,7 @@ header {
 
 .navbar-default {
     height: fit-content;
+    position: relative;
     padding: 1rem 0 1rem .75rem;
     margin-bottom: 2rem;
     display: flex;
@@ -159,6 +159,7 @@ header {
     align-items: center;
     font-size: 1.125rem;
     text-transform: uppercase;
+    position: sticky;
 }
 
 .navbar-shrink>#header-logo {
