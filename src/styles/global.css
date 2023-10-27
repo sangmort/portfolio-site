@@ -486,6 +486,18 @@ p code {
         cursor: pointer;
     }
 
+    .navbar-default,
+    .navbar-shrink {
+        height: 6rem;
+
+    }
+
+    #header-logo,
+    .navbar-shrink>#header-logo {
+        height: 3.5rem;
+    }
+
+
     .skills-layout {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -501,7 +513,20 @@ p code {
         width: calc(100dvw - 6rem);
     }
 
+    .navbar-default,
+    .navbar-shrink {
+        height: 5rem;
+        padding: 0;
+    }
+
     .skills-layout {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #header-logo,
+    .navbar-shrink>#header-logo {
+        height: 3.1rem;
+    }
+
+
 }
