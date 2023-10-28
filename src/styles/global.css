@@ -571,7 +571,7 @@ p code {
 #cloud-container {
     background-color: #0099ff;
     background: rgb(0, 236, 255);
-    background: linear-gradient(7deg, rgba(0, 236, 255, 1) 0%, rgba(0, 185, 255, 1) 100%);
+    background: linear-gradient(7deg, rgb(0, 213, 255)0%, rgb(0, 162, 255) 100%);
     width: 100dvw;
     height: 16rem;
     position: absolute;
