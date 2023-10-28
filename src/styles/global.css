@@ -560,7 +560,7 @@ p code {
     animation: animateClouds 60s linear infinite forward;
 }
 
-#clouds {
+#cloud-container {
     width: 100dvw;
     height: 100dvh;
     position: fixed;
