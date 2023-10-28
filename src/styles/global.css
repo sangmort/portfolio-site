@@ -6,6 +6,8 @@ html[data-theme='light'] {
     --secondary-font-color: #1b1b1b;
     --primary-bg-color: #effeff;
     --secondary-bg-color: #c9c9c9;
+    --cloud-main-color: #fff;
+    --cloud-shadow-color: #b6dffb;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
 
@@ -16,6 +18,8 @@ html[data-theme='dark'] {
     --secondary-font-color: #c4c4c4;
     --primary-bg-color: #252525;
     --secondary-bg-color: #313131;
+    --cloud-main-color: #0078c9;
+    --cloud-shadow-color: #004e81;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
 
