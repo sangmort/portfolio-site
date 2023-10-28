@@ -550,10 +550,16 @@ p code {
     position: fixed;
 }
 
-.cloud1, .cloud2 {
+.cloud1 {
     max-height: 4rem;
     max-width: 8rem;
-    animation: animateClouds 60s linear infinite forward;
+    animation: animateClouds 60s linear infinite;
+}
+
+.cloud2 {
+    max-height: 5rem;
+    max-width: 10rem;
+    animation: animateClouds2 60s linear infinite;
 }
 
 #cloud-container {
@@ -562,36 +568,17 @@ p code {
     position: fixed;
     top: 0rem;
     z-index: -99;
-    /* border-radius: 50%; */
     background: transparent;
-    /* box-shadow:
-        28rem 20.6rem var(--secondary-font-color), 27rem 20rem var(--secondary-font-color), 26rem 20rem var(--secondary-font-color), 25rem 21rem var(--secondary-font-color),
-        20rem 18rem var(--secondary-font-color), 21rem 18.5rem var(--secondary-font-color), 26rem 20rem var(--secondary-font-color), 25rem 21rem var(--secondary-font-color); */
-    animation: animateClouds 60s linear infinite;
 }
-
-/* #clouds::after {
-    width: 7.5rem;
-    height: 2.2rem;
-    content: " ";
-    position: absolute;
-    top: 0px;
-    border-radius: 50%;
-    background: transparent;
-    box-shadow:
-        17rem 9.6rem var(--secondary-font-color), 10rem 10rem var(--secondary-font-color), 15rem 9rem var(--secondary-font-color), 20rem 10rem var(--secondary-font-color);
-    /* animation: animateClouds 60s linear infinite;
- } */
-
 
 
 @keyframes animateClouds {
     from {
-        transform: translateX(0px);
+        transform: translateX(-100px);
     }
 
     to {
-        transform: translateX(2000px);
+        transform: translateX(3000px);
     }
 }
 
