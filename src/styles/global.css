@@ -4,7 +4,7 @@ html[data-theme='light'] {
     --secondary-color: #0099ff;
     --primary-font-color: #0e0e0e;
     --secondary-font-color: #1b1b1b;
-    --primary-bg-color: #e4e4e4;
+    --primary-bg-color: #effeff;
     --secondary-bg-color: #c9c9c9;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 }
