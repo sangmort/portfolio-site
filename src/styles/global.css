@@ -551,15 +551,14 @@ p code {
 }
 
 .cloud1 {
-    max-height: 4rem;
-    max-width: 8rem;
-    animation: animateClouds 60s linear infinite;
+    max-width: 10rem;
+    animation: animateClouds 120s linear infinite;
 }
 
 .cloud2 {
-    max-height: 5rem;
+
     max-width: 10rem;
-    animation: animateClouds2 60s linear infinite;
+    animation: animateClouds2 200s linear infinite;
 }
 
 #cloud-container {
@@ -581,6 +580,17 @@ p code {
         transform: translateX(3000px);
     }
 }
+
+@keyframes animateClouds2 {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(3000px);
+    }
+}
+
 
 #stars {
     width: 1px;
