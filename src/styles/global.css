@@ -558,23 +558,27 @@ p code {
 .cloud2 {
 
     max-width: 10rem;
-    animation: animateClouds2 200s linear infinite;
+    animation: animateClouds2 240s linear infinite;
 }
 
 .cloud3 {
 
     max-width: 10rem;
-    animation: animateClouds2 300s linear infinite;
+    animation: animateClouds2 360s linear infinite;
 }
 
 
 #cloud-container {
+    background-color: #0099ff;
+    background: rgb(0, 236, 255);
+    background: linear-gradient(7deg, rgba(0, 236, 255, 1) 0%, rgba(0, 185, 255, 1) 100%);
     width: 100dvw;
-    height: 100dvh;
+    height: 16rem;
     position: fixed;
-    top: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    top: -5.5rem;
     z-index: -99;
-    background: transparent;
 }
 
 
