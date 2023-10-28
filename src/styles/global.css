@@ -550,13 +550,9 @@ p code {
     position: fixed;
 }
 
-.cloud1 {
-    max-width: 6rem;
-    animation: animateClouds 60s linear infinite forward;
-}
-
-.cloud2 {
-    max-width: 6rem;
+.cloud1, .cloud2 {
+    max-height: 4rem;
+    max-width: 8rem;
     animation: animateClouds 60s linear infinite forward;
 }
 

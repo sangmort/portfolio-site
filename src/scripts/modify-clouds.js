@@ -1,10 +1,11 @@
-const numCopies = 15;
+const numCopies = 30;
 const container = document.getElementById("cloud-container");
-const originalCloud = document.querySelector(".cloud1").cloneNode(true);
+const originalCloud1 = document.querySelector(".cloud1").cloneNode(true);
+const originalCloud2 = document.querySelector(".cloud2").cloneNode(true);
 
 const duplicateClouds = () => {
   for (let i = 0; i < numCopies; i++) {
-    const clonedCloud = originalCloud.cloneNode(true);
+    const clonedCloud = (i % 2 === 0) ? originalCloud1.cloneNode(true) : originalCloud2.cloneNode(true);
     clonedCloud.style.position = "absolute";
 
     const randomX = Math.random() * (container.clientWidth - clonedCloud.clientWidth);
