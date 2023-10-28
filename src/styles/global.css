@@ -574,7 +574,7 @@ p code {
     background: linear-gradient(7deg, rgba(0, 236, 255, 1) 0%, rgba(0, 185, 255, 1) 100%);
     width: 100dvw;
     height: 16rem;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     margin: 0 auto;
     top: -5.5rem;
