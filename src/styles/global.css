@@ -550,6 +550,54 @@ p code {
     position: fixed;
 }
 
+.cloud1 {
+    max-width: 6rem;
+    animation: animateClouds 60s linear infinite forward;
+}
+
+.cloud2 {
+    max-width: 6rem;
+    animation: animateClouds 60s linear infinite forward;
+}
+
+#clouds {
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    top: 0rem;
+    /* border-radius: 50%; */
+    background: transparent;
+    /* box-shadow:
+        28rem 20.6rem var(--secondary-font-color), 27rem 20rem var(--secondary-font-color), 26rem 20rem var(--secondary-font-color), 25rem 21rem var(--secondary-font-color),
+        20rem 18rem var(--secondary-font-color), 21rem 18.5rem var(--secondary-font-color), 26rem 20rem var(--secondary-font-color), 25rem 21rem var(--secondary-font-color); */
+    animation: animateClouds 60s linear infinite;
+}
+
+/* #clouds::after {
+    width: 7.5rem;
+    height: 2.2rem;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow:
+        17rem 9.6rem var(--secondary-font-color), 10rem 10rem var(--secondary-font-color), 15rem 9rem var(--secondary-font-color), 20rem 10rem var(--secondary-font-color);
+    /* animation: animateClouds 60s linear infinite;
+ } */
+
+
+
+@keyframes animateClouds {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(2000px);
+    }
+}
+
 #stars {
     width: 1px;
     height: 1px;
