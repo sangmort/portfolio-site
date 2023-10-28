@@ -15,9 +15,8 @@ const duplicateClouds = () => {
     clonedCloud.style.top = randomY + "px";
 
     const randomScaleX = 0.5 + Math.random();
-    const randomScaleY = 0.5 + Math.random();
 
-    clonedCloud.style.transform = `scale(${randomScaleX}, ${randomScaleY})`;
+    clonedCloud.style.transform = `scale(${randomScaleX})`;
 
     container.appendChild(clonedCloud);
   }
