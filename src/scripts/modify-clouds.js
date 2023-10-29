@@ -1,17 +1,17 @@
-const numCopies = 60;
+const numberOfCopies = 60;
 const container = document.getElementById("cloud-container");
 const originalCloud1 = document.querySelector(".cloud1").cloneNode(true);
 const originalCloud2 = document.querySelector(".cloud2").cloneNode(true);
 const originalCloud3 = document.querySelector(".cloud3").cloneNode(true);
 
 const duplicateClouds = () => {
-  for (let i = 0; i < numCopies; i++) {
+  for (let i = 0; i < numberOfCopies; i++) {
     let clonedCloud;
-    const randomType = Math.floor(Math.random() * 3); // Generates 0, 1, or 2
+    const randomTypeOfCloud = Math.floor(Math.random() * 3); 
 
-    if (randomType === 0) {
+    if (randomTypeOfCloud === 0) {
       clonedCloud = originalCloud1.cloneNode(true);
-    } else if (randomType === 1) {
+    } else if (randomTypeOfCloud === 1) {
       clonedCloud = originalCloud2.cloneNode(true);
     } else {
       clonedCloud = originalCloud3.cloneNode(true);
