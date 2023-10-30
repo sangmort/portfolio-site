@@ -57,4 +57,4 @@ function addStarsToContainer(container, numStars) {
 }
 
 const starsContainer = document.getElementById("star-container");
-addStarsToContainer(container, 600); // Add 100 stars, you can change the number as needed
+addStarsToContainer(container, 600);
