@@ -623,7 +623,7 @@ p code {
     position: absolute;
     background-color: var(--primary-font-color);
     border-radius: 50%;
-    animation: animStar 500s linear infinite;
+    animation: animateStar 500s linear infinite;
     z-index: 0;
     visibility: var(--star-visibility);
 }
