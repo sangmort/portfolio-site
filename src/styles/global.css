@@ -11,6 +11,7 @@ html[data-theme='light'] {
     --cloud-bg-color-1: rgb(0, 213, 255);
     --cloud-bg-color-2: rgb(0, 162, 255);
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
+    --star-visibility: hidden;
 }
 
 html[data-theme='dark'] {
@@ -25,6 +26,7 @@ html[data-theme='dark'] {
     --cloud-bg-color-1: rgb(0, 115, 168);
     --cloud-bg-color-2: rgb(11, 5, 61);
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
+    --star-visibility: visible;
 }
 
 * {
@@ -621,6 +623,7 @@ p code {
     border-radius: 50%;
     animation: animStar 320s linear infinite;
     z-index: 0;
+    visibility: var(--star-visibility);
 }
 
 #stars-container {
@@ -631,6 +634,7 @@ p code {
     overflow: hidden;
     margin: 0 auto;
     top: -5.5rem;
+
 }
 
 @keyframes animStar {
