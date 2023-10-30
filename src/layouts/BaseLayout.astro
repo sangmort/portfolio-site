@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Clouds from "../components/Clouds.astro";
+import SkyHeader from "../components/SkyHeader.astro";
 
 import "../styles/reset.css";
 import "../styles/global.css";
@@ -26,12 +26,7 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Clouds />
-    <div id="stars-container">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </div>
+    <SkyHeader />
     <div id="wrapper">
       <Header />
 
@@ -44,7 +39,7 @@ const { pageTitle } = Astro.props;
       import "../scripts/hamburger.js";
       import "../scripts/theme-picker.js";
       import "../scripts/shrink-navbar-on-scroll.js";
-      import "../scripts/modify-clouds.js";
+      import "../scripts/create-clouds-stars.js";
     </script>
   </body>
 </html>
