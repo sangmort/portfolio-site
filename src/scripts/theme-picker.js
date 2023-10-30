@@ -13,20 +13,35 @@ function initializeTheme() {
   const storedTheme = localStorage.getItem("theme");
   if (storedTheme) {
     setTheme(storedTheme);
+  } else {
+    // If no theme is stored, default to the light theme.
+    setTheme("light");
+  }
+
+  // Update the sun/moon icon based on the initial theme.
+  updateIcon(storedTheme);
+}
+
+function updateIcon(theme) {
+  const sun = document.querySelector(".sun");
+  const moon = document.querySelector(".moon");
+
+  if (theme === "dark") {
+    sun.classList.add("visible");
+    moon.classList.remove("visible");
+  } else {
+    sun.classList.remove("visible");
+    moon.classList.add("visible");
   }
 }
 
-function toggleSunAndMoon() {
-  const sun = document.querySelector('.sun');
-  const moon = document.querySelector('.moon');
-  sun.classList.toggle('visible');
-  moon.classList.toggle('visible');
-}
-
 const toggle = document.getElementById("theme-toggle");
-toggle.addEventListener('click', () => {
+toggle.addEventListener("click", () => {
   toggleTheme();
-  toggleSunAndMoon();
+
+  // Get the updated theme after the toggle and update the icon.
+  const updatedTheme = document.documentElement.getAttribute("data-theme");
+  updateIcon(updatedTheme);
 });
 
 initializeTheme();
