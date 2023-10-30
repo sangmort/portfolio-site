@@ -608,7 +608,7 @@ p code {
     }
 }
 
-@keyframes animateClouds2 {
+@keyframes animateClouds3 {
     from {
         transform: translateX(-100px);
     }
@@ -639,7 +639,7 @@ p code {
 
 }
 
-@keyframes animStar {
+@keyframes animateStars {
     from {
         transform: translateX(0px);
     }
