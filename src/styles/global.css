@@ -555,21 +555,21 @@ p code {
 .cloud1 {
     position: absolute;
     max-width: 10rem;
-    animation: animateClouds 120s linear infinite;
+    animation: animateClouds 400s linear infinite;
     z-index: 1;
 }
 
 .cloud2 {
     position: absolute;
     max-width: 11rem;
-    animation: animateClouds2 240s linear infinite;
+    animation: animateClouds2 500s linear infinite;
     z-index: 1;
 }
 
 .cloud3 {
     position: absolute;
     max-width: 6rem;
-    animation: animateClouds2 360s linear infinite;
+    animation: animateClouds3 600s linear infinite;
     z-index: 1;
 }
 
@@ -587,7 +587,9 @@ p code {
 }
 
 @keyframes animateClouds {
-    from {
+
+    0%,
+    100% {
         transform: translateX(-100px);
     }
 
@@ -621,7 +623,7 @@ p code {
     position: absolute;
     background-color: var(--primary-font-color);
     border-radius: 50%;
-    animation: animStar 320s linear infinite;
+    animation: animStar 500s linear infinite;
     z-index: 0;
     visibility: var(--star-visibility);
 }
