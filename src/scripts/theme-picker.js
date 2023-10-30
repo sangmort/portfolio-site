@@ -14,11 +14,8 @@ function initializeTheme() {
   if (storedTheme) {
     setTheme(storedTheme);
   } else {
-    // If no theme is stored, default to the light theme.
     setTheme("light");
   }
-
-  // Update the sun/moon icon based on the initial theme.
   updateIcon(storedTheme);
 }
 
