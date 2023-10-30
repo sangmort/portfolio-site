@@ -1,5 +1,5 @@
 // Generate Clouds
-const numberOfCopies = 90;
+const numberOfCopies = 75;
 const container = document.getElementById("cloud-container");
 const originalCloud1 = document.querySelector(".cloud1").cloneNode(true);
 const originalCloud2 = document.querySelector(".cloud2").cloneNode(true);
@@ -42,7 +42,7 @@ function getRandomNumber(min, max) {
 function createStar() {
   const star = document.createElement("div");
   star.classList.add("star");
-  star.style.width = getRandomNumber(1, 3) + "px";
+  star.style.width = getRandomNumber(1, 4) + "px";
   star.style.height = star.style.width;
   star.style.left = getRandomNumber(0, 100) + "vw";
   star.style.top = getRandomNumber(0, 100) + "vh";
@@ -57,4 +57,4 @@ function addStarsToContainer(container, numStars) {
 }
 
 const starsContainer = document.getElementById("star-container");
-addStarsToContainer(container, 600);
+addStarsToContainer(container, 800);
