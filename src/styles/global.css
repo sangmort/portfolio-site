@@ -43,6 +43,8 @@ html {
 
 /* Control content width */
 #wrapper {
+    position: relative;
+    z-index: 1000;
     margin: 0 auto;
     width: 55rem;
 }
@@ -296,6 +298,20 @@ nav {
 .moon.visible {
     transform: scale(1) rotate(0deg);
 }
+
+#treeline-container {
+    display: flex;
+    justify-content: center;
+}
+
+#treeline {
+    position: absolute;
+    width: 55rem;
+    top: 5rem;
+    z-index: 10;
+}
+
+
 
 /* emphasis & strong */
 em {
