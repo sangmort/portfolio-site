@@ -1,5 +1,5 @@
 // Generate Clouds
-const numberOfCopies = 75;
+const numberOfCopies = 66;
 const container = document.getElementById("cloud-container");
 const originalCloud1 = document.querySelector(".cloud1").cloneNode(true);
 const originalCloud2 = document.querySelector(".cloud2").cloneNode(true);
