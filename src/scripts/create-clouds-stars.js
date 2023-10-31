@@ -1,9 +1,18 @@
-// Generate Clouds
-const numberOfCopies = 66;
+// Generate random cloud copies based on screen width
+const screenWidth = window.innerWidth;
 const container = document.getElementById("cloud-container");
 const originalCloud1 = document.querySelector(".cloud1").cloneNode(true);
 const originalCloud2 = document.querySelector(".cloud2").cloneNode(true);
 const originalCloud3 = document.querySelector(".cloud3").cloneNode(true);
+let numberOfCopies;
+
+if (screenWidth < 800) {
+  numberOfCopies = 15; // For screens < 800px
+} else if (screenWidth >= 800 && screenWidth <= 1200) {
+  numberOfCopies = 30; // For screens between 800px and 1200px
+} else {
+  numberOfCopies = 66; // For screens > 1200px
+}
 
 const duplicateClouds = () => {
   for (let i = 0; i < numberOfCopies; i++) {
@@ -22,7 +31,7 @@ const duplicateClouds = () => {
     const randomY = Math.random() * (container.clientHeight - clonedCloud.clientHeight);
 
     clonedCloud.style.left = randomX + "px";
-    clonedCloud.style.top = (randomY - 100) + "px";
+    clonedCloud.style.top = randomY - 100 + "px";
 
     const randomScaleX = 0.5 + Math.random();
 
@@ -42,7 +51,7 @@ function getRandomNumber(min, max) {
 function createStar() {
   const star = document.createElement("div");
   star.classList.add("star");
-  star.style.width = getRandomNumber(1, 4) + "px";
+  star.style.width = getRandomNumber(1, 3) + "px";
   star.style.height = star.style.width;
   star.style.left = getRandomNumber(0, 100) + "vw";
   star.style.top = getRandomNumber(0, 100) + "vh";
