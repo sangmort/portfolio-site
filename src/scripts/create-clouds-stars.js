@@ -22,7 +22,7 @@ const duplicateClouds = () => {
     const randomY = Math.random() * (container.clientHeight - clonedCloud.clientHeight);
 
     clonedCloud.style.left = randomX + "px";
-    clonedCloud.style.top = randomY + "px";
+    clonedCloud.style.top = (randomY - 100) + "px";
 
     const randomScaleX = 0.5 + Math.random();
 
