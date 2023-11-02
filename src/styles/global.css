@@ -10,6 +10,10 @@ html[data-theme='light'] {
     --cloud-shadow-color: #b6dffb;
     --cloud-bg-color-1: rgb(0, 213, 255);
     --cloud-bg-color-2: rgb(0, 162, 255);
+    --tree-color-1: #214a5d;
+    --tree-color-2: #21435b;
+    --tree-color-3: #202f4d;
+    --tree-color-4: #121428;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
     --star-visibility: hidden;
 }
