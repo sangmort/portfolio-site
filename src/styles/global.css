@@ -10,10 +10,9 @@ html[data-theme='light'] {
     --cloud-shadow-color: #b6dffb;
     --cloud-bg-color-1: rgb(0, 213, 255);
     --cloud-bg-color-2: rgb(0, 162, 255);
-    --tree-color-1: #214a5d;
-    --tree-color-2: #21435b;
-    --tree-color-3: #202f4d;
-    --tree-color-4: #121428;
+    --tree-color-1: #a3b08b;
+    --tree-color-2: #588159;
+    --tree-color-3: #3b5b40;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
     --star-visibility: hidden;
 }
@@ -23,12 +22,15 @@ html[data-theme='dark'] {
     --secondary-color: #00aeff;
     --primary-font-color: #eeeeee;
     --secondary-font-color: #c4c4c4;
-    --primary-bg-color: #252525;
+    --primary-bg-color: #121212;
     --secondary-bg-color: #313131;
     --cloud-main-color: #1E72A0;
     --cloud-shadow-color: #004e81;
     --cloud-bg-color-1: rgb(0, 115, 168);
     --cloud-bg-color-2: rgb(11, 5, 61);
+    --tree-color-1: #131a1d;
+    --tree-color-2: #374952;
+    --tree-color-3: #5e6c7e;
     --100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
     --star-visibility: visible;
 }
@@ -206,7 +208,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid var(--secondary-bg-color);
+
     background: none;
     padding: .5rem 0;
     width: 100%;
@@ -306,14 +308,31 @@ nav {
 #treeline-container {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 #treeline {
     position: absolute;
-    width: 55rem;
-    top: 5rem;
+    top: -9.5rem;
     z-index: 10;
 }
+
+#treeline path.a {
+    fill: var(--tree-color-3);
+}
+
+#treeline path.b {
+    fill: var(--tree-color-2);
+}
+
+#treeline path.c {
+    fill: var(--tree-color-1);
+}
+
+#treeline path.d {
+    fill: var(--primary-bg-color);
+}
+
 
 
 
@@ -607,7 +626,7 @@ p code {
     background: radial-gradient(var(--cloud-bg-color-1), var(--cloud-bg-color-2));
     background-color: #0099ff;
     width: 100%;
-    height: 15rem;
+    height: 13rem;
     overflow: hidden;
 }
 
