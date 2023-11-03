@@ -484,6 +484,12 @@ p code {
 		z-index: 10;
 		width: 100rem;
 	}
+	.navbar-default {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	#wrapper {
 		margin: 0 auto;
@@ -578,7 +584,7 @@ p code {
 	#cloud-container {
 		height: 23dvh;
 	}
-	
+
 	#treeline {
 		position: absolute;
 		top: -26dvh;
