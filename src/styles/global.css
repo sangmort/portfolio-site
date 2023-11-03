@@ -4,15 +4,15 @@ html[data-theme='light'] {
 	--secondary-color: #0099ff;
 	--primary-font-color: #0e0e0e;
 	--secondary-font-color: #1b1b1b;
-	--primary-bg-color: #f8f8f8;
-	--secondary-bg-color: #c9c9c9;
+	--primary-bg-color: #f7f7f7;
+	--secondary-bg-color: #a7a7a7;
 	--cloud-main-color: #e4ecee;
 	--cloud-shadow-color: #b6dffb;
 	--cloud-bg-color-1: rgb(0, 213, 255);
 	--cloud-bg-color-2: rgb(0, 162, 255);
-	--tree-color-1: #e1e6d7;
-	--tree-color-2: #cdddcd;
-	--tree-color-3: #a7c2a7;
+	--tree-color-1: #e2e9e2;
+	--tree-color-2: #99b699;
+	--tree-color-3: #557055;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 }
@@ -565,7 +565,16 @@ p code {
 @media screen and (max-width: 800px) {
 	html {
 		font-size: 16px;
+		overflow-x: hidden;
 	}
+
+	#treeline {
+		position: absolute;
+		top: -18.5rem;
+		z-index: 10;
+		width: 100rem;
+	}
+
 	#wrapper {
 		margin: 0 auto;
 		width: calc(100dvw - 6rem);
