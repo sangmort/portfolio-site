@@ -46,7 +46,7 @@ html {
 /* Control content width */
 #wrapper {
 	position: relative;
-	z-index: 1000;
+	z-index: 100;
 	margin: 0 auto;
 	width: 55rem;
 }
@@ -111,6 +111,7 @@ body {
 /* Header to allow centering the navbar after scroll*/
 header {
 	display: grid;
+	z-index: 600;
 }
 /* navigation */
 nav {
@@ -502,6 +503,7 @@ p code {
 		background-color: var(--secondary-color);
 		width: var(--100-device-width);
 	}
+	
 	.navbar-links a {
 		display: block;
 		border-bottom: 1px solid red;
@@ -516,7 +518,7 @@ p code {
 	.navbar-links a:first-of-type {
 		border-top: 1px solid red;
 	}
-	.expanded {
+	.navbar-links.expanded {
 		display: flex;
 		position: absolute;
 		top: 0;
@@ -525,6 +527,8 @@ p code {
 		width: 100dvw;
 		height: 100dvh;
 		min-height: 10dvh;
+		
+
 	}
 	.hamburger {
 		display: flex;
