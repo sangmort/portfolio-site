@@ -136,10 +136,10 @@ nav {
 	position: sticky;
 	justify-self: center;
 	margin-top: 0rem;
-	border-radius: 0rem 0rem .5rem .5rem;
 	background-color: var(--primary-bg-color);
+	border-bottom: 1px solid var(--secondary-bg-color);
 	padding: 2rem 2rem;
-	width: 108%;
+	width: 60rem;
 	height: 3rem;
 	animation: navbarEntrance .15s linear 0s 1 normal none;
 	font-size: 1rem;
