@@ -133,7 +133,7 @@ nav {
 }
 .navbar-shrink {
 	display: flex;
-	position: sticky;
+	position: fixed;
 	justify-self: center;
 	margin-top: 0rem;
 	background-color: var(--primary-bg-color);
