@@ -467,18 +467,22 @@ p code {
 	font-size: .75rem;
 }
 /* Resonsive Tablet/Medium */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
 	html {
 		font-size: 17px;
 		overflow-x: hidden;
 		margin: 0 auto;
 	}
+	
+	#cloud-container {
+		height: 24dvh;
+	}
 
 	#treeline {
 		position: absolute;
-		top: -18.5rem;
+		top: -32dvh;
 		z-index: 10;
-		width: 100%;
+		width: 100rem;
 	}
 
 	#wrapper {
@@ -558,34 +562,30 @@ p code {
 	.skills-layout {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	#cloud-container {
-		position: absolute;
-		top: 0;
-		margin: 0 auto;
-		background: radial-gradient(var(--cloud-bg-color-1), var(--cloud-bg-color-2));
-		background-color: #0099ff;
-		width: 100%;
-		max-height: 10rem;
-		overflow: hidden;
-	}
 	h1 {
 		margin-top: 5rem;
 	}
 }
 /* Responsive Phone/Small */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	html {
 		font-size: 16px;
 		overflow-x: hidden;
 		margin: 0 auto;
 	}
 
+	
+	#cloud-container {
+		height: 23dvh;
+	}
+	
 	#treeline {
 		position: absolute;
-		top: -12.5rem;
+		top: -26dvh;
 		z-index: 10;
-		width: 300dvw;
+		width: 100rem;
 	}
+
 
 	#wrapper {
 		margin: 0 auto;
