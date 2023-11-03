@@ -249,23 +249,23 @@ nav {
 }
 #treeline path.a {
 	fill: var(--tree-color-3);
-	animation: myAnim 18s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards;
+	/* animation: myAnim 18s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards; */
 
 }
 #treeline path.b {
 	fill: var(--tree-color-2);
-	animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .4s infinite normal forwards;
+	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .4s infinite normal forwards; */
 
 }
 #treeline path.c {
 	fill: var(--tree-color-1);
-	animation: myAnim 16s cubic-bezier(0.68, -0.6, 0.32, 1.6) .2s infinite normal forwards;
+	/* animation: myAnim 16s cubic-bezier(0.68, -0.6, 0.32, 1.6) .2s infinite normal forwards; */
 }
 #treeline path.d {
 	fill: var(--primary-bg-color);
 	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
-@keyframes myAnim {
+/* @keyframes myAnim {
 	0%,
 	100% {
 		transform: translateX(0%);
@@ -291,7 +291,7 @@ nav {
 	75% {
 		transform: translateX(-1px) rotate(0deg);
 	}
-}
+} */
 /* Links */
 a {
 	text-decoration: none;
