@@ -415,6 +415,7 @@ pre.astro-code.github-dark {
 p code {
 	display: inline-block;
 	border-radius: .25rem;
+	color: #fefefe !important;
 	background-color: #24292e;
 	padding: .05rem .4rem;
 	color: var(--primary-font-color);
