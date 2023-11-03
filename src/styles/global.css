@@ -110,6 +110,7 @@ body {
 }
 /* Header to allow centering the navbar after scroll*/
 header {
+	position: relative;
 	display: grid;
 	z-index: 600;
 }
