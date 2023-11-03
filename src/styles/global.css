@@ -51,6 +51,7 @@ html {
 	width: 55rem;
 }
 body {
+	position: relative;
 	margin: 0 auto;
 	width: auto;
 	height: 100dvh;
@@ -469,7 +470,17 @@ p code {
 @media screen and (max-width: 1200px) {
 	html {
 		font-size: 17px;
+		overflow-x: hidden;
+		margin: 0 auto;
 	}
+
+	#treeline {
+		position: absolute;
+		top: -18.5rem;
+		z-index: 10;
+		width: 100%;
+	}
+
 	#wrapper {
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
@@ -566,13 +577,14 @@ p code {
 	html {
 		font-size: 16px;
 		overflow-x: hidden;
+		margin: 0 auto;
 	}
 
 	#treeline {
 		position: absolute;
-		top: -18.5rem;
+		top: -13.5rem;
 		z-index: 10;
-		width: 100rem;
+		width: 100%;
 	}
 
 	#wrapper {
