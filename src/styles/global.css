@@ -195,6 +195,10 @@ nav {
 .close-navigation {
 	display: none;
 }
+
+#close-x path {
+	fill: var(--primary-font-color);
+}
 /* Theme Icon Toggle */
 #theme-toggle {
 	display: flex;
@@ -550,15 +554,17 @@ p code {
 		margin-bottom: 10px;
 	}
 	nav>div.navbar-links.expanded>.close-navigation {
-		display: flex;
+		display: block;
+		position: absolute;
 		top: 0;
 		right: 0;
-		align-items: flex-start;
-		justify-content: flex-end;
-		padding: 3rem 2rem;
-		font-size: 6rem;
-		font-weight: bold;
-	}
+		padding: 1rem 2rem;
+		}
+
+#close-x {
+	height: 8rem;
+}
+
 	nav>div.navbar-links.expanded>.close-navigation:hover {
 		cursor: pointer;
 	}
