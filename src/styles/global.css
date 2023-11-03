@@ -497,6 +497,11 @@ p code {
 		justify-content: space-between;
 	}
 
+	header {
+		margin: 0 auto;
+		width: calc(100dvw - 10rem);
+	}
+
 	#wrapper {
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
@@ -603,6 +608,10 @@ p code {
 		width: 100rem;
 	}
 
+	header {
+		margin: 0 auto;
+		width: calc(100dvw - 6rem);
+	}
 
 	#wrapper {
 		margin: 0 auto;
