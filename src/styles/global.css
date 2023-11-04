@@ -15,6 +15,7 @@ html[data-theme='light'] {
 	--tree-color-3: #557055;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
+	--sky-orb-color: #f5ff97;
 }
 html[data-theme='dark'] {
 	--primary-color: #b200df;
@@ -32,9 +33,23 @@ html[data-theme='dark'] {
 	--tree-color-3: #000814;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
+	--sky-orb-color: #efefef;
 }
 * {
 	box-sizing: border-box;
+}
+
+#sky-orb {
+	position: absolute;
+	left: -2rem;
+	top: 0;
+	height: 9rem;
+	z-index: 2;
+	filter:drop-shadow(0px 0px 12px var(--sky-orb-color));
+	 animation: animateSkyOrb 4s infinite normal forwards;
+}
+#sky-orb path.a {
+	fill: var(--sky-orb-color);
 }
 html {
 	background-color: var(--primary-bg-color);
@@ -71,7 +86,7 @@ body {
 }
 .cloud1 {
 	position: absolute;
-	z-index: 1;
+	z-index: 3;
 	max-width: 10rem;
 	animation: animateClouds 400s linear infinite;  
 
@@ -251,7 +266,7 @@ nav {
 	position: absolute;
 	top: -13rem;
 	z-index: 10;    
-	width: 102%;
+	width: 120%;
 	
 }
 #treeline path.a {
@@ -672,5 +687,14 @@ p code {
 	100% {
 		transform: translateY(0);
 		opacity: 1;
+	}
+}
+
+@keyframes animateSkyOrb {
+	0%, 100% {
+		filter:drop-shadow(0px 0px 3px var(--sky-orb-color));
+	}
+	50% {
+		filter:drop-shadow(0px 0px 6px var(--sky-orb-color));
 	}
 }
