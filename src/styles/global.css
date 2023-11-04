@@ -88,21 +88,21 @@ body {
 	position: absolute;
 	z-index: 3;
 	max-width: 10rem;
-	animation: animateClouds 400s linear infinite;  
+	animation: animateClouds 700s linear infinite;  
 
 }
 .cloud2 {
 	position: absolute;
 	z-index: 1;
 	max-width: 11rem;
-	animation: animateClouds2 500s linear infinite;
+	animation: animateClouds2 800s linear infinite;
 
 }
 .cloud3 {
 	position: absolute;
 	z-index: 1;
 	max-width: 6rem;
-	animation: animateClouds3 600s linear infinite;
+	animation: animateClouds3 900s linear infinite;
 
 }
 .star {
@@ -111,7 +111,7 @@ body {
 	z-index: 0;
 	border-radius: 50%;
 	background-color: var(--primary-font-color);
-	animation: animateStars 500s linear infinite;
+	animation: animateStars 900s linear infinite;
 	filter: drop-shadow(0px 0px 1px rgba(214, 252, 255, 0.842));
 }
 #stars-container {
