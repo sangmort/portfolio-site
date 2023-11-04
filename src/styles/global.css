@@ -15,7 +15,7 @@ html[data-theme='light'] {
 	--tree-color-3: #557055;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
-	--sky-orb-color: #f5ff97;
+	--sky-orb-color: rgb(255, 250, 185);
 	--outer-wrapper: rgba(255, 255, 255, 0.6);
 }
 html[data-theme='dark'] {
