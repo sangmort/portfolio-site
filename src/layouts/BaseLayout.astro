@@ -26,6 +26,7 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
+    <div id="outer-wrapper">    </div>
     <SkyHeader />
     <Treeline />
     <Header />
@@ -40,5 +41,6 @@ const { pageTitle } = Astro.props;
       import "../scripts/shrink-navbar-on-scroll.js";
       import "../scripts/create-clouds-stars.js";
     </script>
+
   </body>
 </html>

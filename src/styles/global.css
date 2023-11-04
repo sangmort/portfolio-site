@@ -16,6 +16,7 @@ html[data-theme='light'] {
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 	--sky-orb-color: #f5ff97;
+	--outer-wrapper: rgba(255, 255, 255, 0.6);
 }
 html[data-theme='dark'] {
 	--primary-color: #b200df;
@@ -34,6 +35,7 @@ html[data-theme='dark'] {
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
 	--sky-orb-color: #efefef;
+	--outer-wrapper: rgba(9, 14, 56, 0.4);
 }
 * {
 	box-sizing: border-box;
@@ -73,6 +75,16 @@ body {
 	line-height: 1.5rem;
 	overflow-x: hidden;
 }
+
+#outer-wrapper {
+	display: block;
+	position: fixed;
+	background-color: var(--outer-wrapper);
+	z-index: 100;
+	height: 100dvh;
+	width: 100dvw;
+}
+
 /* SkyHeader Styling */
 #cloud-container {
 	position: absolute;
