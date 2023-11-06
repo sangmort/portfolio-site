@@ -19,8 +19,9 @@ html[data-theme='light'] {
 	--tree-color-7: #ecf7ef; /* Foreground Trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
-	--sky-orb-color: rgb(255, 250, 185);
-	--outer-wrapper: rgba(255, 255, 255, .4)
+	--sky-orb-color: #fffcd5;
+	--sky-orb-color-2: #fffdef;
+	--outer-wrapper: rgba(232, 255, 190, 0.6);
 }
 html[data-theme='dark'] {
 	--primary-color: #b200df;
@@ -42,7 +43,8 @@ html[data-theme='dark'] {
 	--tree-color-7: #121212;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
-	--sky-orb-color: #efefef;
+	--sky-orb-color: #ffffff;
+	--sky-orb-color-2: #f2f6ff;
 	--outer-wrapper: rgba(1, 4, 32, 0.6);
 }
 * {
@@ -51,7 +53,7 @@ html[data-theme='dark'] {
 
 #sky-orb {
 	position: absolute;
-	left: -2rem;
+	left: -20rem;
 	top: 0;
 	height: 9rem;
 	z-index: 2;
@@ -61,6 +63,11 @@ html[data-theme='dark'] {
 #sky-orb path.a {
 	fill: var(--sky-orb-color);
 }
+
+#sky-orb path.b {
+	fill: var(--sky-orb-color-2);
+}
+
 html {
 	background-color: var(--primary-bg-color);
 	width: var(--100-device-width);
