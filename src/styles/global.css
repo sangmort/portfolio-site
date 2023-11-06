@@ -4,19 +4,23 @@ html[data-theme='light'] {
 	--secondary-color: #0099ff;
 	--primary-font-color: #0e0e0e;
 	--secondary-font-color: #1b1b1b;
-	--primary-bg-color: #f7f7f7;
+	--primary-bg-color: #f5f5f5;
 	--secondary-bg-color: #a7a7a7;
 	--cloud-main-color: #e4ecee;
 	--cloud-shadow-color: #b6dffb;
 	--cloud-bg-color-1: rgb(0, 213, 255);
 	--cloud-bg-color-2: rgb(0, 162, 255);
-	--tree-color-1: #e2e9e2;
-	--tree-color-2: #99b699;
-	--tree-color-3: #557055;
+	--tree-color-1: #deede0;
+	--tree-color-2: #b8ccb9;
+	--tree-color-3: #d6e2d9; 
+	--tree-color-4: #deede0;
+	--tree-color-5: #c9e2cd;
+	--tree-color-6: #9cb4a0;
+	--tree-color-7: #ecf7ef; /* Foreground Trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 	--sky-orb-color: rgb(255, 250, 185);
-	--outer-wrapper: rgba(255, 255, 255, 0.6);
+	--outer-wrapper: rgba(255, 255, 255, .4)
 }
 html[data-theme='dark'] {
 	--primary-color: #b200df;
@@ -29,13 +33,17 @@ html[data-theme='dark'] {
 	--cloud-shadow-color: #004e81;
 	--cloud-bg-color-1: rgb(0, 115, 168);
 	--cloud-bg-color-2: rgb(11, 5, 61);
-	--tree-color-1: #001c2c;
-	--tree-color-2: #00283b;
-	--tree-color-3: #000814;
+	--tree-color-1: #1e323a;
+	--tree-color-2: #365158;
+	--tree-color-3: #1f333b;
+	--tree-color-4: #121921;
+	--tree-color-5: #1d2736;
+	--tree-color-6: #526f7c;
+	--tree-color-7: #121212;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
 	--sky-orb-color: #efefef;
-	--outer-wrapper: rgba(9, 14, 56, 0.4);
+	--outer-wrapper: rgba(1, 4, 32, 0.6);
 }
 * {
 	box-sizing: border-box;
@@ -60,6 +68,7 @@ html {
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 }
+
 /* Control content width */
 #wrapper {
 	position: relative;
@@ -74,6 +83,7 @@ body {
 	height: 100dvh;
 	line-height: 1.5rem;
 	overflow-x: hidden;
+	
 }
 
 .firefly {
@@ -92,6 +102,7 @@ body {
 	z-index: 100;
 	height: 100dvh;
 	width: 100dvw;
+	
 }
 
 /* SkyHeader Styling */
@@ -114,7 +125,7 @@ body {
 }
 .cloud2 {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	max-width: 11rem;
 	animation: animateClouds2 800s linear infinite;
 
@@ -144,6 +155,94 @@ body {
 	height: 20rem;
 	overflow: hidden;
 }
+
+/* Treeline */
+#treeline-container {
+	display: flex;
+	justify-content: center;
+
+}
+#treeline {
+	position: absolute;
+	top: -5rem;
+	z-index: 10;    
+	width: 100%;
+}
+#treeline path.a {
+	fill: var(--tree-color-1);
+	stroke: var(--tree-color-1);
+	stroke-width: .5;
+	/* animation: myAnim 1s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards; */
+
+}
+#treeline path.b {
+	fill: var(--tree-color-2);
+	stroke: var(--tree-color-2);
+	stroke-width: 1;
+	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .4s infinite normal forwards; */
+
+}
+#treeline path.c {
+	fill: var(--tree-color-3);
+	stroke: var(--tree-color-3);
+	stroke-width: 1;
+	/* animation: myAnim 16s cubic-bezier(0.68, -0.6, 0.32, 1.6) .2s infinite normal forwards; */
+}
+#treeline path.d {
+	fill: var(--tree-color-4);
+	stroke: var(--tree-color-4);
+	stroke-width: .5;
+	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
+}
+
+#treeline path.e {
+	fill: var(--tree-color-5);
+	stroke: var(--tree-color-5);
+	stroke-width: .5;
+	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
+}
+
+#treeline path.f {
+	fill: var(--tree-color-6);
+	stroke: var(--tree-color-6);
+	stroke-width: 2;
+	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
+}
+
+#treeline path.g {
+	fill: var(--tree-color-7);
+	stroke: var(--tree-color-7);
+	stroke-width: 1;
+	/* animation: myAnim 30s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
+}
+/* @keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-3px) rotate(-.2deg);
+	}
+
+	30% {
+		transform: translateX(1px) rotate(.2deg);
+	}
+
+	45% {
+		transform: translateX(-1px) rotate(-.1deg);
+	}
+
+	60% {
+		transform: translateX(0px) rotate(.1deg);
+	}
+
+	75% {
+		transform: translateX(-1px) rotate(0deg);
+	}
+} */
+
 /* Header to allow centering the navbar after scroll*/
 header {
 	position: relative;
@@ -277,64 +376,7 @@ nav {
 .moon.visible {
 	transform: scale(1) rotate(0deg);
 }
-/* Treeline */
-#treeline-container {
-	display: flex;
-	justify-content: center;
 
-}
-#treeline {
-	position: absolute;
-	top: -13rem;
-	z-index: 10;    
-	width: 120%;
-	
-}
-#treeline path.a {
-	fill: var(--tree-color-3);
-	/* animation: myAnim 18s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards; */
-
-}
-#treeline path.b {
-	fill: var(--tree-color-2);
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .4s infinite normal forwards; */
-
-}
-#treeline path.c {
-	fill: var(--tree-color-1);
-	/* animation: myAnim 16s cubic-bezier(0.68, -0.6, 0.32, 1.6) .2s infinite normal forwards; */
-}
-#treeline path.d {
-	fill: var(--primary-bg-color);
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
-}
-/* @keyframes myAnim {
-	0%,
-	100% {
-		transform: translateX(0%);
-		transform-origin: 50% 50%;
-	}
-
-	15% {
-		transform: translateX(-3px) rotate(-.2deg);
-	}
-
-	30% {
-		transform: translateX(1px) rotate(.2deg);
-	}
-
-	45% {
-		transform: translateX(-1px) rotate(-.1deg);
-	}
-
-	60% {
-		transform: translateX(0px) rotate(.1deg);
-	}
-
-	75% {
-		transform: translateX(-1px) rotate(0deg);
-	}
-} */
 /* Links */
 a {
 	text-decoration: none;
