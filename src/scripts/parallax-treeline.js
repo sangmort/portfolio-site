@@ -1,15 +1,15 @@
 // Parallax effect for landscape background, targets and moves each SVG path as the user scrolls
-const paths = document.querySelectorAll("#treeline path");
+const svgPaths = document.querySelectorAll("#treeline path");
 
 // Parallax effects for each path
 const pathParallaxEffects = [
-    // { element: paths[0], direction: "down", speed: 0.08 },
-    { element: paths[1], direction: "up", speed: 0.2 },
-    { element: paths[2], direction: "down", speed: 0.15 },
-    { element: paths[3], direction: "up", speed: 0.2 },
-    { element: paths[4], direction: "up", speed: 0.5 },
-    { element: paths[5], direction: "up", speed: 0.9 },
-    { element: paths[6], direction: "up", speed: 1.1 },
+    { element: svgPaths[0], direction: "down", speed: 0.08 },
+    { element: svgPaths[1], direction: "up", speed: 0.2 },
+    { element: svgPaths[2], direction: "down", speed: 0.15 },
+    { element: svgPaths[3], direction: "up", speed: 0.2 },
+    { element: svgPaths[4], direction: "up", speed: 0.5 },
+    { element: svgPaths[5], direction: "up", speed: 0.9 },
+    { element: svgPaths[6], direction: "up", speed: 1.1 },
 ];
 
 const svgElement = document.querySelector("#treeline");
@@ -27,14 +27,14 @@ window.addEventListener("scroll", () => {
     if (scrollY > parallaxScrollThreshold) {
         if (!hideSVG) {
             svgElement.style.visibility = 'hidden';
-            paths[6].style.visibility = `visible`;
+            svgPaths[6].style.visibility = `visible`;
             hideSVG = true;
         }
     // Show the SVG if user scrolls back up
     } else {
         if (hideSVG) {
             svgElement.style.visibility = 'visible';
-            paths[6].style.visibility = `visible`;
+            svgPaths[6].style.visibility = `visible`;
             hideSVG = false;
         }
 
