@@ -42,3 +42,4 @@ toggle.addEventListener("click", () => {
 });
 
 initializeTheme();
+
