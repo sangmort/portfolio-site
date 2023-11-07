@@ -48,7 +48,7 @@ window.addEventListener(
       // Remove fireflies
       window.setTimeout(function () {
         document.body.removeChild(elem);
-      }, Math.round(Math.random() * scale * 360));
+      }, Math.round(Math.random() * scale * 300));
 
       // Random blinking
       setInterval(function () {
