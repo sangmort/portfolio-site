@@ -583,7 +583,7 @@ p code {
 }
 
 /* Resonsive Tablet/Medium */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
 	html {
 		margin: 0 auto;
 		overflow-x: hidden;
@@ -596,9 +596,9 @@ p code {
 
 	#treeline {
 		position: absolute;
-		top: -8dvh;
+		top: 0dvh;
 		z-index: 10;
-		width: 100rem;
+		width: 100dvw;
 	}
 
 	.navbar-default {
@@ -719,14 +719,15 @@ p code {
 
 	/* #cloud-container {
 		height: 24dvh;
-	}
+	} */
 
 	#treeline {
 		position: absolute;
-		top: -8dvh;
+		top: -2dvh;
+		left: 0;
 		z-index: 10;
-		width: 100rem;
-	} */
+		width: 100dvh;
+	} 
 
 	header {
 		margin: 0 auto;
