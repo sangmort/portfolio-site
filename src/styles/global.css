@@ -10,13 +10,15 @@ html[data-theme="light"] {
 	--cloud-shadow-color: #e6f5ff;
 	--cloud-bg-color-1: rgb(116, 211, 255);
 	--cloud-bg-color-2: rgb(179, 227, 255);
-	--tree-color-1: #e6f7ff;
-	--tree-color-2: #c2e0f1;
-	--tree-color-3: #eaf1f5;
-	--tree-color-4: #ceebff;
-	--tree-color-5: #b7d9ed;
-	--tree-color-6: #a3c8e4;
-	--tree-color-7: #ffffff;
+	--tree-color-1: #4a8eb9; /* background mountain */
+	--tree-color-2: #5295bf; /* foreground mountain */
+	--tree-color-3: #63a0c7; /* furthest bg trees */
+	--tree-color-4: #7baccf; /* 2nd furthest bg trees */
+	--tree-color-5: #8eb8d7; /* furthest midground trees */
+	--tree-color-6: #a5c3e0; /* midground trees */
+	--tree-color-7: #d0e1f2; /* foreground trees */
+
+	
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 	--sky-orb-color: #fffcd5;
@@ -37,13 +39,13 @@ html[data-theme="dark"] {
 	--cloud-shadow-color: #004e81;
 	--cloud-bg-color-1: rgb(11, 5, 61);
 	--cloud-bg-color-2: rgb(0, 115, 168);
-	--tree-color-1: #d7e0e3; /* background mountain */
-	--tree-color-2: #bdccd1; /* foreground mountain */
-	--tree-color-3: #a2bdbe; /* furthest bg trees */
-	--tree-color-4: #47636b; /* 2nd furthest bg trees */
-	--tree-color-5: #1d2736; /* furthest midground trees */
-	--tree-color-6: #121921; /* midground trees */
-	--tree-color-7: #081013; /* foreground trees */
+	--tree-color-1: #54738f; /* background mountain */
+	--tree-color-2: #2f485c; /* foreground mountain */
+	--tree-color-3: #192d3d; /* furthest bg trees */
+	--tree-color-4: #203633; /* 2nd furthest bg trees */
+	--tree-color-5: #152c2a; /* furthest midground trees */
+	--tree-color-6: #10221f; /* midground trees */
+	--tree-color-7: #0c1d1d; /* foreground trees */
 	
 
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
@@ -179,6 +181,10 @@ body {
 	width: 100%;
 }
 
+#treeline path {
+	transition: transform .3s ease;
+}
+
 #treeline path.a {
 	fill: var(--tree-color-1);
 	stroke: var(--tree-color-2);
@@ -189,32 +195,32 @@ body {
 	fill: var(--tree-color-2);
 	stroke: var(--tree-color-3);
 	stroke-width: .5;
+	filter: drop-shadow(0 10px 20px var(--tree-color-3));
 }
 
 #treeline path.c {
 	fill: var(--tree-color-3);
+	filter: drop-shadow(0 15px 15px var(--tree-color-3));
 }
 
 #treeline path.d {
 	fill: var(--tree-color-4);
-	filter: blur(.01rem);
 }
 
 #treeline path.e {
 	fill: var(--tree-color-5);
-	filter: blur(.03rem);
-	
 }
 
 #treeline path.f {
 	fill: var(--tree-color-6);
 	stroke: var(--tree-color-6);
-	filter: blur(.05rem);}
+	filter: blur(.02rem);
+}
 
 #treeline path.g {
 	fill: var(--tree-color-7);
 	stroke: var(--tree-color-7);
-	filter: blur(.07rem);
+	filter: blur(.05rem);
 
 }
 
@@ -585,12 +591,12 @@ p code {
 	}
 
 	#cloud-container {
-		height: 24dvh;
+		height: 25dvh;
 	}
 
 	#treeline {
 		position: absolute;
-		top: -32dvh;
+		top: -8dvh;
 		z-index: 10;
 		width: 100rem;
 	}
@@ -711,16 +717,16 @@ p code {
 		font-size: 16px;
 	}
 
-	#cloud-container {
-		height: 23dvh;
+	/* #cloud-container {
+		height: 24dvh;
 	}
 
 	#treeline {
 		position: absolute;
-		top: -26dvh;
+		top: -8dvh;
 		z-index: 10;
 		width: 100rem;
-	}
+	} */
 
 	header {
 		margin: 0 auto;

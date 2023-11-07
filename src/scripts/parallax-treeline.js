@@ -3,9 +3,9 @@ const svgPaths = document.querySelectorAll("#treeline path");
 
 // Parallax effects for each path
 const pathParallaxEffects = [
-  { element: svgPaths[0], direction: "down", speed: 0.08 },
+  { element: svgPaths[0], direction: "down", speed: 0.01 },
   { element: svgPaths[1], direction: "up", speed: 0.2 },
-  { element: svgPaths[2], direction: "down", speed: 0.15 },
+  { element: svgPaths[2], direction: "down", speed: .1 },
   { element: svgPaths[3], direction: "up", speed: 0.2 },
   { element: svgPaths[4], direction: "up", speed: 0.5 },
   { element: svgPaths[5], direction: "up", speed: 0.9 },
