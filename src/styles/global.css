@@ -21,6 +21,9 @@ html[data-theme='light'] {
 	--star-visibility: hidden;
 	--sky-orb-color: #fffcd5;
 	--sky-orb-color-2: #fffdef;
+	--fireflies-color-1: #c3ffa0;
+	--fireflies-color-2: #a6ff00;
+	--fireflies-color-2: #8cc521;
 	--outer-wrapper: rgba(232, 255, 190, 0.6);
 }
 html[data-theme='dark'] {
@@ -45,11 +48,18 @@ html[data-theme='dark'] {
 	--star-visibility: visible;
 	--sky-orb-color: #ffffff;
 	--sky-orb-color-2: #f2f6ff;
+	--fireflies-color-1: #ffe600;
+	--fireflies-color-2: #fff06c;
+	--fireflies-color-2: #ffce2c;
 	--outer-wrapper: rgba(1, 4, 32, 0.6);
 }
 * {
 	box-sizing: border-box;
 }
+
+svg path {
+	transition: transform 1s; /* Add a transition for smoother animation */
+  }
 
 #sky-orb {
 	position: absolute;
@@ -92,15 +102,6 @@ body {
 	overflow-x: hidden;
 	
 }
-
-.firefly {
-	width: 10px;
-	height: 10px;
-	background-color: yellow;
-	border-radius: 50%;
-	position: absolute;
-	transition: transform 0.5s ease-in-out;
-  }
 
 #outer-wrapper {
 	display: block;
