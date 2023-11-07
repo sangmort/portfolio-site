@@ -135,8 +135,9 @@ body {
 	z-index: 0;
 	border-radius: 50%;
 	background-color: var(--primary-font-color);
-	animation: animateStars 900s linear infinite;
-	filter: drop-shadow(0px 0px 1px rgba(214, 252, 255, 0.842));
+	animation: animateStars 1.75s linear infinite;
+	opacity: .4;
+	filter: drop-shadow(0px 0px 1px var(--sky-orb-color));
 }
 
 #stars-container {
@@ -789,12 +790,15 @@ p code {
 }
 
 @keyframes animateStars {
-	from {
-		transform: translateX(0px);
+	0%,
+	100% {
+		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
+		opacity: .9;
 	}
 
-	to {
-		transform: translateX(-2000px);
+	50% {
+		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
+		opacity: .75;
 	}
 }
 
