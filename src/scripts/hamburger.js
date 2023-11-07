@@ -49,11 +49,6 @@ window.addEventListener(
       window.setTimeout(function () {
         document.body.removeChild(elem);
       }, Math.round(Math.random() * scale * 300));
-
-      // Random blinking
-      setInterval(function () {
-        elem.style.opacity = Math.random() * 0.6 + 0.2;
-      }, Math.random() * 2000 + 100);
     }
 
     // Create fireflies
