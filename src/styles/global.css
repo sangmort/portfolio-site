@@ -1,5 +1,5 @@
 :root,
-html[data-theme='light'] {
+html[data-theme="light"] {
 	--primary-color: #b30000;
 	--secondary-color: #0099ff;
 	--primary-font-color: #0e0e0e;
@@ -22,18 +22,18 @@ html[data-theme='light'] {
 	--sky-orb-color: #fffcd5;
 	--sky-orb-color-2: #fffdef;
 	--fireflies-color-1: #c3ffa0;
-	--fireflies-color-2: #a6ff00;
 	--fireflies-color-2: #8cc521;
 	--outer-wrapper: rgba(217, 238, 255, 0.5);
 }
-html[data-theme='dark'] {
+
+html[data-theme="dark"] {
 	--primary-color: #b200df;
 	--secondary-color: #00aeff;
 	--primary-font-color: #efefef;
 	--secondary-font-color: #cecece;
 	--primary-bg-color: #030303;
 	--secondary-bg-color: #313131;
-	--cloud-main-color: #1E72A0;
+	--cloud-main-color: #1e72a0;
 	--cloud-shadow-color: #004e81;
 	--cloud-bg-color-1: rgb(11, 5, 61);
 	--cloud-bg-color-2: rgb(0, 115, 168);
@@ -49,7 +49,6 @@ html[data-theme='dark'] {
 	--sky-orb-color: #ffffff;
 	--sky-orb-color-2: #e9f0ff;
 	--fireflies-color-1: #ffe600;
-	--fireflies-color-2: #fff06c;
 	--fireflies-color-2: #ffce2c;
 	--outer-wrapper: rgba(5, 10, 53, 0.55);
 }
@@ -58,29 +57,11 @@ html[data-theme='dark'] {
 	box-sizing: border-box;
 }
 
-#sky-orb {
-	position: absolute;
-	margin: 0 auto;
-	top: 0;
-	height: 12rem;
-	z-index: 2;
-	filter:drop-shadow(0px 0px 12px var(--sky-orb-color));
-	 animation: animateSkyOrb 4s infinite normal forwards;
-}
-#sky-orb path.a {
-	fill: var(--sky-orb-color);
-}
-
-#sky-orb path.b {
-	fill: var(--sky-orb-color-2);
-	filter: blur(1px);
-}
-
 html {
 	background-color: var(--primary-bg-color);
 	width: var(--100-device-width);
 	color: var(--primary-font-color);
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 18px;
 }
 
@@ -91,24 +72,23 @@ html {
 	margin: 0 auto;
 	width: 55rem;
 }
+
 body {
 	position: relative;
 	margin: 0 auto;
 	width: auto;
 	height: 100dvh;
-	line-height: 1.5rem;
 	overflow-x: hidden;
-	
+	line-height: 1.5rem;
 }
 
 #outer-wrapper {
 	display: block;
 	position: fixed;
-	background-color: var(--outer-wrapper);
 	z-index: 100;
-	height: 100dvh;
+	background-color: var(--outer-wrapper);
 	width: 100dvw;
-	
+	height: 100dvh;
 }
 
 /* SkyHeader Styling */
@@ -122,28 +102,28 @@ body {
 	height: 14rem;
 	overflow: hidden;
 }
+
 .cloud1 {
 	position: absolute;
 	z-index: 3;
 	max-width: 10rem;
-	animation: animateClouds 700s linear infinite;  
-
-
-
+	animation: animateClouds 700s linear infinite;
 }
+
 .cloud2 {
 	position: absolute;
 	z-index: 2;
 	max-width: 11rem;
 	animation: animateClouds2 800s linear infinite;
 }
+
 .cloud3 {
 	position: absolute;
 	z-index: 1;
 	max-width: 6rem;
 	animation: animateClouds3 900s linear infinite;
-
 }
+
 .star {
 	position: absolute;
 	visibility: var(--star-visibility);
@@ -153,6 +133,7 @@ body {
 	animation: animateStars 900s linear infinite;
 	filter: drop-shadow(0px 0px 1px rgba(214, 252, 255, 0.842));
 }
+
 #stars-container {
 	position: absolute;
 	top: -5.5rem;
@@ -163,51 +144,75 @@ body {
 	overflow: hidden;
 }
 
+/* Sun & Moon in Sky */
+#sky-orb {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	margin: 0 auto;
+	height: 12rem;
+	animation: animateSkyOrb 4s infinite normal forwards;
+	filter: drop-shadow(0px 0px 12px var(--sky-orb-color));
+}
+
+#sky-orb path.a {
+	fill: var(--sky-orb-color);
+}
+
+#sky-orb path.b {
+	fill: var(--sky-orb-color-2);
+	filter: blur(1px);
+}
+
 /* Treeline */
 #treeline-container {
 	display: flex;
 	justify-content: center;
-
 }
+
 #treeline {
 	position: absolute;
 	top: -5rem;
-	z-index: 10;    
+	z-index: 10;
 	width: 100%;
 }
+
 #treeline path.a {
 	fill: var(--tree-color-1);
 	stroke: var(--tree-color-1);
-	stroke-width: .5;
+	stroke-width: 0.5;
 	filter: blur(2px);
 }
+
 #treeline path.b {
 	fill: var(--tree-color-2);
 	stroke: var(--tree-color-2);
 	stroke-width: 1;
 }
+
 #treeline path.c {
 	fill: var(--tree-color-3);
 	stroke: var(--tree-color-3);
 	stroke-width: 1;
 }
+
 #treeline path.d {
 	fill: var(--tree-color-4);
 	stroke: var(--tree-color-4);
-	stroke-width: .5;
+	stroke-width: 0.5;
 }
 
 #treeline path.e {
 	fill: var(--tree-color-5);
 	stroke: var(--tree-color-5);
-	stroke-width: .5;
+	stroke-width: 0.5;
 }
 
 #treeline path.f {
 	fill: var(--tree-color-6);
 	stroke: var(--tree-color-6);
 	stroke-width: 2;
-	filter:drop-shadow(0px -5px 15px var(--primary-bg-color));
+	filter: drop-shadow(0px -5px 15px var(--primary-bg-color));
 }
 
 #treeline path.g {
@@ -219,10 +224,11 @@ body {
 
 /* Header to allow centering the navbar after scroll*/
 header {
-	position: relative;
 	display: grid;
+	position: relative;
 	z-index: 600;
 }
+
 /* navigation */
 nav {
 	display: flex;
@@ -232,6 +238,7 @@ nav {
 	margin-bottom: 2rem;
 	text-transform: uppercase;
 }
+
 .navbar-default {
 	display: flex;
 	position: relative;
@@ -241,25 +248,28 @@ nav {
 	height: fit-content;
 	font-size: 1.125rem;
 }
+
 .navbar-shrink {
 	display: flex;
 	position: fixed;
 	justify-self: center;
 	margin-top: 0rem;
-	background-color: var(--primary-bg-color);
 	border-bottom: 1px solid var(--secondary-bg-color);
+	background-color: var(--primary-bg-color);
 	padding: 2rem 2rem;
 	width: 60rem;
 	height: 3rem;
-	animation: navbarEntrance .15s linear 0s 1 normal none;
+	animation: navbarEntrance 0.15s linear 0s 1 normal none;
 	font-size: 1rem;
 }
+
 /* Header Logo */
 #header-logo {
 	margin: 2rem 0;
 	height: 6.5rem;
 	fill: var(--secondary-font-color);
 }
+
 /* Top navigation links */
 .navbar-links {
 	display: flex;
@@ -268,38 +278,45 @@ nav {
 	align-items: center;
 	justify-content: center;
 	background: none;
-	padding: .5rem 0;
+	padding: 0.5rem 0;
 	width: 100%;
 }
+
 .navbar-links a {
 	display: inline-block;
-	padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 	color: var(--secondary-font-color);
 	font-weight: 500;
 }
+
 .navbar-links a:hover,
 .navbar-links a:focus {
-	transition: all .2s;
-	border-radius: .25rem;
+	transition: all 0.2s;
+	border-radius: 0.25rem;
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
 }
+
 /* Theme Icon SVG's */
 #sun {
-	margin-top: .25rem;
+	margin-top: 0.25rem;
 	height: 1.75rem;
 }
+
 #moon {
 	height: 2rem;
 }
+
 #sun path,
 #moon path {
 	fill: var(--primary-font-color);
 }
+
 /* Hamburger Menu */
 .hamburger {
 	display: none;
 }
+
 /* Close hamburger menu */
 .close-navigation {
 	display: none;
@@ -308,45 +325,53 @@ nav {
 #close-x path {
 	fill: var(--primary-font-color);
 }
+
 /* Theme Icon Toggle */
 #theme-toggle {
 	display: flex;
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	margin-left: .25rem;
+	margin-left: 0.25rem;
 	border: 0px solid var(--primary-color);
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	background: none;
 	width: 2rem;
 	height: 3rem;
 }
+
 #theme-toggle:hover {
 	cursor: pointer;
 }
+
 .sun,
 .moon {
 	position: absolute;
 	opacity: 0;
 	pointer-events: none;
 }
+
 .sun {
 	transform: scale(0.6) rotate(0deg);
 	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
+
 .moon {
 	transform: scale(0.6) rotate(0deg);
 	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 }
+
 .sun.visible,
 .moon.visible {
 	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
 	opacity: 1;
 	pointer-events: auto;
 }
+
 .sun.visible {
 	transform: scale(1) rotate(180deg);
 }
+
 .moon.visible {
 	transform: scale(1) rotate(0deg);
 }
@@ -356,38 +381,45 @@ a {
 	text-decoration: none;
 	color: var(--primary-color);
 }
+
 /* Headings */
 h1 {
 	margin-bottom: 2.125rem;
 	line-height: 2rem;
 	font-size: 2.125rem;
 }
+
 h2 {
 	margin-bottom: 1.875rem;
 	line-height: 1.75rem;
 	font-size: 1.875rem;
 }
+
 h3 {
 	margin-bottom: 1.5rem;
 	line-height: 1.375;
 	font-size: 1.5rem;
 }
+
 h4 {
 	margin-bottom: 1.25rem;
 	line-height: 1.125;
 	font-size: 1.25rem;
 }
+
 h5 {
 	margin-bottom: 1.125rem;
 	line-height: 1rem;
 	font-size: 1.125rem;
 }
+
 h6 {
 	margin-bottom: 1rem;
-	line-height: .875rem;
+	line-height: 0.875rem;
 	font-size: 1rem;
 	font-weight: bold;
 }
+
 /* Add » before each heading */
 h1::before,
 h2::before,
@@ -400,6 +432,7 @@ h6::before {
 	vertical-align: 7%;
 	content: "»";
 }
+
 /* Add padding to headings that follow a paragraph */
 p:not(:last-of-type)+h1,
 p:not(:last-of-type)+h2,
@@ -409,49 +442,60 @@ p:not(:last-of-type)+h5,
 p:not(:last-of-type)+h6 {
 	padding-top: 2rem;
 }
+
 /* Section Spacing */
 *+section {
 	margin-bottom: 5rem;
 }
+
 /* Paragraph Spacing */
 p {
 	margin-bottom: 1.25rem;
 }
+
 /* Markdown Styling */
 /* Emphasis */
 em {
 	font-style: italic;
 }
+
 /* Strong */
 strong {
 	font-weight: bold;
 }
+
 /* Lists */
 ol {
 	margin-left: 1rem;
 }
+
 ul>li {
 	display: flex;
 	flex-direction: row;
 }
+
 ol>li {
-	margin-left: .75rem;
+	margin-left: 0.75rem;
 }
+
 /* Spacing after last list item */
 ol>li:last-child:not(ol > li > ol > li),
 ul>li:last-child:not(ul > li > ul > li) {
 	margin-bottom: 2rem;
 }
+
 /* long dash for unordered list items */
 ul>li::before {
-	margin: 0 .5rem 0 0;
+	margin: 0 0.5rem 0 0;
 	content: "—";
 }
+
 /* long dash for sublist items */
 ul>li>ul>li::before {
-	margin: 0 .5rem 0 0;
+	margin: 0 0.5rem 0 0;
 	content: "—";
 }
+
 /* Blockquote */
 blockquote,
 q {
@@ -461,49 +505,57 @@ q {
 	padding-left: 1rem;
 	quotes: none;
 }
+
 blockquote p {
-	margin-bottom: .25rem;
+	margin-bottom: 0.25rem;
 }
+
 /* Code Block */
 pre.astro-code.github-dark {
 	margin-bottom: 2rem;
 	border-radius: 0.25rem;
 	padding: 1rem;
 }
+
 /* Inline code */
 p code {
 	display: inline-block;
-	border-radius: .25rem;
-	color: #fefefe !important;
+	border-radius: 0.25rem;
 	background-color: #24292e;
-	padding: .05rem .4rem;
+	padding: 0.05rem 0.4rem;
 	color: var(--primary-font-color);
 }
+
 /* tags */
 .tags-layout {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .tag {
 	margin-right: 0.5rem;
 }
+
 .tag>a {
-	border-radius: .4rem;
+	border-radius: 0.4rem;
 	background-color: var(--primary-color);
-	padding: .5rem 1.25rem;
+	padding: 0.5rem 1.25rem;
 	text-decoration: none;
 	color: var(--primary-bg-color);
 	font-size: 1.15rem;
 }
+
 .tag>a:hover {
 	background-color: var(--secondary-color);
 	text-decoration: none;
 	color: var(--primary-bg-color);
 }
+
 /* About Skills Sections */
 .skills>h3 {
 	font-size: 1.25rem;
 }
+
 .skills-layout {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -511,27 +563,30 @@ p code {
 	margin: 0 auto;
 	max-width: calc(100vw - 2rem);
 }
+
 .skills-layout .skills {
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	padding: 1.5rem;
 	min-height: 24rem;
 }
+
 .copyright {
 	display: flex;
 	bottom: 0;
 	align-items: flex-end;
 	justify-content: flex-end;
-	font-size: .75rem;
+	font-size: 0.75rem;
 }
+
 /* Resonsive Tablet/Medium */
 @media screen and (max-width: 1400px) {
 	html {
-		font-size: 17px;
-		overflow-x: hidden;
 		margin: 0 auto;
+		overflow-x: hidden;
+		font-size: 17px;
 	}
-	
+
 	#cloud-container {
 		height: 24dvh;
 	}
@@ -542,6 +597,7 @@ p code {
 		z-index: 10;
 		width: 100rem;
 	}
+
 	.navbar-default {
 		display: flex;
 		flex-direction: row;
@@ -558,6 +614,7 @@ p code {
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
 	}
+
 	.navbar-links {
 		display: none;
 		top: 1rem;
@@ -565,11 +622,11 @@ p code {
 		background-color: var(--secondary-color);
 		width: var(--100-device-width);
 	}
-	
+
 	.navbar-links a {
 		display: block;
 		border-bottom: 1px solid red;
-		border-radius: .2rem;
+		border-radius: 0.2rem;
 		padding: 3rem 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -577,9 +634,11 @@ p code {
 		font-size: 2.5rem;
 		font-weight: bold;
 	}
+
 	.navbar-links a:first-of-type {
 		border-top: 1px solid red;
 	}
+
 	.navbar-links.expanded {
 		display: flex;
 		position: absolute;
@@ -589,9 +648,8 @@ p code {
 		width: 100dvw;
 		height: 100dvh;
 		min-height: 10dvh;
-		
-
 	}
+
 	.hamburger {
 		display: flex;
 		flex-direction: column;
@@ -599,56 +657,63 @@ p code {
 		margin-right: 0rem;
 		cursor: pointer;
 	}
+
 	.hamburger>.line {
 		display: block;
 		background-color: var(--secondary-color);
 		width: 40px;
 		height: 5px;
 	}
+
 	.hamburger>.line:nth-child(2) {
 		display: block;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
 		padding: 1rem 2rem;
-		}
+	}
 
-#close-x {
-	height: 8rem;
-}
+	#close-x {
+		height: 8rem;
+	}
 
 	nav>div.navbar-links.expanded>.close-navigation:hover {
 		cursor: pointer;
 	}
+
 	.navbar-default,
-    .navbar-shrink {
+	.navbar-shrink {
 		height: 6rem;
 	}
+
 	#header-logo,
-    .navbar-shrink>#header-logo {
+	.navbar-shrink>#header-logo {
 		height: 3.5rem;
 	}
+
 	.skills-layout {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
 	h1 {
 		margin-top: 5rem;
 	}
 }
+
 /* Responsive Phone/Small */
 @media screen and (max-width: 900px) {
 	html {
-		font-size: 16px;
-		overflow-x: hidden;
 		margin: 0 auto;
+		overflow-x: hidden;
+		font-size: 16px;
 	}
 
-	
 	#cloud-container {
 		height: 23dvh;
 	}
@@ -669,58 +734,72 @@ p code {
 		margin: 0 auto;
 		width: calc(100dvw - 6rem);
 	}
+
 	.navbar-default,
-    .navbar-shrink {
+	.navbar-shrink {
 		padding: 0;
 		height: 5rem;
 	}
+
 	.skills-layout {
 		grid-template-columns: repeat(1, 1fr);
 	}
+
 	#header-logo,
-    .navbar-shrink>#header-logo {
+	.navbar-shrink>#header-logo {
 		height: 3.1rem;
 	}
 }
+
 /* Animations */
 @keyframes animateClouds {
+
 	0%,
-    100% {
+	100% {
 		transform: translateX(-100px);
 	}
+
 	to {
 		transform: translateX(3000px);
 	}
 }
+
 @keyframes animateClouds2 {
 	from {
 		transform: translateX(-300px);
 	}
+
 	to {
 		transform: translateX(3000px);
 	}
 }
+
 @keyframes animateClouds3 {
 	from {
 		transform: translateX(-100px);
 	}
+
 	to {
 		transform: translateX(3000px);
 	}
 }
+
 @keyframes animateStars {
 	from {
 		transform: translateX(0px);
 	}
+
 	to {
 		transform: translateX(-2000px);
 	}
 }
+
 @keyframes navbarEntrance {
 	0% {
 		transform: translateY(-50px);
 		opacity: 0;
 	}
+
 	100% {
 		transform: translateY(0);
 		opacity: 1;
@@ -728,10 +807,13 @@ p code {
 }
 
 @keyframes animateSkyOrb {
-	0%, 100% {
-		filter:drop-shadow(0px 0px 3px var(--sky-orb-color));
+
+	0%,
+	100% {
+		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
 	}
+
 	50% {
-		filter:drop-shadow(0px 0px 6px var(--sky-orb-color));
+		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
 	}
 }
