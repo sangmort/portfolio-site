@@ -216,7 +216,7 @@ body {
 	fill: var(--tree-color-7);
 	stroke: var(--tree-color-7);
 	filter: blur(.07rem);}
-}
+
 
 /* Header to allow centering the navbar after scroll*/
 header {
