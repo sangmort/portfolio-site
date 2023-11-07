@@ -175,7 +175,6 @@ body {
 
 #treeline {
 	position: absolute;
-	top: -5rem;
 	z-index: 10;
 	width: 100%;
 }
@@ -215,7 +214,9 @@ body {
 #treeline path.g {
 	fill: var(--tree-color-7);
 	stroke: var(--tree-color-7);
-	filter: blur(.07rem);}
+	filter: blur(.07rem);
+
+}
 
 
 /* Header to allow centering the navbar after scroll*/
