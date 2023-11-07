@@ -4,19 +4,19 @@ html[data-theme='light'] {
 	--secondary-color: #0099ff;
 	--primary-font-color: #0e0e0e;
 	--secondary-font-color: #1b1b1b;
-	--primary-bg-color: #a7c5a1;
+	--primary-bg-color: #ffffff;
 	--secondary-bg-color: #a7a7a7;
-	--cloud-main-color: #e4ecee;
-	--cloud-shadow-color: #b6dffb;
-	--cloud-bg-color-1: rgb(0, 213, 255);
-	--cloud-bg-color-2: rgb(0, 162, 255);
-	--tree-color-1: #8ca887;
-	--tree-color-2: #254420;
-	--tree-color-3: #dfebdd;
-	--tree-color-4: #c7d8c4;
-	--tree-color-5: #3f5e3a;
-	--tree-color-6: #0b2b06;
-	--tree-color-7: #a7c5a1;
+	--cloud-main-color: #ecfbff;
+	--cloud-shadow-color: #e6f5ff;
+	--cloud-bg-color-1: rgb(116, 211, 255);
+	--cloud-bg-color-2: rgb(179, 227, 255);
+	--tree-color-1: #e6f7ff;
+	--tree-color-2: #c2e0f1;
+	--tree-color-3: #eaf1f5;
+	--tree-color-4: #ceebff;
+	--tree-color-5: #b7d9ed;
+	--tree-color-6: #a3c8e4;
+	--tree-color-7: #ffffff;
 	
 	 /* Foreground Trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
@@ -26,48 +26,45 @@ html[data-theme='light'] {
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #a6ff00;
 	--fireflies-color-2: #8cc521;
-	--outer-wrapper: rgba(104, 187, 255, 0.5);
+	--outer-wrapper: rgba(217, 238, 255, 0.5);
 }
 html[data-theme='dark'] {
 	--primary-color: #b200df;
 	--secondary-color: #00aeff;
-	--primary-font-color: #eeeeee;
-	--secondary-font-color: #c4c4c4;
-	--primary-bg-color: #121212;
+	--primary-font-color: #efefef;
+	--secondary-font-color: #cecece;
+	--primary-bg-color: #030303;
 	--secondary-bg-color: #313131;
 	--cloud-main-color: #1E72A0;
 	--cloud-shadow-color: #004e81;
-	--cloud-bg-color-1: rgb(0, 115, 168);
-	--cloud-bg-color-2: rgb(11, 5, 61);
+	--cloud-bg-color-1: rgb(11, 5, 61);
+	--cloud-bg-color-2: rgb(0, 115, 168);
 	--tree-color-1: #1e323a;
-	--tree-color-2: #365158;
-	--tree-color-3: #1f333b;
+	--tree-color-2: #3b565e;
+	--tree-color-3: #040816;
 	--tree-color-4: #121921;
 	--tree-color-5: #1d2736;
-	--tree-color-6: #526f7c;
-	--tree-color-7: #121212;
+	--tree-color-6: #556d77;
+	--tree-color-7: #030303;
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
 	--sky-orb-color: #ffffff;
-	--sky-orb-color-2: #f2f6ff;
+	--sky-orb-color-2: #e9f0ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #fff06c;
 	--fireflies-color-2: #ffce2c;
-	--outer-wrapper: rgba(1, 4, 32, 0.6);
+	--outer-wrapper: rgba(5, 10, 53, 0.55);
 }
+
 * {
 	box-sizing: border-box;
 }
 
-svg path {
-	transition: transform 1s; /* Add a transition for smoother animation */
-  }
-
 #sky-orb {
 	position: absolute;
-	left: -20rem;
+	margin: 0 auto;
 	top: 0;
-	height: 9rem;
+	height: 12rem;
 	z-index: 2;
 	filter:drop-shadow(0px 0px 12px var(--sky-orb-color));
 	 animation: animateSkyOrb 4s infinite normal forwards;
@@ -78,6 +75,7 @@ svg path {
 
 #sky-orb path.b {
 	fill: var(--sky-orb-color-2);
+	filter: blur(1px);
 }
 
 html {
@@ -132,13 +130,14 @@ body {
 	max-width: 10rem;
 	animation: animateClouds 700s linear infinite;  
 
+
+
 }
 .cloud2 {
 	position: absolute;
 	z-index: 2;
 	max-width: 11rem;
 	animation: animateClouds2 800s linear infinite;
-
 }
 .cloud3 {
 	position: absolute;
@@ -182,6 +181,7 @@ body {
 	fill: var(--tree-color-1);
 	stroke: var(--tree-color-1);
 	stroke-width: .5;
+	filter: blur(2px);
 	/* animation: myAnim 1s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards; */
 
 }
@@ -202,6 +202,8 @@ body {
 	fill: var(--tree-color-4);
 	stroke: var(--tree-color-4);
 	stroke-width: .5;
+	.
+	
 	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 
@@ -216,6 +218,7 @@ body {
 	fill: var(--tree-color-6);
 	stroke: var(--tree-color-6);
 	stroke-width: 2;
+	filter:drop-shadow(0px -5px 15px var(--primary-bg-color));
 	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 
@@ -223,6 +226,7 @@ body {
 	fill: var(--tree-color-7);
 	stroke: var(--tree-color-7);
 	stroke-width: 1;
+	filter: blur(1px);
 	/* animation: myAnim 30s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 /* @keyframes myAnim {
