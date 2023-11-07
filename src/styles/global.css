@@ -17,8 +17,6 @@ html[data-theme='light'] {
 	--tree-color-5: #b7d9ed;
 	--tree-color-6: #a3c8e4;
 	--tree-color-7: #ffffff;
-	
-	 /* Foreground Trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 	--sky-orb-color: #fffcd5;
@@ -182,36 +180,27 @@ body {
 	stroke: var(--tree-color-1);
 	stroke-width: .5;
 	filter: blur(2px);
-	/* animation: myAnim 1s cubic-bezier(0.68, -0.6, 0.32, 1.6) .6s infinite normal forwards; */
-
 }
 #treeline path.b {
 	fill: var(--tree-color-2);
 	stroke: var(--tree-color-2);
 	stroke-width: 1;
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .4s infinite normal forwards; */
-
 }
 #treeline path.c {
 	fill: var(--tree-color-3);
 	stroke: var(--tree-color-3);
 	stroke-width: 1;
-	/* animation: myAnim 16s cubic-bezier(0.68, -0.6, 0.32, 1.6) .2s infinite normal forwards; */
 }
 #treeline path.d {
 	fill: var(--tree-color-4);
 	stroke: var(--tree-color-4);
 	stroke-width: .5;
-	.
-	
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 
 #treeline path.e {
 	fill: var(--tree-color-5);
 	stroke: var(--tree-color-5);
 	stroke-width: .5;
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 
 #treeline path.f {
@@ -219,7 +208,6 @@ body {
 	stroke: var(--tree-color-6);
 	stroke-width: 2;
 	filter:drop-shadow(0px -5px 15px var(--primary-bg-color));
-	/* animation: myAnim 17s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
 
 #treeline path.g {
@@ -227,35 +215,7 @@ body {
 	stroke: var(--tree-color-7);
 	stroke-width: 1;
 	filter: blur(1px);
-	/* animation: myAnim 30s cubic-bezier(0.68, -0.6, 0.32, 1.6) .5s infinite normal forwards; */
 }
-/* @keyframes myAnim {
-	0%,
-	100% {
-		transform: translateX(0%);
-		transform-origin: 50% 50%;
-	}
-
-	15% {
-		transform: translateX(-3px) rotate(-.2deg);
-	}
-
-	30% {
-		transform: translateX(1px) rotate(.2deg);
-	}
-
-	45% {
-		transform: translateX(-1px) rotate(-.1deg);
-	}
-
-	60% {
-		transform: translateX(0px) rotate(.1deg);
-	}
-
-	75% {
-		transform: translateX(-1px) rotate(0deg);
-	}
-} */
 
 /* Header to allow centering the navbar after scroll*/
 header {
