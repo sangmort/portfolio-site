@@ -8,8 +8,8 @@ html[data-theme="light"] {
 	--secondary-bg-color: #d7fffc;
 	--cloud-main-color: #eafbff;
 	--cloud-shadow-color: #d4efff;
-	--cloud-bg-color-1: rgb(76, 154, 255);
-	--cloud-bg-color-2: rgb(143, 214, 255);
+	--cloud-bg-color-1: rgb(147, 224, 255);
+	--cloud-bg-color-2: rgb(197, 234, 255);
 	--tree-color-1: #BFDBF2;
 	/* background mountain */
 	--tree-color-2: #dfedf7;
@@ -27,8 +27,8 @@ html[data-theme="light"] {
 
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
-	--sky-orb-color: #fffcd5;
-	--sky-orb-color-2: #fffdef;
+	--sky-orb-color: #fffde6;
+	--sky-orb-color-2: #ffffff;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
 	--outer-wrapper: rgba(217, 238, 255, 0.5);
