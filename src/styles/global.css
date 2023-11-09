@@ -12,7 +12,7 @@ html[data-theme="light"] {
 	--cloud-bg-color-2: rgb(143, 214, 255);
 	--tree-color-1: #BFDBF2;
 	/* background mountain */
-	--tree-color-2: #C8E1F4;
+	--tree-color-2: #dfedf7;
 	/* foreground mountain */
 	--tree-color-3: #D1E6F6;
 	/* furthest bg trees */
@@ -87,6 +87,8 @@ html {
 	z-index: 100;
 	margin: 0 auto;
 	width: 55rem;
+	margin-top: 30rem;
+	transition: transform 0.3s ease;
 }
 
 body {
