@@ -436,7 +436,6 @@ h6 {
 }
 
 /* Add » before each heading */
-h1::before,
 h2::before,
 h3::before,
 h4::before,
