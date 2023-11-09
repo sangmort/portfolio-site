@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerLogo = document.getElementById("header-logo");
   const header = document.querySelector("header");
   const navbar = document.querySelector(".navbar-default");
-  const scrollThreshold = 100;
+  const scrollThreshold = 200;
 
   // Track whether navigation is sticky
   let isNavigationSticky = false;
