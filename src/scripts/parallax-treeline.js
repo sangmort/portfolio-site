@@ -1,6 +1,7 @@
 // Parallax effect for landscape background, targets and moves each SVG path as the user scrolls
 const svgPaths = document.querySelectorAll("#treeline path");
 const wrapper = document.getElementById("wrapper");
+const skyOrb = document.getElementById("sky-orb");
 
 // Parallax effects for each path
 const pathParallaxEffects = [
@@ -12,6 +13,7 @@ const pathParallaxEffects = [
   { element: svgPaths[5], direction: "up", speed: 0.9 },
   { element: svgPaths[6], direction: "up", speed: 1.3 },
   { element: wrapper, direction: "up", speed: 2 },
+  { element: skyOrb, direction: "down", speed: .2 }
 ];
 
 const svgElement = document.querySelector("#treeline");

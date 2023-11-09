@@ -169,9 +169,11 @@ body {
 	top: 0;
 	z-index: 2;
 	margin: 0 auto;
+	margin-top: 6rem;
 	height: 12rem;
 	animation: animateSkyOrb 4s infinite normal forwards;
 	filter: drop-shadow(0px 0px 12px var(--sky-orb-color));
+	transition: transform 0.3s ease;
 }
 
 #sky-orb path.a {
@@ -242,6 +244,7 @@ header {
 	display: grid;
 	position: relative;
 	z-index: 600;
+	top: 25dvh;
 }
 
 /* navigation */
@@ -261,7 +264,7 @@ nav {
 	align-items: center;
 	justify-content: center;
 	height: fit-content;
-	font-size: 1.125rem;
+	font-size: 1.75rem;
 }
 
 .navbar-shrink {
@@ -281,7 +284,7 @@ nav {
 /* Header Logo */
 #header-logo {
 	margin: 2rem 0;
-	height: 6.5rem;
+	height: 30dvh;
 	fill: var(--secondary-font-color);
 }
 
