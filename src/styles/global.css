@@ -245,6 +245,7 @@ header {
 	position: relative;
 	z-index: 600;
 	top: 25dvh;
+	transition: transform 0.3s ease;
 }
 
 /* navigation */
