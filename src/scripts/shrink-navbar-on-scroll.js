@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("navbar-shrink");
       header.style.position = "sticky";
       header.style.top = "0";
-      headerLogo.style.display = "none";
+      headerLogo.style.visibility = "hidden";
 
       // Create a placeholder when navigation is sticky to stop page from jumping
       const headerPlaceholder = document.createElement("div");
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY < scrollThreshold && isNavigationSticky) {
       navbar.classList.remove("navbar-shrink");
       header.style.position = "relative";
-      header.style.top = "initial";
-      headerLogo.style.display = "block";
+      header.style.top = "25dvh";
+      headerLogo.style.visibility = "visible";
 
       // Remove placeholder when navigation is no longer sticky
       const headerPlaceholder = document.querySelector("#header-placeholder");

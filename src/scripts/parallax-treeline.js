@@ -2,6 +2,7 @@
 const svgPaths = document.querySelectorAll("#treeline path");
 const wrapper = document.getElementById("wrapper");
 const skyOrb = document.getElementById("sky-orb");
+const header = document.querySelector("header");
 
 // Parallax effects for each path
 const pathParallaxEffects = [
@@ -13,7 +14,8 @@ const pathParallaxEffects = [
   { element: svgPaths[5], direction: "up", speed: 0.9 },
   { element: svgPaths[6], direction: "up", speed: 1.3 },
   { element: wrapper, direction: "up", speed: 2 },
-  { element: skyOrb, direction: "down", speed: .2 }
+  { element: skyOrb, direction: "down", speed: .2 },
+  { element: header, direction: "up", speed: 1.3 }
 ];
 
 const svgElement = document.querySelector("#treeline");
