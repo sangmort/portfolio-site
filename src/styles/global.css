@@ -243,20 +243,20 @@ body {
 header {
 	display: grid;
 	position: relative;
-	z-index: 600;
+	z-index: 1000;
 	top: 25dvh;
 	transition: transform 0.3s ease;
 }
 
 /* navigation */
-nav {
+/* nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	z-index: 10;
 	margin-bottom: 2rem;
 	text-transform: uppercase;
-}
+} */
 
 .navbar-default {
 	display: flex;
@@ -270,7 +270,6 @@ nav {
 
 .navbar-shrink {
 	display: flex;
-	position: fixed;
 	justify-self: center;
 	margin-top: 0rem;
 	border-bottom: 1px solid var(--secondary-bg-color);
@@ -280,6 +279,7 @@ nav {
 	height: 3rem;
 	animation: navbarEntrance 0.15s linear 0s 1 normal none;
 	font-size: 1rem;
+	z-index: 1000;
 }
 
 /* Header Logo */
@@ -287,6 +287,14 @@ nav {
 	margin: 2rem 0;
 	height: 30dvh;
 	fill: var(--secondary-font-color);
+}
+
+#sticky {
+	visibility: hidden;
+	background-color: red;
+	margin-top: 0;
+	position: fixed;
+	z-index: 800;
 }
 
 /* Top navigation links */

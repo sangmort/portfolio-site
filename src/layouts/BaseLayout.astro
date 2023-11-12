@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SkyHeader from "../components/SkyHeader.astro";
+import StickyNavigation from "../components/StickyNavigation.astro";
 import Treeline from "../components/Treeline.astro";
 
 import "../styles/reset.css";
@@ -30,6 +31,7 @@ const { pageTitle } = Astro.props;
     <SkyHeader />
     <Treeline />
     <Header />
+    <StickyNavigation />
     <div id="wrapper">
       <h1>{pageTitle}</h1>
       <slot />
