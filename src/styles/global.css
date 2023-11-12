@@ -290,9 +290,12 @@ header {
 }
 
 #sticky {
+	display: flex;
 	visibility: hidden;
-	background-color: red;
-	margin-top: 0;
+	background-color: var(--primary-bg-color);
+	border-bottom: 1px solid var(--secondary-bg-color);
+	top: 0;
+	margin: 0 auto;
 	position: fixed;
 	z-index: 800;
 }
