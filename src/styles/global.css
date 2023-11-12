@@ -87,7 +87,7 @@ html {
 	z-index: 100;
 	margin: 0 auto;
 	width: 55rem;
-	margin-top: 44rem;
+	top: 37rem;
 	transition: transform 0.3s ease;
 }
 
