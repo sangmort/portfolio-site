@@ -300,7 +300,6 @@ header {
 /* Top navigation links */
 .navbar-links {
 	display: flex;
-	position: static;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
@@ -359,7 +358,7 @@ header {
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	margin-left: 0.25rem;
+	margin: .5rem .75rem;
 	border: 0px solid var(--primary-color);
 	border-radius: 0.5rem;
 	background: none;
