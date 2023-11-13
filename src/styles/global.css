@@ -326,20 +326,6 @@ header {
 	color: var(--primary-bg-color);
 }
 
-/* Theme Icon SVG's */
-#sun {
-	margin-top: 0.25rem;
-	height: 1.75rem;
-}
-
-#moon {
-	height: 2rem;
-}
-
-#sun path,
-#moon path {
-	fill: var(--primary-font-color);
-}
 
 /* Hamburger Menu */
 .hamburger {
@@ -355,8 +341,24 @@ header {
 	fill: var(--primary-font-color);
 }
 
+/* Theme Icon SVG's */
+.sunny {
+	margin-top: 0.25rem;
+	height: 1.75rem;
+}
+
+.moony {
+	height: 2rem;
+}
+
+.sunny path,
+.moony path {
+	fill: var(--primary-font-color);
+}
+
+
 /* Theme Icon Toggle */
-#theme-toggle {
+.theme-toggle {
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -369,7 +371,7 @@ header {
 	height: 3rem;
 }
 
-#theme-toggle:hover {
+.theme-toggle:hover {
 	cursor: pointer;
 }
 
