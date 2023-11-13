@@ -55,7 +55,7 @@ html[data-theme="dark"] {
 	/* background mountain */
 	--tree-color-2: #183657;
 	/* foreground mountain */
-	--tree-color-3: #15324A;
+	--tree-color-3: #1a4268;
 	/* furthest bg trees */
 	--tree-color-4: #112C42;
 	/* 2nd furthest bg trees */
@@ -232,7 +232,6 @@ body {
 
 #treeline path.c {
 	fill: url(#treelineGradient3);
-	filter: drop-shadow(20px 0px 1px var(--tree-color-4));
 }
 
 #treeline path.d {
@@ -247,8 +246,6 @@ body {
 #treeline path.f {
 	fill: url(#treelineGradient6);
 	filter: drop-shadow(-50px -1px 0px var(--tree-color-6));
-	/* stroke: var(--tree-color-6); */
-	/* filter: blur(0.02rem); */
 }
 
 #treeline path.g {
