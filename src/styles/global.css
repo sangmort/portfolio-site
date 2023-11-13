@@ -266,15 +266,6 @@ header {
 }
 
 /* navigation */
-/* nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	z-index: 10;
-	margin-bottom: 2rem;
-	text-transform: uppercase;
-} */
-
 .navbar-default {
 	display: flex;
 	position: relative;
