@@ -148,7 +148,7 @@ body {
 
 .cloud3 {
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 	max-width: 6rem;
 	animation: animateClouds3 950s linear infinite;
 	filter: url(#myFilter);
@@ -157,11 +157,11 @@ body {
 .star {
 	position: absolute;
 	visibility: var(--star-visibility);
-	opacity: 0.4;
+	opacity: 0.75;
 	z-index: 0;
 	border-radius: 50%;
-	background-color: var(--primary-font-color);
-	animation: animateStars 1.75s linear infinite;
+	background-color: var(--secondary-font-color);
+	animation: animateStars 3s linear infinite;
 	filter: drop-shadow(0px 0px 1px var(--sky-orb-color));
 }
 
@@ -807,12 +807,12 @@ p code {
 
 	0%,
 	100% {
-		opacity: 0.9;
+		opacity: 1;
 		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
 	}
 
 	50% {
-		opacity: 0.75;
+		opacity: 0.5;
 		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
 	}
 }

@@ -11,7 +11,7 @@ if (screenWidth < 800) {
 } else if (screenWidth >= 800 && screenWidth <= 1200) {
   numberOfCopies = 30; // For screens between 800px and 1200px
 } else {
-  numberOfCopies = 66; // For screens > 1200px
+  numberOfCopies = 60; // For screens > 1200px
 }
 
 const duplicateClouds = () => {
@@ -48,13 +48,14 @@ function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+// Creates the stars & stylyes them
 function createStar() {
   const star = document.createElement("div");
   star.classList.add("star");
   star.style.width = getRandomNumber(1, 3) + "px";
   star.style.height = star.style.width;
-  star.style.left = getRandomNumber(0, 100) + "vw";
-  star.style.top = getRandomNumber(0, 100) + "vh";
+  star.style.left = getRandomNumber(0, 100) + "dvw";
+  star.style.top = getRandomNumber(0, 100) + "dvh";
   return star;
 }
 
@@ -66,4 +67,4 @@ function addStarsToContainer(container, numStars) {
 }
 
 const starsContainer = document.getElementById("star-container");
-addStarsToContainer(container, 800);
+addStarsToContainer(container, 1100);
