@@ -2,33 +2,37 @@
 html[data-theme="light"] {
 	--primary-color: #b30000;
 	--secondary-color: #0099ff;
-	--primary-font-color: #0e0e0e;
+	--primary-font-color: #121212;
 	--secondary-font-color: #1b1b1b;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: #d7fffc;
-	--cloud-main-color: #eafbff;
-	--cloud-shadow-color: #d4efff;
-	--cloud-bg-color-1: rgb(147, 224, 255);
-	--cloud-bg-color-2: rgb(197, 234, 255);
-	--tree-color-1: #BFDBF2;
+	--secondary-bg-color: var(--tree-color-2);
+	--cloud-main-color: #f2ffff;
+	--cloud-shadow-color: #cefcff;
+	--cloud-bg-color-1: rgb(255, 255, 230);
+	--cloud-bg-color-2: rgb(197, 255, 255);
+	--cloud-bg-color-3: rgb(63, 203, 228);
+	--cloud-bg-glow: rgb(252, 255, 240);
+	--tree-color-1: #81D4F0;
 	/* background mountain */
-	--tree-color-2: #dfedf7;
+	--tree-color-2: #9cdbee;
 	/* foreground mountain */
-	--tree-color-3: #D1E6F6;
+	--tree-color-3: #A0E0EF;
 	/* furthest bg trees */
-	--tree-color-4: #DAECF9;
+	--tree-color-4: #AFE6EF;
 	/* 2nd furthest bg trees */
-	--tree-color-5: #E2F2FB;
+	--tree-color-5: #BFEDEE;
 	/* furthest midground trees */
-	--tree-color-6: #EBF7FD;
+	--tree-color-6: #CEF3EE;
 	/* midground trees */
-	--tree-color-7: #F9FEFF;
+	--tree-color-7: #DEF9ED;
+	/* extra shading */
+	--tree-color-8: #EDFFED;
 	/* foreground trees */
-
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
 	--sky-orb-color: #fffde6;
-	--sky-orb-color-2: #ffffff;
+	--sky-orb-color-2: var(--sky-orb-color);
+	--sky-orb-stroke-color: #FFF6CF;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
 	--outer-wrapper: rgba(217, 238, 255, 0.5);
@@ -40,30 +44,34 @@ html[data-theme="dark"] {
 	--primary-font-color: #efefef;
 	--secondary-font-color: #cecece;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: #313131;
-	--cloud-main-color: #1e72a0;
-	--cloud-shadow-color: #004e81;
-	--cloud-bg-color-1: rgb(11, 5, 61);
-	--cloud-bg-color-2: rgb(0, 115, 168);
-	--tree-color-1: #192c53;
+	--secondary-bg-color: var(--tree-color-1);
+	--cloud-main-color: #2e7dbd;
+	--cloud-shadow-color: #005b97;
+	--cloud-bg-color-1: rgb(0, 127, 185);
+	--cloud-bg-color-2: rgb(0, 99, 165);
+	--cloud-bg-color-3: rgb(0, 30, 85);
+	--cloud-bg-glow: rgb(0, 117, 212);
+	--tree-color-1: #1B3964;
 	/* background mountain */
-	--tree-color-2: #10213D;
+	--tree-color-2: #183657;
 	/* foreground mountain */
-	--tree-color-3: #0F2035;
+	--tree-color-3: #15324A;
 	/* furthest bg trees */
-	--tree-color-4: #0F1F2E;
+	--tree-color-4: #112C42;
 	/* 2nd furthest bg trees */
-	--tree-color-5: #0e1b26;
+	--tree-color-5: #0E2837;
 	/* furthest midground trees */
-	--tree-color-6: #0d191e;
+	--tree-color-6: #0b202c;
 	/* midground trees */
-	--tree-color-7: #0c141c;
+	--tree-color-7: #071620;
+	/* extra shading */
+	--tree-color-8: #04131b;
 	/* foreground trees */
-
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: visible;
-	--sky-orb-color: #ffffff;
-	--sky-orb-color-2: #e9f0ff;
+	--sky-orb-color: #eaf3ff;
+	--sky-orb-color-2: #dce4f5;
+	--sky-orb-stroke-color: #cff5ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #ffce2c;
 	--outer-wrapper: rgba(5, 10, 53, 0.55);
@@ -114,8 +122,8 @@ body {
 	position: absolute;
 	top: 0;
 	margin: 0 auto;
-	background: radial-gradient(var(--cloud-bg-color-1), var(--cloud-bg-color-2));
-	background-color: #0099ff;
+	background: radial-gradient(var(--cloud-bg-color-1) 0%, var(--cloud-bg-color-2) 33%, var(--cloud-bg-color-3) 77%);
+	background-color: var(--cloud-bg-color-1);
 	width: 100%;
 	height: 18rem;
 	overflow: hidden;
@@ -124,22 +132,26 @@ body {
 .cloud1 {
 	position: absolute;
 	z-index: 3;
-	max-width: 10rem;
+	max-width: 8rem;
 	animation: animateClouds 700s linear infinite;
+	filter: url(#myFilter);
+
 }
 
 .cloud2 {
 	position: absolute;
-	z-index: 2;
-	max-width: 11rem;
+	z-index: 1;
+	max-width: 10rem;
 	animation: animateClouds2 800s linear infinite;
+	filter: url(#myFilter);
 }
 
 .cloud3 {
 	position: absolute;
-	z-index: 1;
+	z-index: 0;
 	max-width: 6rem;
 	animation: animateClouds3 900s linear infinite;
+	filter: url(#myFilter);
 }
 
 .star {
@@ -166,18 +178,21 @@ body {
 /* Sun & Moon in Sky */
 #sky-orb {
 	position: absolute;
-	top: 0;
 	z-index: 2;
+	top: 6rem;
 	margin: 0 auto;
-	margin-top: 6rem;
 	height: 12rem;
 	animation: animateSkyOrb 4s infinite normal forwards;
 	filter: drop-shadow(0px 0px 12px var(--sky-orb-color));
 	transition: transform 0.3s ease;
+
 }
 
 #sky-orb path.a {
 	fill: var(--sky-orb-color);
+	stroke: var(--sky-orb-stroke-color);
+	stroke-width: .5;
+
 }
 
 #sky-orb path.b {
@@ -202,41 +217,46 @@ body {
 }
 
 #treeline path.a {
-	fill: var(--tree-color-1);
-	stroke: var(--tree-color-2);
+	fill: url(#treelineGradient1);
+	stroke: var(--cloud-bg-color-1);
 	stroke-width: 0.5;
+	filter: drop-shadow(0 -10px 20px var(--cloud-bg-glow));
 }
 
 #treeline path.b {
-	fill: var(--tree-color-2);
-	stroke: var(--tree-color-3);
+	fill: url(#treelineGradient2);
+	stroke: var(--cloud-bg-color-2);
 	stroke-width: 0.5;
-	filter: drop-shadow(0 10px 20px var(--tree-color-3));
+	filter: drop-shadow(0 0px 20px var(--tree-color-5));
 }
 
 #treeline path.c {
-	fill: var(--tree-color-3);
-	filter: drop-shadow(0 15px 15px var(--tree-color-3));
+	fill: url(#treelineGradient3);
+	filter: drop-shadow(20px 0px 1px var(--tree-color-4));
 }
 
 #treeline path.d {
-	fill: var(--tree-color-4);
+	fill: url(#treelineGradient4);
+	filter: drop-shadow(-20px 0px 20px var(--tree-color-5));
 }
 
 #treeline path.e {
-	fill: var(--tree-color-5);
+	fill: url(#treelineGradient5);
 }
 
 #treeline path.f {
-	fill: var(--tree-color-6);
-	stroke: var(--tree-color-6);
-	filter: blur(0.02rem);
+	fill: url(#treelineGradient6);
+	filter: drop-shadow(-50px -1px 0px var(--tree-color-6));
+	/* stroke: var(--tree-color-6); */
+	/* filter: blur(0.02rem); */
 }
 
 #treeline path.g {
-	fill: var(--tree-color-7);
+	fill: url(#treelineGradient7);
 	stroke: var(--tree-color-7);
+	stroke-width: .3;
 	filter: blur(0.05rem);
+
 }
 
 /* Header to allow centering the navbar after scroll*/
@@ -841,10 +861,10 @@ p code {
 
 	0%,
 	100% {
-		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
+		filter: drop-shadow(0px 0px 6px var(--sky-orb-stroke-color));
 	}
 
 	50% {
-		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
+		filter: drop-shadow(0px 0px 9px var(--sky-orb-stroke-color));
 	}
 }
