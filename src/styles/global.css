@@ -133,7 +133,7 @@ body {
 	position: absolute;
 	z-index: 3;
 	max-width: 8rem;
-	animation: animateClouds 700s linear infinite;
+	animation: animateClouds 800s linear infinite;
 	filter: url(#myFilter);
 
 }
@@ -142,7 +142,7 @@ body {
 	position: absolute;
 	z-index: 1;
 	max-width: 10rem;
-	animation: animateClouds2 800s linear infinite;
+	animation: animateClouds2 850s linear infinite;
 	filter: url(#myFilter);
 }
 
@@ -150,7 +150,7 @@ body {
 	position: absolute;
 	z-index: 0;
 	max-width: 6rem;
-	animation: animateClouds3 900s linear infinite;
+	animation: animateClouds3 950s linear infinite;
 	filter: url(#myFilter);
 }
 
@@ -779,7 +779,7 @@ p code {
 	}
 
 	to {
-		transform: translateX(3000px);
+		transform: translateX(125dvw);
 	}
 }
 
@@ -789,17 +789,17 @@ p code {
 	}
 
 	to {
-		transform: translateX(3000px);
+		transform: translateX(125dvw);
 	}
 }
 
 @keyframes animateClouds3 {
 	from {
-		transform: translateX(-100px);
+		transform: translateX(-200px);
 	}
 
 	to {
-		transform: translateX(3000px);
+		transform: translateX(125dvw);
 	}
 }
 
