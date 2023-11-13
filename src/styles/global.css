@@ -2,8 +2,8 @@
 html[data-theme="light"] {
 	--primary-color: #b30000;
 	--secondary-color: #0099ff;
-	--primary-font-color: #121212;
-	--secondary-font-color: #1b1b1b;
+	--primary-font-color: #222222;
+	--secondary-font-color: #222838;
 	--primary-bg-color: var(--tree-color-7);
 	--secondary-bg-color: var(--tree-color-2);
 	--cloud-main-color: #f2ffff;
@@ -42,7 +42,7 @@ html[data-theme="dark"] {
 	--primary-color: #b200df;
 	--secondary-color: #00aeff;
 	--primary-font-color: #efefef;
-	--secondary-font-color: #cecece;
+	--secondary-font-color: #cee3f1;
 	--primary-bg-color: var(--tree-color-7);
 	--secondary-bg-color: var(--tree-color-1);
 	--cloud-main-color: #2e7dbd;
