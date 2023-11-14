@@ -32,7 +32,7 @@ html[data-theme="light"] {
 	--star-visibility: hidden;
 	--sky-orb-color: #fffde6;
 	--sky-orb-color-2: var(--sky-orb-color);
-	--sky-orb-stroke-color: #FFF6CF;
+	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
 	--outer-wrapper: rgba(217, 238, 255, 0.5);
@@ -286,10 +286,11 @@ header {
 	visibility: hidden;
 	background-color: var(--primary-bg-color);
 	border-bottom: 1px solid var(--secondary-bg-color);
-	top: 0;
 	margin: 0 auto;
 	position: fixed;
 	z-index: 800;
+	animation: 2s ease-in navbarEntrance;
+		/* transition: opacity 40s ease; */
 }
 
 /* Top navigation links */
@@ -301,6 +302,7 @@ header {
 	background: none;
 	padding: 0.5rem 0;
 	width: 100%;
+	transition: all 1s; 
 }
 
 .navbar-links a {
@@ -812,15 +814,30 @@ p code {
 }
 
 @keyframes navbarEntrance {
-	0% {
-		transform: translateY(-50px);
-		opacity: 0;
-	}
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
 
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
+	25% {
+        opacity: 0.20;
+        transform: translateY(-75%);
+    } 
+
+	50% {
+        opacity: 0.45;
+        transform: translateY(-50%);
+    } 
+
+	75% {
+        opacity: 0.7;
+        transform: translateY(-25%);
+    } 
+
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
 }
 
 @keyframes animateSkyOrb {
