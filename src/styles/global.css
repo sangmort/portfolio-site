@@ -170,6 +170,7 @@ body {
 	z-index: 0;
 	fill: var(--sky-orb-stroke-color);
 	animation: animateStars 9s linear infinite;
+	will-change: opacity, filter;
 	opacity: .8;
 }
 
@@ -180,8 +181,9 @@ body {
 	top: 6rem;
 	margin: 0 auto;
 	height: 12rem;
-	animation: animateSkyOrb 4s infinite normal forwards;
-	filter: drop-shadow(0px 0px 12px var(--sky-orb-color));
+	animation: animateSkyOrb 6s infinite normal forwards;
+	/* filter: drop-shadow(0px 0px 12px var(--sky-orb-color)); */
+	will-change: filter;
 	transition: transform 0.3s ease;
 
 }
@@ -853,13 +855,13 @@ p code {
 	0%,
 	100% {
 		opacity: 1;
-		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
+		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
 	}
 
 	25%,
 	75% {
 		opacity: 0.9;
-		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
+		filter: drop-shadow(0px 0px 2px var(--sky-orb-color));
 	}
 
 	50% {
@@ -896,13 +898,12 @@ p code {
 }
 
 @keyframes animateSkyOrb {
-
 	0%,
 	100% {
-		filter: drop-shadow(0px 0px 6px var(--sky-orb-stroke-color));
+		filter: drop-shadow(0px 0px 20px var(--sky-orb-stroke-color));
 	}
 
 	50% {
-		filter: drop-shadow(0px 0px 9px var(--sky-orb-stroke-color));
+		filter: drop-shadow(0px 0px 12px var(--sky-orb-stroke-color));
 	}
 }
