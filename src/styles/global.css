@@ -157,12 +157,10 @@ body {
 .star {
 	position: absolute;
 	visibility: var(--star-visibility);
-	opacity: 0.75;
 	z-index: 0;
 	border-radius: 50%;
 	background-color: var(--secondary-font-color);
 	animation: animateStars 3s linear infinite;
-	filter: drop-shadow(0px 0px 1px var(--sky-orb-color));
 }
 
 #stars-container {
@@ -799,12 +797,17 @@ p code {
 	0%,
 	100% {
 		opacity: 1;
+		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
+	}
+
+	25%, 75% {
+		opacity: 0.9;
 		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
 	}
 
 	50% {
-		opacity: 0.5;
-		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
+		opacity: 0.8;
+		filter: drop-shadow(0px 0px 1px var(--sky-orb-color));
 	}
 }
 
