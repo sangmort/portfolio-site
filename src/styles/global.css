@@ -646,46 +646,6 @@ p code {
 		fill: var(--secondary-font-color);
 	}
 
-	#wrapper {
-		margin: 0 auto;
-		width: calc(100dvw - 10rem);
-		top: 3dvh;
-	}
-
-	.navbar-links {
-		display: none;
-		top: 1rem;
-		margin: 0;
-		background-color: var(--secondary-color);
-		width: var(--100-device-width);
-	}
-
-	.navbar-links a {
-		display: block;
-		border-bottom: 1px solid red;
-		border-radius: 0.2rem;
-		padding: 3rem 0;
-		text-align: center;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-size: 2.5rem;
-		font-weight: bold;
-	}
-
-	.navbar-links a:last-of-type {
-		border-bottom: 1px solid red;
-	}
-
-	.navbar-links.expanded {
-		display: flex;
-		position: fixed;
-		top: 0;
-		right: 0;
-		flex-direction: column;
-		width: 80dvw;
-		height: 100dvh;
-	}
-
 	.hamburger {
 		display: flex;
 		flex-direction: column;
@@ -714,6 +674,40 @@ p code {
 		right: 0;
 		padding: 1rem 2rem;
 	}
+	.navbar-links {
+		display: none;
+		top: 1rem;
+		margin: 0;
+		background-color: var(--secondary-color);
+		width: var(--100-device-width);
+		background: rgb(227 255 242 / 61%);
+		box-shadow: -36px 0px 60px 0 rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
+		border: 1px solid rgba(210, 242, 255, 0.42);
+	}
+
+	.navbar-links a {
+		display: block;
+		padding: 4rem 0;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 3rem;
+		font-weight: 500;
+		width: 100%;
+	}
+
+
+	.navbar-links.expanded {
+		display: flex;
+		position: fixed;
+		top: 0;
+		right: 0;
+		flex-direction: column;
+		width: 60dvw;
+		height: 100dvh;
+	}
 
 	#close-x {
 		height: 8rem;
@@ -725,6 +719,12 @@ p code {
 
 	.navbar-default {
 		height: 6rem;
+	}
+
+	#wrapper {
+		margin: 0 auto;
+		width: calc(100dvw - 10rem);
+		top: 3dvh;
 	}
 
 	.skills-layout {
@@ -767,7 +767,7 @@ p code {
 		width: calc(100dvw - 6rem);
 	}
 
-	.navbar-default{
+	.navbar-default {
 		padding: 0;
 		height: 5rem;
 	}
@@ -819,7 +819,8 @@ p code {
 		filter: drop-shadow(0px 0px 6px var(--sky-orb-color));
 	}
 
-	25%, 75% {
+	25%,
+	75% {
 		opacity: 0.9;
 		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
 	}
@@ -831,30 +832,30 @@ p code {
 }
 
 @keyframes navbarEntrance {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    } 
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
 
 	25% {
-        opacity: 0.20;
-        transform: translateY(-75%);
-    } 
+		opacity: 0.20;
+		transform: translateY(-75%);
+	}
 
 	50% {
-        opacity: 0.45;
-        transform: translateY(-50%);
-    } 
+		opacity: 0.45;
+		transform: translateY(-50%);
+	}
 
 	75% {
-        opacity: 0.7;
-        transform: translateY(-25%);
-    } 
+		opacity: 0.7;
+		transform: translateY(-25%);
+	}
 
-    100% {
-        opacity: 0.9;
-        transform: translateY(0);
-    } 
+	100% {
+		opacity: 0.9;
+		transform: translateY(0);
+	}
 }
 
 @keyframes animateSkyOrb {
