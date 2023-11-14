@@ -632,6 +632,7 @@ p code {
 
 	#cloud-container {
 		height: 20dvh;
+		z-index: 9000;
 	}
 
 	#treeline {
