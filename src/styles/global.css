@@ -106,14 +106,6 @@ body {
 	line-height: 1.5rem;
 }
 
-/* Allows #sticky to be centered  */
-#outer-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow-x: hidden;
-}
-
 /* SkyHeader Styling */
 #cloud-container {
 	position: absolute;
@@ -278,6 +270,15 @@ header {
 	fill: var(--secondary-font-color);
 }
 
+/* Allows #sticky to be centered  */
+#outer-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+/* Sticky navigation on scroll */
 #sticky {
 	display: flex;
 	visibility: hidden;
@@ -288,7 +289,7 @@ header {
 	width: 55rem;
 	z-index: 900;
 	animation: .7s ease navbarEntrance;
-		/* transition: opacity 40s ease; */
+	transition: opacity 0s ease;
 }
 
 /* Top navigation links */
@@ -571,6 +572,10 @@ p code {
 	background-color: var(--secondary-color);
 	text-decoration: none;
 	color: var(--primary-bg-color);
+}
+
+.single-page-anchor {
+	padding-top: 6rem;
 }
 
 /* About Skills Sections */
