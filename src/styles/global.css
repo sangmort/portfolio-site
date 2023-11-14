@@ -672,19 +672,18 @@ p code {
 		font-weight: bold;
 	}
 
-	.navbar-links a:first-of-type {
-		border-top: 1px solid red;
+	.navbar-links a:last-of-type {
+		border-bottom: 1px solid red;
 	}
 
 	.navbar-links.expanded {
 		display: flex;
-		position: absolute;
+		position: fixed;
 		top: 0;
-		left: 0;
+		right: 0;
 		flex-direction: column;
-		width: 100dvw;
+		width: 80dvw;
 		height: 100dvh;
-		min-height: 10dvh;
 	}
 
 	.hamburger {
