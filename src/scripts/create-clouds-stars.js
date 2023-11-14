@@ -39,19 +39,24 @@ duplicateClouds();
 
 // Generate Stars
 function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return (Math.random() * (max - min + Math.random()) + min).toFixed(1);
 }
 
 // Creates the stars & stylyes them
 function createStar() {
-  const star = document.createElement("div");
-  star.classList.add("star");
-  star.style.width = getRandomNumber(1, 3) + "px";
-  star.style.height = star.style.width;
-  star.style.left = (Math.random() * (100 + 0.67)).toFixed(2) + "dvw";
-  star.style.top = getRandomNumber(0, 30) + "dvh";
-  return star;
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  const circle = document.createElementNS(svgNS, "circle");
+
+  svg.setAttribute("class", "star");
+  circle.setAttribute("r", getRandomNumber(.25, 1.35)) + "rem";
+  circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
+  circle.setAttribute("cy", getRandomNumber(1, 27) + "dvh");
+
+  svg.appendChild(circle);
+  return svg;
 }
+
 
 function addStarsToContainer(container, numStars) {
   for (let i = 0; i < numStars; i++) {
@@ -61,11 +66,12 @@ function addStarsToContainer(container, numStars) {
 }
 
 // Adjust ammount of stars used by screen-size for performance reasons
-const starsContainer = document.getElementById("star-container");
+const starsContainer = document.getElementById("stars-container");
+
 if (screenWidth < 800) {
-  addStarsToContainer(container, 200); // For screens < 800px
+  addStarsToContainer(starsContainer, 200); // For screens < 800px
 } else if (screenWidth >= 800 && screenWidth <= 1300) {
-  addStarsToContainer(container, 300); // For screens between 800px and 1200px
+  addStarsToContainer(starsContainer, 300); // For screens between 800px and 1200px
 } else {
-  addStarsToContainer(container, 400) // For screens > 1200px
+  addStarsToContainer(starsContainer, 400); // For screens > 1200px
 }
