@@ -323,8 +323,8 @@ header {
 }
 
 
-/* Hamburger Menu */
-.hamburger {
+/* Hide Hamburger & Themepicker on Desktop */
+#hide-on-desktop {
 	display: none;
 }
 
@@ -646,6 +646,26 @@ p code {
 		fill: var(--secondary-font-color);
 	}
 
+	/* Show Theme Icon & Hamburger */
+	#hide-on-desktop {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	/* Style theme icon switcher */
+	.theme-toggle {
+		margin: 1rem 2rem;
+	}
+	.sunny {
+		margin-top: 0.35rem;
+		height: 3.25rem;
+	}
+
+	.moony {
+		height: 3.5rem;
+	}
+
 	.hamburger {
 		display: flex;
 		flex-direction: column;
@@ -698,7 +718,6 @@ p code {
 		width: 100%;
 	}
 
-
 	.navbar-links.expanded {
 		display: flex;
 		position: fixed;
@@ -707,6 +726,11 @@ p code {
 		flex-direction: column;
 		width: 60dvw;
 		height: 100dvh;
+	}
+
+	/* Hide desktop theme changer in mobile navigation */
+	body > header > nav > div.navbar-links.expanded > button {
+		display: none;
 	}
 
 	#close-x {
