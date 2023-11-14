@@ -84,7 +84,7 @@ html {
 	width: var(--100-device-width);
 	color: var(--primary-font-color);
 	font-family: "Poppins", sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 /* Control content width */
@@ -266,7 +266,7 @@ header {
 /* Header Logo */
 #header-logo {
 	margin: 2rem 0;
-	height: 30dvh;
+	height: 36dvh;
 	fill: var(--secondary-font-color);
 }
 
@@ -289,7 +289,9 @@ header {
 	width: 55rem;
 	z-index: 900;
 	animation: .7s ease navbarEntrance;
-	transition: opacity 0s ease;
+	transition: opacity 0s linear;
+	height: 3rem;
+	font-size: 1.25rem;
 }
 
 /* Top navigation links */
@@ -302,6 +304,7 @@ header {
 	padding: 0.5rem 0;
 	width: 100%;
 	transition: .7s all;
+	text-transform: uppercase;
 }
 
 .navbar-links a {
@@ -615,7 +618,7 @@ p code {
 	}
 
 	#cloud-container {
-		height: 30dvh;
+		height: 20dvh;
 	}
 
 	#treeline {
@@ -635,11 +638,18 @@ p code {
 	header {
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
+		top: 3rem;
+	}
+
+	#header-logo {
+		height: 4rem;
+		fill: var(--secondary-font-color);
 	}
 
 	#wrapper {
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
+		top: 3dvh;
 	}
 
 	.navbar-links {
@@ -687,7 +697,7 @@ p code {
 
 	.hamburger>.line {
 		display: block;
-		background-color: var(--secondary-color);
+		background-color: var(--primary-font-color);
 		width: 40px;
 		height: 5px;
 	}
@@ -725,6 +735,7 @@ p code {
 	h1 {
 		margin-top: 5rem;
 	}
+
 }
 
 /* Responsive Phone/Small */
@@ -732,7 +743,7 @@ p code {
 	html {
 		margin: 0 auto;
 		overflow-x: hidden;
-		font-size: 16px;
+		font-size: 15px;
 	}
 
 	#treeline {
@@ -746,6 +757,10 @@ p code {
 	header {
 		margin: 0 auto;
 		width: calc(100dvw - 6rem);
+	}
+
+	#header-logo {
+		height: 3.5rem;
 	}
 
 	#wrapper {
