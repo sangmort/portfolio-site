@@ -29,7 +29,7 @@ const duplicateClouds = () => {
 
     clonedCloud.style.left = getRandomNumber(0, 100) + "dvw";
     clonedCloud.style.top = getRandomNumber(-15, 10) + "dvh";
-    clonedCloud.style.width = getRandomNumber(4, 11) + "rem";;
+    clonedCloud.style.width = getRandomNumber(4, 11) + "rem";
 
     container.appendChild(clonedCloud);
   }
@@ -42,36 +42,37 @@ function getRandomNumber(min, max) {
   return (Math.random() * (max - min + Math.random()) + min).toFixed(1);
 }
 
-// Creates the stars & stylyes them
+// Creates stars & styles them
 function createStar() {
-  const svgNS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(svgNS, "svg");
-  const circle = document.createElementNS(svgNS, "circle");
+  const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-  svg.setAttribute("class", "star");
-  circle.setAttribute("r", getRandomNumber(.25, 1.35)) + "rem";
+  circle.setAttribute("class", "star");
+  circle.setAttribute("r", getRandomNumber(0, 1));
   circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
   circle.setAttribute("cy", getRandomNumber(1, 27) + "dvh");
 
-  svg.appendChild(circle);
-  return svg;
+  return circle;
 }
-
 
 function addStarsToContainer(container, numStars) {
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+
   for (let i = 0; i < numStars; i++) {
     const star = createStar();
-    container.appendChild(star);
+    svg.appendChild(star);
   }
+
+  container.appendChild(svg);
 }
 
-// Adjust ammount of stars used by screen-size for performance reasons
+// Adjust amount of stars used by screen-size for performance reasons
 const starsContainer = document.getElementById("stars-container");
 
-if (screenWidth < 800) {
-  addStarsToContainer(starsContainer, 200); // For screens < 800px
-} else if (screenWidth >= 800 && screenWidth <= 1300) {
-  addStarsToContainer(starsContainer, 300); // For screens between 800px and 1200px
+if (screenWidth < 900) {
+  addStarsToContainer(starsContainer, 200); // For screens < 900px
+} else if (screenWidth >= 900 && screenWidth <= 1300) {
+  addStarsToContainer(starsContainer, 300); // For screens between 900px and 1200px
 } else {
   addStarsToContainer(starsContainer, 400); // For screens > 1200px
 }
