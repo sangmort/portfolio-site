@@ -27,18 +27,18 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-
     <SkyHeader />
     <Treeline />
     <Header />
     <div id="outer-wrapper">
-    <StickyNavigation />
+      <StickyNavigation />
+    </div>
     <div id="wrapper">
       <h1>{pageTitle}</h1>
       <slot />
       <Footer />
     </div>
-  </div>
+
     <script>
       import "../scripts/parallax-treeline.js";
       import "../scripts/hamburger.js";
