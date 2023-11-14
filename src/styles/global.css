@@ -120,21 +120,21 @@ body {
 
 .cloud1 {
 	position: absolute;
-	z-index: 3000;
+	z-index: 3;
 	max-width: 8rem;
 	animation: animateClouds 800s linear infinite;
 }
 
 .cloud2 {
 	position: absolute;
-	z-index: 3000;
+	z-index: 1;
 	max-width: 10rem;
 	animation: animateClouds2 850s linear infinite;
 }
 
 .cloud3 {
 	position: absolute;
-	z-index: 3000;
+	z-index: 1;
 	max-width: 6rem;
 	animation: animateClouds3 950s linear infinite;
 }
@@ -720,7 +720,6 @@ p code {
 
 	#cloud-container {
 		height: 20dvh;
-		z-index: 9000;
 	}
 
 	#treeline {
