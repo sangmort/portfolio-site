@@ -45,7 +45,7 @@ duplicateClouds();
 
 // Generate Stars
 function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Creates the stars & stylyes them
@@ -54,8 +54,8 @@ function createStar() {
   star.classList.add("star");
   star.style.width = getRandomNumber(1, 3) + "px";
   star.style.height = star.style.width;
-  star.style.left = getRandomNumber(0, 100) + "dvw";
-  star.style.top = getRandomNumber(0, 100) + "dvh";
+  star.style.left = Math.random() * (100 + .67) + "dvw";
+  star.style.top = getRandomNumber(0, 30) + "dvh";
   return star;
 }
 
@@ -66,5 +66,12 @@ function addStarsToContainer(container, numStars) {
   }
 }
 
+// Adjust ammount of stars used by screen-size for performance reasons
 const starsContainer = document.getElementById("star-container");
-addStarsToContainer(container, 1100);
+if (screenWidth < 800) {
+  addStarsToContainer(container, 200); // For screens < 800px
+} else if (screenWidth >= 800 && screenWidth <= 1300) {
+  addStarsToContainer(container, 300); // For screens between 800px and 1200px
+} else {
+  addStarsToContainer(container, 400) // For screens > 1200px
+}
