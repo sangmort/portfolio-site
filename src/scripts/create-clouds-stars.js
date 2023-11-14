@@ -27,15 +27,9 @@ const duplicateClouds = () => {
       clonedCloud = originalCloud3.cloneNode(true);
     }
 
-    const randomX = Math.random() * (container.clientWidth - clonedCloud.clientWidth);
-    const randomY = Math.random() * (container.clientHeight - clonedCloud.clientHeight);
-
-    clonedCloud.style.left = randomX + "px";
-    clonedCloud.style.top = randomY - 100 + "px";
-
-    const randomScaleX = 0.5 + Math.random();
-
-    clonedCloud.style.transform = `scale(${randomScaleX})`;
+    clonedCloud.style.left = getRandomNumber(0, 100) + "dvw";
+    clonedCloud.style.top = getRandomNumber(-15, 10) + "dvh";
+    clonedCloud.style.transform = `scale(getRandomNumber(-15, 10))`;
 
     container.appendChild(clonedCloud);
   }
