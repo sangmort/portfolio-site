@@ -6,8 +6,8 @@ html[data-theme="light"] {
 	--secondary-font-color: #222838;
 	--primary-bg-color: var(--tree-color-7);
 	--secondary-bg-color: var(--tree-color-2);
-	--cloud-main-color: #f2ffff;
-	--cloud-shadow-color: #cefcff;
+	--cloud-main-color: #eaffff;
+	--cloud-shadow-color: #c0e9f3;
 	--cloud-bg-color-1: rgb(255, 255, 230);
 	--cloud-bg-color-2: rgb(197, 255, 255);
 	--cloud-bg-color-3: rgb(63, 203, 228);

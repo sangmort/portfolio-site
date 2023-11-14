@@ -28,8 +28,9 @@ const duplicateClouds = () => {
     }
 
     clonedCloud.style.left = getRandomNumber(0, 100) + "dvw";
-    clonedCloud.style.top = getRandomNumber(-15, 10) + "dvh";
+    clonedCloud.style.top = getRandomNumber(0, 25) + "dvh";
     clonedCloud.style.width = getRandomNumber(4, 10) + "rem";
+    clonedCloud.style.opacity = getRandomNumber(.9, 1);
 
     container.appendChild(clonedCloud);
   }
