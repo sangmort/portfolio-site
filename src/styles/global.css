@@ -35,7 +35,6 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
-	--outer-wrapper: rgba(217, 238, 255, 0.5);
 }
 
 html[data-theme="dark"] {
@@ -74,7 +73,6 @@ html[data-theme="dark"] {
 	--sky-orb-stroke-color: #cff5ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #ffce2c;
-	--outer-wrapper: rgba(5, 10, 53, 0.55);
 }
 
 * {
@@ -108,13 +106,13 @@ body {
 	line-height: 1.5rem;
 }
 
+/* Allows #sticky to be centered  */
 #outer-wrapper {
-	display: none;
-	position: fixed;
-	z-index: 100;
-	background-color: var(--outer-wrapper);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100dvw;
-	height: 100dvh;
+	overflow-x: hidden;
 }
 
 /* SkyHeader Styling */
@@ -288,8 +286,9 @@ header {
 	border-bottom: 1px solid var(--secondary-bg-color);
 	margin: 0 auto;
 	position: fixed;
-	z-index: 800;
-	animation: 2s ease-in navbarEntrance;
+	width: 55rem;
+	z-index: 900;
+	animation: 1s ease navbarEntrance;
 		/* transition: opacity 40s ease; */
 }
 
