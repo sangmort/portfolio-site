@@ -48,7 +48,7 @@ function createStar() {
   star.classList.add("star");
   star.style.width = getRandomNumber(1, 3) + "px";
   star.style.height = star.style.width;
-  star.style.left = Math.random() * (100 + .67) + "dvw";
+  star.style.left = (Math.random() * (100 + 0.67)).toFixed(2) + "dvw";
   star.style.top = getRandomNumber(0, 30) + "dvh";
   return star;
 }
