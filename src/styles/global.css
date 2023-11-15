@@ -279,30 +279,6 @@ header {
 	font-size: 1.75rem;
 }
 
-/* Allows #sticky to be centered  */
-#outer-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow-x: hidden;
-}
-
-/* Sticky navigation on scroll */
-#sticky {
-	display: flex;
-	position: fixed;
-	transition: opacity 0s linear;
-	visibility: hidden;
-	z-index: 900;
-	margin: 0 auto;
-	border-bottom: 1px solid var(--secondary-bg-color);
-	background-color: var(--primary-bg-color);
-	width: 55rem;
-	height: 3rem;
-	animation: .7s ease navbarEntrance;
-	font-size: 1.25rem;
-}
-
 /* Top navigation links */
 .navbar-links {
 	display: flex;
@@ -329,6 +305,30 @@ header {
 	border-radius: 0.25rem;
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
+}
+
+/* Allows #sticky to be centered  */
+#outer-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+/* Sticky navigation on scroll */
+#sticky {
+	display: flex;
+	position: fixed;
+	transition: opacity 0s linear;
+	visibility: hidden;
+	z-index: 900;
+	margin: 0 auto;
+	border-bottom: 1px solid var(--secondary-bg-color);
+	background-color: var(--primary-bg-color);
+	width: 55rem;
+	height: 3rem;
+	animation: .7s ease navbarEntrance;
+	font-size: 1.25rem;
 }
 
 /* Hide Hamburger & Themepicker on Desktop */
