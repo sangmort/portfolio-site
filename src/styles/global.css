@@ -1,11 +1,11 @@
 :root,
 html[data-theme="light"] {
-	--primary-color: #b30000;
-	--secondary-color: #0099ff;
+	--primary-color: #005C5C;
+	--secondary-color: #c9dcdd;
 	--primary-font-color: #222222;
 	--secondary-font-color: #222838;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: var(--tree-color-2);
+	--secondary-bg-color: var(--cloud-shadow-color);
 	--cloud-main-color: #eaffff;
 	--cloud-shadow-color: #c0e9f3;
 	--cloud-bg-color-1: rgb(255, 255, 230);
@@ -24,7 +24,7 @@ html[data-theme="light"] {
 	/* furthest midground trees */
 	--tree-color-6: #CEF3EE;
 	/* midground trees */
-	--tree-color-7: #DEF9ED;
+	--tree-color-7: #EEFCF5;
 	/* extra shading */
 	--tree-color-8: #EDFFED;
 	/* foreground trees */
@@ -35,18 +35,18 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
-	--sticky-nav-bg: #def9edc9;
+	--sticky-nav-bg: #EEFCF5c9;
 	--mobile-nav-bg: rgb(227 255 242 / 61%);
 	--mobile-nav-border: 1px solid rgb(227 255 242 / 100%);
 }
 
 html[data-theme="dark"] {
-	--primary-color: #b200df;
-	--secondary-color: #00aeff;
+	--primary-color: #00AEFF;
+	--secondary-color: #1c4253;
 	--primary-font-color: #efefef;
 	--secondary-font-color: #cee3f1;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: var(--tree-color-1);
+	--secondary-bg-color: var(--cloud-shadow-color);
 	--cloud-main-color: #2e7dbd;
 	--cloud-shadow-color: #005b97;
 	--cloud-bg-color-1: rgb(0, 127, 185);
@@ -280,7 +280,6 @@ header {
 	justify-content: center;
 	height: fit-content;
 	font-size: 1.25rem;
-	filter: drop-shadow(0 0 6px var(--tree-color-7));
 }
 
 /* Top navigation links */
@@ -301,6 +300,7 @@ header {
 	padding: 0.5rem 1rem;
 	color: var(--secondary-font-color);
 	font-weight: 500;
+	filter: drop-shadow(0 0 2px var(--tree-color-8));
 }
 
 .navbar-links a:hover,
@@ -327,7 +327,7 @@ header {
 	visibility: hidden;
 	z-index: 900;
 	margin: 0 auto;
-	border-bottom: 1px solid var(--secondary-bg-color);
+	border-bottom: 1px solid var(--secondary-color);
 	background-color: var(--primary-bg-color);
 	width: 58rem;
 	height: 3.5rem;
@@ -422,6 +422,7 @@ header {
 a {
 	text-decoration: none;
 	color: var(--primary-color);
+	font-weight: 600;
 }
 
 /* Headings */
