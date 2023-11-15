@@ -737,7 +737,14 @@ p code {
 	}
 
 	.navbar-default {
-		height: 6rem;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		height: fit-content;
+		font-size: 1.25rem;
+		align-content: flex-end;
 	}
 
 	header {

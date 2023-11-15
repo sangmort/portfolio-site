@@ -8,14 +8,19 @@ const header = document.querySelector("header");
 const pathParallaxEffects = [
   { element: svgPaths[0], direction: "down", speed: 0.01 },
   { element: svgPaths[1], direction: "up", speed: 0.2 },
-  { element: svgPaths[2], direction: "down", speed: .01 },
+  { element: svgPaths[2], direction: "down", speed: 0.01 },
   { element: svgPaths[3], direction: "up", speed: 0.2 },
   { element: svgPaths[4], direction: "up", speed: 0.5 },
   { element: svgPaths[5], direction: "up", speed: 0.9 },
   { element: svgPaths[6], direction: "up", speed: 1.3 },
   { element: wrapper, direction: "up", speed: 2 },
-  { element: skyOrb, direction: "down", speed: .2 },
-  { element: header, direction: "up", speed: 3 }
+  { element: skyOrb, direction: "down", speed: 0.2 },
+  {
+    element: header,
+    direction: "up",
+    speed: 3,
+    desktopOnly: true,
+  },
 ];
 
 const svgElement = document.querySelector("#treeline");
@@ -29,14 +34,14 @@ let hideSVG = false;
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
-  // Hide the SVG if user scrolls past viewport, keep top path visible to stop bottom SVGs from showing
+  // Hide the SVG if the user scrolls past viewport, keep top path visible to stop bottom SVGs from showing
   if (scrollY > parallaxScrollThreshold) {
     if (!hideSVG) {
       svgElement.style.visibility = "hidden";
       svgPaths[6].style.visibility = `visible`;
       hideSVG = true;
     }
-    // Show the SVG if user scrolls back up
+    // Show the SVG if the user scrolls back up
   } else {
     if (hideSVG) {
       svgElement.style.visibility = "visible";
@@ -46,7 +51,12 @@ window.addEventListener("scroll", () => {
 
     // Add parallax effect to each path
     pathParallaxEffects.forEach((effect) => {
-      const { element, direction, speed } = effect;
+      const { element, direction, speed, desktopOnly } = effect;
+
+      // Check if the effect should be applied only on desktop
+      if (desktopOnly && window.innerWidth < 1400) {
+        return;
+      }
 
       if (direction === "up") {
         const translateY = -scrollY * speed;
