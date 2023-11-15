@@ -818,26 +818,10 @@ p code {
 	  }
 	  
 
-	/* X SVG to close navigation */
-	#close-x {
-		height: 4rem;
-		display: none;
-	}
-
-	/* Thickens stroke of SVG path */
-	svg#close-x path {
-		fill: var(--secondary-font-color);
-		stroke-width: 1px;
-		stroke: var(--secondary-font-color);
-	}
-
-	nav>div.navbar-links.expanded>.close-navigation:hover {
-		cursor: pointer;
-	}
-
+	/* Close Placeholder */
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
-		padding: 1rem 2rem 0 0;
+		padding: 2rem 2rem 0 0;
 	}
 
 	.navbar-links {
@@ -855,8 +839,7 @@ p code {
 
 	.navbar-links a {
 		display: block;
-		padding: 1.5rem 2rem;
-		text-align: center;
+		padding: 1.5rem 4rem;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 2rem;
@@ -865,7 +848,7 @@ p code {
 	}
 
 	.navbar-links a:first-of-type {
-		margin-top: 1.25rem;
+		margin-top: 5rem;
 	}
 
 	.navbar-links.expanded {
@@ -874,13 +857,12 @@ p code {
 		top: 0;
 		right: 0;
 		flex-direction: column;
-		width: 100dvh;
+		width: fit-content;
 		height: 100dvh;
 		align-items: flex-end;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-content: flex-end;
-		padding: 2.5rem 2rem;
 	}
 
 	/* Hide desktop theme changer in mobile navigation */
@@ -927,12 +909,12 @@ p code {
 
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
-		padding: 1rem .25rem 0 0;
+		padding: 2rem .25rem 0 0;
 	}
 
 	.navbar-links a {
 		display: block;
-		padding: 1.5rem 1rem;
+		padding: 2.5rem 3rem;
 		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
