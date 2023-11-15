@@ -35,6 +35,8 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
+	--mobile-nav-bg:  rgb(227 255 242 / 61%);
+	--mobile-nav-border: 1px solid rgb(227 255 242 / 100%);
 }
 
 html[data-theme="dark"] {
@@ -73,6 +75,8 @@ html[data-theme="dark"] {
 	--sky-orb-stroke-color: #cff5ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #ffce2c;
+	--mobile-nav-bg:  rgba(20, 30, 46, 0.61);
+	--mobile-nav-border: 1px solid rgba(20, 30, 46, 1);
 }
 
 * {
@@ -801,24 +805,26 @@ p code {
 		display: none;
 		top: 1rem;
 		margin: 0;
-		background-color: var(--secondary-color);
 		width: var(--100-device-width);
-		background: rgb(227 255 242 / 61%);
+		background: var(--mobile-nav-bg);
 		box-shadow: -36px 0px 60px 0 rgba(0, 0, 0, 0.4);
 		backdrop-filter: blur(3px);
 		-webkit-backdrop-filter: blur(3px);
-		border: 1px solid rgba(210, 242, 255, 0.42);
+		border: var(--mobile-nav-border);
+		
 	}
 
 	.navbar-links a {
 		display: block;
-		padding: 4rem 0;
+		padding: 2rem 0;
+		margin-right: 6rem;
 		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
-		font-size: 3rem;
+		font-size: 2rem;
 		font-weight: 500;
 		width: 100%;
+		text-align: right;
 	}
 
 	.navbar-links.expanded {
@@ -827,7 +833,7 @@ p code {
 		top: 0;
 		right: 0;
 		flex-direction: column;
-		width: 60dvw;
+		width: 40dvw;
 		height: 100dvh;
 	}
 
@@ -837,7 +843,7 @@ p code {
 	}
 
 	#close-x {
-		height: 8rem;
+		height: 4rem;
 	}
 
 	nav>div.navbar-links.expanded>.close-navigation:hover {
