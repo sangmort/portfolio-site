@@ -1,9 +1,22 @@
 ---
 
 ---
-
-<div class="hamburger">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
-</div>
+<svg class="hamburger hamburger-rotate"
+  version="1.2" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 60 60"
+  width="60"
+  height="60"
+  onclick="this.classList.toggle('active')">
+<path 
+  class="line top" 
+  d="m10 13h40c3.7 0 7.5 3.1 7.5 8.6 0 5-2 8-7.5 8.4h-20"
+  />
+<path 
+  class="line middle"
+  d="m10 30h40"
+  />
+<path 
+  class="line bottom"
+  d="m50 47h-40c0 0-7.5-0.8-7.5-8.4 0-7 7.5-8.6 7.5-8.6h20"
+  />
+</svg>

@@ -3,6 +3,8 @@ const navigation = document.querySelector(".navbar-links");
 document.querySelector(".hamburger").addEventListener("click", (event) => {
   event.stopPropagation();
   navigation.classList.toggle("expanded");
+  e.preventDefault();
+  $(this).toggleClass('no-hamburger');
 });
 
 document.querySelector(".close-navigation").addEventListener("click", () => {
@@ -14,6 +16,7 @@ document.addEventListener("click", (event) => {
     navigation.classList.remove("expanded");
   }
 });
+
 
 // // Fireflies that follow user's mouse cursor
 // window.addEventListener(
