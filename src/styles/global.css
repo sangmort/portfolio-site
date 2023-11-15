@@ -90,7 +90,7 @@ html {
 	width: var(--100-device-width);
 	color: var(--primary-font-color);
 	font-family: "Poppins", sans-serif;
-	font-size: 20px;
+	font-size: 19px;
 }
 
 /* Control content width */
@@ -100,7 +100,7 @@ html {
 	transition: transform 0.3s ease;
 	z-index: 100;
 	margin: 0 auto;
-	width: 55rem;
+	width: 50rem;
 }
 
 body {
@@ -493,6 +493,12 @@ p:not(:last-of-type)+h6 {
 /* Paragraph Spacing */
 p {
 	margin-bottom: 1.25rem;
+	line-height: 1.75rem;
+	margin: 0 auto;
+}
+
+* + p {
+	margin-bottom: 2rem;
 }
 
 /* Markdown Styling */
