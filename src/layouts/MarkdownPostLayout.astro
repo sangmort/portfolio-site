@@ -11,8 +11,8 @@ const { frontmatter } = Astro.props;
 
   <slot />
 
-  <footer>
-    <h3>Tags</h3>
+  <footer id="blog-footer">
+    <h2>Tags</h2>
     <div class="tags-layout">
       {
         frontmatter.tags.map((tag) => (
