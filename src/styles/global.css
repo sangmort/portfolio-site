@@ -35,7 +35,7 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
-	--mobile-nav-bg:  rgb(227 255 242 / 61%);
+	--mobile-nav-bg: rgb(227 255 242 / 61%);
 	--mobile-nav-border: 1px solid rgb(227 255 242 / 100%);
 }
 
@@ -75,7 +75,7 @@ html[data-theme="dark"] {
 	--sky-orb-stroke-color: #cff5ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #ffce2c;
-	--mobile-nav-bg:  rgba(20, 30, 46, 0.61);
+	--mobile-nav-bg: rgba(20, 30, 46, 0.61);
 	--mobile-nav-border: 1px solid rgba(20, 30, 46, 1);
 }
 
@@ -704,6 +704,7 @@ p code {
 }
 
 @keyframes animateSkyOrb {
+
 	0%,
 	100% {
 		filter: drop-shadow(0px 0px 20px var(--sky-orb-stroke-color));
@@ -793,12 +794,25 @@ p code {
 		margin-bottom: 10px;
 	}
 
+	/* X SVG to close navigation */
+	#close-x {
+		height: 4rem;
+	}
+
+	/* Thickens stroke of SVG path */
+	svg#close-x path {
+		fill: var(--secondary-font-color);
+		stroke-width: 1px;
+		stroke: var(--secondary-font-color);
+	}
+
+	nav>div.navbar-links.expanded>.close-navigation:hover {
+		cursor: pointer;
+	}
+
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 1rem 2rem;
+		padding: 1rem 2rem 0 0;
 	}
 
 	.navbar-links {
@@ -811,13 +825,12 @@ p code {
 		backdrop-filter: blur(3px);
 		-webkit-backdrop-filter: blur(3px);
 		border: var(--mobile-nav-border);
-		
+
 	}
 
 	.navbar-links a {
 		display: block;
-		padding: 2rem 0;
-		margin-right: 6rem;
+		padding: 1.5rem 2.5rem;
 		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -827,27 +840,28 @@ p code {
 		text-align: right;
 	}
 
+	.navbar-links a:first-of-type {
+		margin-top: 1.25rem;
+	}
+
 	.navbar-links.expanded {
 		display: flex;
 		position: fixed;
 		top: 0;
 		right: 0;
 		flex-direction: column;
-		width: 40dvw;
-		height: 100dvh;
+		width: fit-content;
+		height: fit-content;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: flex-end;
+		padding: 2.5rem 2rem;
 	}
 
 	/* Hide desktop theme changer in mobile navigation */
 	body>header>nav>div.navbar-links.expanded>button {
 		display: none;
-	}
-
-	#close-x {
-		height: 4rem;
-	}
-
-	nav>div.navbar-links.expanded>.close-navigation:hover {
-		cursor: pointer;
 	}
 
 	.navbar-default {
@@ -885,6 +899,23 @@ p code {
 
 	#header-logo {
 		height: 3.5rem;
+	}
+
+	nav>div.navbar-links.expanded>.close-navigation {
+		display: block;
+		padding: 1rem .25rem 0 0;
+	}
+
+	.navbar-links a {
+		display: block;
+		padding: 1.5rem 1rem;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 2rem;
+		font-weight: 500;
+		width: 100%;
+		text-align: right;
 	}
 
 	#wrapper {
