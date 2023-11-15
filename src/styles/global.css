@@ -775,7 +775,7 @@ p code {
 
 	.hamburger {
 		position: fixed;
-		right: 5rem;
+		right: 4.5rem;
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
 		transition: transform 400ms;
@@ -850,7 +850,7 @@ p code {
 	}
 
 	.navbar-links a:first-of-type {
-		margin-top: 5rem;
+		margin-top: 6rem;
 	}
 
 	.navbar-links.expanded {
