@@ -279,7 +279,7 @@ header {
 /* Header Logo */
 #header-logo {
 	margin: 2rem 0;
-	height: 36dvh;
+	height: 26dvh;
 	fill: var(--secondary-font-color);
 }
 
@@ -748,8 +748,11 @@ p code {
 	}
 
 	#header-logo {
-		height: 4rem;
+		height: 4.5rem;
+		stroke: var(--tree-color-8);
+		stroke-width: .5;
 		fill: var(--secondary-font-color);
+		filter: drop-shadow(2px 4px 8px var(--tree-color-8));
 	}
 
 	/* Show Theme Icon & Hamburger */
@@ -762,6 +765,7 @@ p code {
 	/* Style theme icon switcher */
 	.theme-toggle {
 		margin: 1rem 5.25rem;
+		filter: drop-shadow(2px 4px 8px var(--tree-color-8));
 	}
 
 	.sunny {
@@ -785,6 +789,7 @@ p code {
 		user-select: none;
 		z-index: 9000;
 	  }
+	  
 	  .hamburger-rotate.active {
 		transform: rotate(45deg);
 	  }
@@ -906,7 +911,7 @@ p code {
 	}
 
 	#header-logo {
-		height: 3.5rem;
+		height: 4rem;
 	}
 
 	.theme-toggle {
