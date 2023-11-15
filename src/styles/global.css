@@ -35,6 +35,7 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
+	--sticky-nav-bg: #def9edc9;
 	--mobile-nav-bg: rgb(227 255 242 / 61%);
 	--mobile-nav-border: 1px solid rgb(227 255 242 / 100%);
 }
@@ -77,6 +78,7 @@ html[data-theme="dark"] {
 	--fireflies-color-2: #ffce2c;
 	--mobile-nav-bg: rgba(20, 30, 46, 0.61);
 	--mobile-nav-border: 1px solid rgba(20, 30, 46, 1);
+	--sticky-nav-bg: #071620c9;
 }
 
 * {
@@ -263,9 +265,10 @@ header {
 
 /* Header Logo */
 #header-logo {
-	margin: 2rem 0;
+	margin: .25rem 0;
 	height: 26dvh;
 	fill: var(--secondary-font-color);
+	filter: drop-shadow(0 0 6px var(--tree-color-7));
 }
 
 /* navigation */
@@ -276,7 +279,8 @@ header {
 	align-items: center;
 	justify-content: center;
 	height: fit-content;
-	font-size: 1.75rem;
+	font-size: 1.25rem;
+	filter: drop-shadow(0 0 6px var(--tree-color-7));
 }
 
 /* Top navigation links */
@@ -325,10 +329,14 @@ header {
 	margin: 0 auto;
 	border-bottom: 1px solid var(--secondary-bg-color);
 	background-color: var(--primary-bg-color);
-	width: 55rem;
-	height: 3rem;
+	width: 58rem;
+	height: 3.5rem;
 	animation: .7s ease navbarEntrance;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
+
+	background: var(--sticky-nav-bg);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
 }
 
 /* Hide Hamburger & Themepicker on Desktop */
