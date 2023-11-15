@@ -430,10 +430,16 @@ a {
 }
 
 /* Headings */
+h2,h3,h4,h5,h6 {
+	font-weight: 600;
+}
+
 h1 {
-	margin-bottom: 2.125rem;
+	margin-bottom: 1rem;
 	line-height: 2rem;
-	font-size: 2.125rem;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 700;
 }
 
 h2 {
