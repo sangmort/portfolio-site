@@ -761,7 +761,7 @@ p code {
 
 	/* Style theme icon switcher */
 	.theme-toggle {
-		margin: 1rem 2rem;
+		margin: 1rem 5.25rem;
 	}
 
 	.sunny {
@@ -774,6 +774,8 @@ p code {
 	}
 
 	.hamburger {
+		position: fixed;
+		right: 5rem;
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
 		transition: transform 400ms;
@@ -907,9 +909,18 @@ p code {
 		height: 3.5rem;
 	}
 
+	.theme-toggle {
+		margin: 1rem 4.5rem;
+	}
+
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
 		padding: 2rem .25rem 0 0;
+	}
+
+	.hamburger {
+		position: fixed;
+		right: 2rem;
 	}
 
 	.navbar-links a {
