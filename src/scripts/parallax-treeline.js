@@ -6,14 +6,14 @@ const header = document.querySelector("header");
 
 // Parallax effects for each path
 const pathParallaxEffects = [
-  // { element: skyOrb, direction: "down", speed: 0.1 },
-  // { element: svgPaths[0], direction: "down", speed: 0.01 },
-  { element: svgPaths[1], direction: "up", speed: 0.3 },
-  { element: svgPaths[2], direction: "up", speed: 0.4 },
+  // { element: skyOrb, direction: "down", speed: 0.05 },
+  // { element: svgPaths[0], direction: "down", speed: 0.05 },
+  { element: svgPaths[1], direction: "up", speed: 0.1 },
+  { element: svgPaths[2], direction: "up", speed: 0.3 },
   { element: svgPaths[3], direction: "up", speed: 0.5 },
   { element: svgPaths[4], direction: "up", speed: 0.7 },
-  { element: svgPaths[5], direction: "up", speed: 0.9 },
-  { element: svgPaths[6], direction: "up", speed: 1 },
+  { element: svgPaths[5], direction: "up", speed: 1.0 },
+  { element: svgPaths[6], direction: "up", speed: 1.3 },
   { element: wrapper, direction: "up", speed: 2 },
   {
     element: header,
