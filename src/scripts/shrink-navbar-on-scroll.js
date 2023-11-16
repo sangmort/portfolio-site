@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const stickyNavbar = document.getElementById("sticky");
-  const scrollThreshold = 375;
+  const scrollThreshold = 475;
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > scrollThreshold) {
