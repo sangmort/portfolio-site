@@ -17,12 +17,33 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// Vertical Tabs
+document.addEventListener('DOMContentLoaded', function () {
+  let tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      openTab(this.dataset.tab);
+    });
+  });
+});
+
+function openTab(tabName) {
+  let i, tabContent;
+  tabContent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+
+
+
 // // Fireflies that follow user's mouse cursor
 // window.addEventListener(
 //   "mousemove",
 //   function (e) {
 //     const numberOfFireflies = 20;
-//     const colors = ["var(--fireflies-color-1)", "var(--fireflies-color-2)", "var(--fireflies-color-3)"];
+//     const colors = ["let(--fireflies-color-1)", "let(--fireflies-color-2)", "let(--fireflies-color-3)"];
 
 //     function createFirefly() {
 //       const scale = 0.6 + Math.random() * 0.7;

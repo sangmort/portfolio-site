@@ -662,6 +662,43 @@ p code {
 	border-radius: 0 0 .2rem .2rem;
 }
 /* About Skills Sections */
+
+.tabs-container {
+	display: flex;
+  }
+  
+  .vertical-tabs {
+	display: flex;
+	flex-direction: column;
+	width: 200px; /* Adjust the width as needed */
+  }
+  
+  .tab {
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	background-color: #f1f1f1;
+	text-align: center;
+  }
+  
+  .tab:hover {
+	background-color: #ddd;
+  }
+  
+  .tab-content-container {
+	display: grid;
+	grid-template-columns: 1fr; /* Equal width columns, adjust as needed */
+	gap: 10px; /* Adjust the gap between tabs and content */
+  }
+  
+  .tab-content {
+	display: none;
+	padding: 10px;
+	border: 1px solid #ddd;
+  }
+  
+  
+
 .skills>h3 {
 	font-size: 1.25rem;
 }
