@@ -27,8 +27,8 @@ const duplicateClouds = () => {
       clonedCloud = originalCloud3.cloneNode(true);
     }
 
-    clonedCloud.style.left = getRandomNumber(0, 100) + "dvw";
-    clonedCloud.style.top = getRandomNumber(0, 25) + "dvh";
+    clonedCloud.style.left = getRandomNumber(-4, 102) + "dvw";
+    clonedCloud.style.top = getRandomNumber(1, 35) + "dvh";
     clonedCloud.style.width = getRandomNumber(4, 10) + "rem";
     clonedCloud.style.opacity = getRandomNumber(.9, 1);
 
@@ -50,7 +50,7 @@ function createStar() {
   circle.setAttribute("class", "star");
   circle.setAttribute("r", getRandomNumber(0, 1));
   circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
-  circle.setAttribute("cy", getRandomNumber(1, 27) + "dvh");
+  circle.setAttribute("cy", getRandomNumber(1, 35) + "dvh");
 
   return circle;
 }
