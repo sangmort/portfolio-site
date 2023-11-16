@@ -1,8 +1,115 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home";
+const pageTitle = "About";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Heading 2</h2>
+  <section id="about">
+    <h2>Osy</h2>
+  <p>
+    Front-end web developer with over a decade of experience in translating design concepts into seamless,
+    user-friendly web interfaces. Proficient in HTML, CSS, and JavaScript, my focus is on creating visually appealing and
+    responsive websites that enhance user experience.
+  </p>
+
+
+    <h3>Background</h2>
+    <p>
+      I've been hand-coding websites since I was 12 years old, back in the days when Notepad was our "IDE" of choice,
+      since Dreamweaver was more of a hindrance then help.
+    </p>
+
+    <p>
+      It all started as a hobby for the love of creating something new and interactive, as a kid that meant fun fan
+      sites for the video games I was <del>obsessed with</del> loved. (Legend of Dragoon anyone?) Eventually, I had the
+      opportunity to work with commercial clients when I was 15, earning volunteer hours through my teacher's freelance
+      agency.
+    </p>
+
+    <p>
+      Creating websites that customers love was even more rewarding, partly because of all the intricacies that come
+      with working for external clients, and mostly for the external validation of doing something not everyone can do.
+    </p>
+
+    <p>
+      Architecting technical solutions to everyday problems, streamlining business processes, increasing customer
+      conversion rate, optimizing the user experience…all interesting challenges, with their own unique solutions, it's
+      impossible to get bored.
+    </p>
+
+    <p>Even the most complex problems are just fun puzzles in disguise, waiting to be solved.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tech</h2>
+    <div class="skills-layout">
+      <div class="skills">
+        <h3>LANGUAGES</h3>
+        <p>For crafting the visual and interactive aspects of websites/applications.</p>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>SASS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3>DATABASE & SERVER</h3>
+        <p>For hosting and maintaining websites.</p>
+        <ul>
+          <li>Linux</li>
+          <li>Nginx (preferred)</li>
+          <li>Apache</li>
+          <li>MariaDB, MySQL</li>
+          <li>PHP</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3>GRAPHICS & PROTOTYPING</h3>
+        <p>For creating visually appealing & user-friendly digital experiences.</p>
+        <ul>
+          <li>Adobe Photoshop, Adobe Illustrator</li>
+          <li>Affinity Designer, Affinity Photo</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3>DEVELOPMENT TOOLS</h3>
+        <p>For streamlined coding & development.</p>
+        <ul>
+          <li>VS Code</li>
+          <li>Git</li>
+          <li>NPM</li>
+          <li>Chrome DevTools</li>
+          <li>Firefox DevTools</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3>SSG & CMS</h3>
+        <p>For efficient web development & content management."</p>
+        <ul>
+          <li>AstroJS</li>
+          <li>Wordpress</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>A Taste of My Work</h2>
+    <p>
+      You can explore my work in my <a href="#new">portfolio</a> section.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>
+      You can explore my work in my <a href="#new">portfolio</a> section.
+    </p>
+  </section>
 </BaseLayout>
