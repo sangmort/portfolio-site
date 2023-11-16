@@ -622,40 +622,45 @@ p code {
 	color: var(--primary-color);
 }
 
+/* Accordion */
 .accordion {
 	display: flex;
 	flex-direction: column;
+	margin: 2rem 0;
 }
 
 .accordion-button::before {
 	content: '»';
-	padding: 1rem;
 	font-size: 1.75rem;
+	margin-right: .5rem;
 	display: inline-block;
-	transform: translateY(0);
+	transform: translateY(-5px);
 	transition: transform 0.2s ease-out;
+	vertical-align: middle;
 }
 
 .accordion-button.rotate-icon::before {
-	transform: translateY(4px) rotate(90deg);
+	transform: translateY(-2px) rotate(90deg);
 }
 
 .accordion-button {
 	cursor: pointer;
-	padding: 1rem;
+	padding: 1rem 1.5rem;
 	font-size: 1.25rem;
 	text-align: left;
+	color: var(--primary-font-color);
 	border: 1px solid var(--secondary-bg-color);
 	background-color: var(--secondary-bg-color);
 	border-radius: 0.2rem;
 }
 
 .accordion-content {
-	display: none;
-	padding: 10px;
-	background-color: var(--secondary-bg-color);
+    display: none;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-bg-color);
+    border-top: 4px solid var(--primary-bg-color);
+	border-radius: 0 0 .2rem .2rem;
 }
-
 /* About Skills Sections */
 .skills>h3 {
 	font-size: 1.25rem;
