@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
       openTab(this.dataset.tab);
     });
   });
+
+  // First tab by default
+  openTab(tabs[0].dataset.tab);
 });
 
 function openTab(tabName) {
