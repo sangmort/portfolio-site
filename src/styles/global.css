@@ -124,7 +124,7 @@ section {
 	background: radial-gradient(var(--cloud-bg-color-1) 0%, var(--cloud-bg-color-2) 33%, var(--cloud-bg-color-3) 77%);
 	background-color: var(--cloud-bg-color-1);
 	width: 100%;
-	height: 33dvh;
+	height: 50dvh;
 	overflow: hidden;
 }
 
@@ -183,7 +183,7 @@ section {
 /* Sun & Moon in Sky */
 #sky-orb {
 	position: absolute;
-	top: 6rem;
+	top: 10rem;
 	transition: transform 0.3s ease;
 	z-index: 2;
 	margin: 0 auto;
@@ -213,6 +213,7 @@ section {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
+	top: 3rem;
 }
 
 #treeline path {
@@ -269,8 +270,8 @@ header {
 
 /* Header Logo */
 #header-logo {
-	margin: .25rem 0;
-	height: 26dvh;
+	margin: 0;
+	height: 12rem;
 	fill: var(--secondary-font-color);
 	filter: drop-shadow(0 0 6px var(--tree-color-7));
 }
@@ -283,7 +284,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	height: fit-content;
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 /* Top navigation links */
@@ -304,7 +305,7 @@ header {
 	padding: 0.5rem 1rem;
 	color: var(--secondary-font-color);
 	font-weight: 500;
-	filter: drop-shadow(0 0 2px var(--tree-color-8));
+	filter: drop-shadow(0 0 5px var(--tree-color-8));
 }
 
 .navbar-links a:hover,
