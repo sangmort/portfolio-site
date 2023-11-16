@@ -12,13 +12,13 @@ const pathParallaxEffects = [
   { element: svgPaths[2], direction: "up", speed: 0.3 },
   { element: svgPaths[3], direction: "up", speed: 0.5 },
   { element: svgPaths[4], direction: "up", speed: 0.7 },
-  { element: svgPaths[5], direction: "up", speed: 1.0 },
-  { element: svgPaths[6], direction: "up", speed: 1.3 },
+  { element: svgPaths[5], direction: "up", speed: 0.9 },
+  { element: svgPaths[6], direction: "up", speed: 1.1 },
   { element: wrapper, direction: "up", speed: 2 },
   {
     element: header,
     direction: "up",
-    speed: 3,
+    speed: 2,
     desktopOnly: true,
   },
 ];
