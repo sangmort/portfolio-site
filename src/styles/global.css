@@ -5,7 +5,7 @@ html[data-theme="light"] {
 	--primary-font-color: #444444;
 	--secondary-font-color: #222838;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: var(--cloud-shadow-color);
+	--secondary-bg-color: #e9f1ec;
 	--cloud-main-color: #eaffff;
 	--cloud-shadow-color: #c0e9f3;
 	--cloud-bg-color-1: rgb(255, 255, 230);
@@ -46,7 +46,7 @@ html[data-theme="dark"] {
 	--primary-font-color: #e2e9ee;
 	--secondary-font-color: #cee3f1;
 	--primary-bg-color: var(--tree-color-7);
-	--secondary-bg-color: var(--cloud-shadow-color);
+	--secondary-bg-color: #0c2433;
 	--cloud-main-color: #2e7dbd;
 	--cloud-shadow-color: #005b97;
 	--cloud-bg-color-1: rgb(0, 127, 185);
@@ -344,7 +344,8 @@ header {
 }
 
 /* Hide Hamburger, Themepicker, & Home link on Desktop */
-#hide-on-desktop, a.home {
+#hide-on-desktop,
+a.home {
 	display: none;
 }
 
@@ -623,6 +624,40 @@ p code {
 
 .single-page-anchor {
 	padding-top: 6rem;
+}
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+}
+
+.accordion-button::before {
+	content: '»';
+	padding: 1rem;
+	font-size: 1.75rem;
+	display: inline-block;
+	transform: translateY(0);
+	transition: transform 0.2s ease-out;
+}
+
+.accordion-button.rotate-icon::before {
+	transform: translateY(4px) rotate(90deg);
+}
+
+.accordion-button {
+	cursor: pointer;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-align: left;
+	border: 1px solid var(--secondary-bg-color);
+	background-color: var(--secondary-bg-color);
+	border-radius: 0.2rem;
+}
+
+.accordion-content {
+	display: none;
+	padding: 10px;
+	background-color: var(--secondary-bg-color);
 }
 
 /* About Skills Sections */
