@@ -1,3 +1,4 @@
+// Adds sticky navigation after user scrolls past the hero 
 document.addEventListener("DOMContentLoaded", function () {
   const stickyNavbar = document.getElementById("sticky");
   const scrollThreshold = 475;
