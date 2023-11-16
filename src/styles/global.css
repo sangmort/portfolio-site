@@ -622,10 +622,6 @@ p code {
 	color: var(--primary-color);
 }
 
-.single-page-anchor {
-	padding-top: 6rem;
-}
-
 .accordion {
 	display: flex;
 	flex-direction: column;
