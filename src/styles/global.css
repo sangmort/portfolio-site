@@ -101,7 +101,7 @@ html {
 	transition: transform 0.3s ease;
 	z-index: 100;
 	margin: 0 auto;
-	width: 50dvw;
+	width: 40dvw;
 }
 
 body {
@@ -516,7 +516,7 @@ p {
 }
 
 *+p {
-	margin-bottom: 2rem;
+	margin-bottom: 1.55rem;
 }
 
 /* Markdown Styling */
@@ -660,6 +660,7 @@ p code {
 	justify-content: flex-end;
 	font-size: 0.75rem;
 }
+
 
 /* Animations */
 @keyframes animateClouds {
