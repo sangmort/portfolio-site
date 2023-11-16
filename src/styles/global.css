@@ -343,8 +343,8 @@ header {
 	-webkit-backdrop-filter: blur(3px);
 }
 
-/* Hide Hamburger & Themepicker on Desktop */
-#hide-on-desktop {
+/* Hide Hamburger, Themepicker, & Home link on Desktop */
+#hide-on-desktop, a.home {
 	display: none;
 }
 
