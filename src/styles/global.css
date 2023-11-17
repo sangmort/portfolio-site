@@ -478,18 +478,6 @@ h6 {
 	font-weight: bold;
 }
 
-/* Add » before each heading */
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-	display: inline-block;
-	margin-right: 0.25rem;
-	vertical-align: 7%;
-	content: "»";
-}
-
 /* Add padding to headings that follow a paragraph */
 p:not(:last-of-type)+h1,
 p:not(:last-of-type)+h2,
