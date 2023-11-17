@@ -60,10 +60,18 @@ window.addEventListener("scroll", () => {
 
       if (direction === "up") {
         const translateY = -scrollY * speed;
-        element.style.transform = `translateY(${translateY}px)`;
+        const newTransformValue = `translate3d(0, ${translateY}px, 0)`;
+
+        if (element.style.transform !== newTransformValue) {
+          element.style.transform = newTransformValue;
+        }
       } else if (direction === "down") {
         const translateY = scrollY * speed;
-        element.style.transform = `translateY(${translateY}px)`;
+        const newTransformValue = `translate3d(0, ${translateY}px, 0)`;
+
+        if (element.style.transform !== newTransformValue) {
+          element.style.transform = newTransformValue;
+        }
       }
     });
   }
