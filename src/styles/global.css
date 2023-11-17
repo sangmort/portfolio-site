@@ -174,9 +174,10 @@ body {
 	visibility: var(--star-visibility);
 	opacity: .8;
 	z-index: 0;
-	animation: animateStars 9s linear infinite;
+	animation: animateStars 5s linear infinite;
 	fill: var(--sky-orb-stroke-color);
-	will-change: opacity, filter;
+	/* will-change: opacity, filter; */
+	filter: drop-shadow(0 0 2px var(--sky-orb-stroke-color));
 }
 
 /* Sun & Moon in Sky */
@@ -787,18 +788,18 @@ button.tab:focus {
 	0%,
 	100% {
 		opacity: 1;
-		filter: drop-shadow(0px 0px 3px var(--sky-orb-color));
+		/* filter: drop-shadow(0px 0px 3px var(--sky-orb-color)); */
 	}
 
 	25%,
 	75% {
-		opacity: 0.9;
-		filter: drop-shadow(0px 0px 2px var(--sky-orb-color));
+		opacity: 0.75;
+		/* filter: drop-shadow(0px 0px 2px var(--sky-orb-color)); */
 	}
 
 	50% {
-		opacity: 0.8;
-		filter: drop-shadow(0px 0px 1px var(--sky-orb-color));
+		opacity: 0.5;
+		/* filter: drop-shadow(0px 0px 1px var(--sky-orb-color)); */
 	}
 }
 
