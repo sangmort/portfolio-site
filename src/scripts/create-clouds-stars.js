@@ -37,7 +37,7 @@ function createClonedCloud() {
 
   clonedCloud.style.left = getRandomNumber(1, 98) + "dvw";
   clonedCloud.style.top = getRandomNumber(1, 35) + "dvh";
-  clonedCloud.style.width = getRandomNumber(4, 9) + "rem";;
+  clonedCloud.style.width = getRandomNumber(3, 9) + "rem";;
   clonedCloud.style.opacity = getRandomNumber(0.9, 1);
 
   return clonedCloud;
