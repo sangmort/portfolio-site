@@ -43,8 +43,8 @@ const pageTitle = "About";
         </p>
 
         <p>
-          My journey has been a relentless pursuit of passion, leading to coding meeting business impact, creating a deeply
-          gratifying and rewarding experience.
+          My journey has been a relentless pursuit of passion, leading to coding meeting business impact, creating a
+          deeply gratifying and rewarding experience.
         </p>
       </div>
     </aside>
@@ -110,8 +110,10 @@ const pageTitle = "About";
           <h3>GRAPHIC DESIGN</h3>
           <p>For drafting prototpes & creating assets.</p>
           <ul>
-            <li>Adobe Photoshop, Adobe Illustrator</li>
-            <li>Affinity Designer, Affinity Photo</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Affinity Designer</li>
+            <li>Affinity Photo</li>
             <li>Figma</li>
           </ul>
         </div>
@@ -128,8 +130,23 @@ const pageTitle = "About";
 
   <section id="contact">
     <h2>Get in Touch</h2>
-    <p>
-      You can explore my work in my <a href="#new">portfolio</a> section.
-    </p>
+    <h1>Contact Us</h1>
+
+    <form id="contactForm" action="your_server_processing_script" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <!-- Add your anti-spam measures, like reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="your_recaptcha_site_key"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
   </section>
 </BaseLayout>
