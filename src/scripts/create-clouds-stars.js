@@ -30,7 +30,7 @@ const duplicateClouds = () => {
     clonedCloud.style.left = getRandomNumber(-4, 102) + "dvw";
     clonedCloud.style.top = getRandomNumber(1, 35) + "dvh";
     clonedCloud.style.width = getRandomNumber(4, 10) + "rem";
-    clonedCloud.style.opacity = getRandomNumber(.9, 1);
+    clonedCloud.style.opacity = getRandomNumber(0.9, 1);
 
     container.appendChild(clonedCloud);
   }
@@ -40,7 +40,7 @@ duplicateClouds();
 
 // Generate Stars
 function getRandomNumber(min, max) {
-  return (Math.random() * (max - min + Math.random()) + min).toFixed(1);
+  return (Math.random() * (max - min) + min).toFixed(1);
 }
 
 // Creates stars & styles them
@@ -55,15 +55,12 @@ function createStar() {
   return circle;
 }
 
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 function addStarsToContainer(container, numStars) {
-  const svgNS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(svgNS, "svg");
-
   for (let i = 0; i < numStars; i++) {
     const star = createStar();
     svg.appendChild(star);
   }
-
   container.appendChild(svg);
 }
 
