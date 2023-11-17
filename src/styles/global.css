@@ -1034,7 +1034,7 @@ button.tab:focus {
 
 	header {
 		margin: 0 auto;
-		width: calc(100dvw - 6rem);
+		width: calc(100dvw - 3rem);
 	}
 
 	#header-logo {
