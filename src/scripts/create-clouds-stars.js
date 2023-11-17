@@ -12,7 +12,7 @@ function createStar() {
   const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
   circle.setAttribute("class", "star");
-  circle.setAttribute("r", getRandomNumber(0, 1));
+  circle.setAttribute("r", getRandomNumber(.1, 1));
   circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
   circle.setAttribute("cy", getRandomNumber(1, 30) + "dvh");
   return circle;
@@ -36,8 +36,8 @@ function createClonedCloud() {
   const clonedCloud = document.querySelector(`.cloud${randomTypeOfCloud + 1}`).cloneNode(true);
 
   clonedCloud.style.left = getRandomNumber(1, 98) + "dvw";
-  clonedCloud.style.top = getRandomNumber(1, 35) + "dvh";
-  clonedCloud.style.width = getRandomNumber(3, 9) + "rem";;
+  clonedCloud.style.top = getRandomNumber(1, 32) + "dvh";
+  clonedCloud.style.width = getRandomNumber(4, 9) + "rem";;
   clonedCloud.style.opacity = getRandomNumber(0.9, 1);
 
   return clonedCloud;

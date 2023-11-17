@@ -129,21 +129,21 @@ body {
 .cloud1 {
 	position: absolute;
 	z-index: 3;
-	max-width: 10.5rem;
+	max-width: 10rem;
 	animation: animateClouds 800s linear infinite;
 }
 
 .cloud2 {
 	position: absolute;
 	z-index: 1;
-	max-width: 10.5rem;
+	max-width: 10rem;
 	animation: animateClouds2 850s linear infinite;
 }
 
 .cloud3 {
 	position: absolute;
 	z-index: 1;
-	max-width: 10.5rem;
+	max-width: 10rem;
 	animation: animateClouds3 950s linear infinite;
 }
 
