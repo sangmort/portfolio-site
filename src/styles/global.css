@@ -655,49 +655,74 @@ p code {
 }
 
 .accordion-content {
-    display: none;
-    padding: 1rem 2rem;
-    background-color: var(--secondary-bg-color);
-    border-top: 4px solid var(--primary-bg-color);
+	display: none;
+	padding: 1rem 2rem;
+	background-color: var(--secondary-bg-color);
+	border-top: 4px solid var(--primary-bg-color);
 	border-radius: 0 0 .2rem .2rem;
 }
+
 /* About Skills Sections */
 
 .tabs-container {
-	display: flex;
-  }
-  
-  .vertical-tabs {
+	display: grid;
+	display: grid;
+	grid-template-columns: .5fr 2fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.vertical-tabs {
 	display: flex;
 	flex-direction: column;
-	width: 200px; /* Adjust the width as needed */
-  }
-  
-  .tab {
-	padding: 10px;
+	justify-content: space-between;
+}
+
+.tab {
 	cursor: pointer;
-	border: 1px solid #ddd;
-	background-color: #f1f1f1;
-	text-align: center;
-  }
-  
-  .tab:hover {
-	background-color: #ddd;
-  }
-  
-  .tab-content-container {
+	background-color: var(--primary-bg-color);
+	text-align: right;
+	padding: 1rem .75rem 1rem 0;
+	height: 4rem;
+	font-size: .8rem;
+	border: 0;
+	border-right: 2px solid var(--primary-bg-color);
+	text-transform: uppercase;
+	color: var(--primary-font-color);
+}
+
+.tab:hover {
+	color: var(--primary-font-color);
+	/* background-color: var(--secondary-bg-color); */
+	border-right: 2px solid var(--secondary-color);
+	border-radius: .25rem 0 0 .25rem;
+}
+
+button.tab:active,
+button.tab:focus {
+	color: var(--primary-font-color);
+	/* background-color: var(--secondary-bg-color); */
+	border-right: 2px solid var(--primary-color);
+	border-radius: .25rem 0 0 .25rem;
+}
+
+.tab-content-container {
 	display: grid;
-	grid-template-columns: 1fr; /* Equal width columns, adjust as needed */
-	gap: 10px; /* Adjust the gap between tabs and content */
-  }
-  
-  .tab-content {
+	grid-template-columns: 1fr;
+	background-color: var(--primary-bg-color);
+	gap: 0px;
+	border-radius: 0 .25rem .25rem 0;
+}
+
+.tab-content {
 	display: none;
-	padding: 10px;
-	border: 1px solid #ddd;
-  }
-  
-  
+	padding: .75rem 1.5rem;
+	height: 20rem;
+	/* background-color: var(--secondary-bg-color); */
+}
+
+
 
 .skills>h3 {
 	font-size: 1.25rem;
