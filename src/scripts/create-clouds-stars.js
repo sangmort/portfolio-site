@@ -1,6 +1,6 @@
 const screenWidth = window.innerWidth;
 const cloudContainer = document.getElementById("cloud-container");
-// const starsContainer = document.getElementById("stars-container");
+const starsContainer = document.getElementById("stars-container");
 
 // Helper function that randomly picks between min & max
 function getRandomNumber(min, max) {
@@ -8,27 +8,27 @@ function getRandomNumber(min, max) {
 }
 
 // Create stars & style them
-// function createStar() {
-//   const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+function createStar() {
+  const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-//   circle.setAttribute("class", "star");
-//   circle.setAttribute("r", getRandomNumber(0, 1));
-//   circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
-//   circle.setAttribute("cy", getRandomNumber(1, 30) + "dvh");
-//   return circle;
-// }
+  circle.setAttribute("class", "star");
+  circle.setAttribute("r", getRandomNumber(0, 1));
+  circle.setAttribute("cx", getRandomNumber(2, 98) + "dvw");
+  circle.setAttribute("cy", getRandomNumber(1, 30) + "dvh");
+  return circle;
+}
 
 // Duplicate stars, then add them to the svg
-// function addStarsToContainer(numStars) {
-//   const svgNS = "http://www.w3.org/2000/svg";
-//   const svg = document.createElementNS(svgNS, "svg");
+function addStarsToContainer(numStars) {
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
 
-//   for (let i = 0; i < numStars; i++) {
-//     const star = createStar();
-//     svg.appendChild(star);
-//   }
-//   starsContainer.appendChild(svg);
-// }
+  for (let i = 0; i < numStars; i++) {
+    const star = createStar();
+    svg.appendChild(star);
+  }
+  starsContainer.appendChild(svg);
+}
 
 // Create clones of existing SVG Clouds & style them
 function createClonedCloud() {
@@ -60,13 +60,13 @@ let numberOfClouds;
 
 if (screenWidth < 900) {
   numberOfClouds = 15;
-  // addStarsToContainer(200);
+  addStarsToContainer(200);
 } else if (screenWidth >= 900 && screenWidth <= 1300) {
   numberOfClouds = 30;
-  // addStarsToContainer(300);
+  addStarsToContainer(300);
 } else {
   numberOfClouds = 60; //
-  // addStarsToContainer(400);
+  addStarsToContainer(400);
 }
 
 // Call duplicateClouds using requestAnimationFrame for better performance
