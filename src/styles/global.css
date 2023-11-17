@@ -147,6 +147,21 @@ body {
 	animation: animateClouds3 950s linear infinite;
 }
 
+.cloud4 {
+	position: absolute;
+	z-index: 3;
+	max-width: 10rem;
+	animation: animateClouds3 950s linear infinite;
+}
+
+.cloud1 path.a,.cloud2 path.a,.cloud3 path.a,.cloud4 path.a {
+	fill: var(--cloud-main-color);
+}
+
+.cloud1 path.b,.cloud2 path.b,.cloud3 path.b,.cloud4 path.b {
+	fill: var(--cloud-shadow-color);
+}
+
 /* Stars */
 #stars-container {
 	position: absolute;
@@ -424,12 +439,12 @@ a.home {
 }
 
 /* Adjustment for sticky header on tablets */
-a[data-hs-anchor="true"] {   
-	display: block; 
-	position: relative; 
-	visibility: hidden; 
-	top: -3.5rem;  
-   }
+a[data-hs-anchor="true"] {
+	display: block;
+	position: relative;
+	visibility: hidden;
+	top: -3.5rem;
+}
 
 /* #Links */
 a {

@@ -32,13 +32,13 @@ function addStarsToContainer(numStars) {
 
 // Create clones of existing SVG Clouds & style them
 function createClonedCloud() {
-  const randomTypeOfCloud = Math.floor(Math.random() * 3);
+  const randomTypeOfCloud = Math.floor(Math.random() * 4);
   const clonedCloud = document.querySelector(`.cloud${randomTypeOfCloud + 1}`).cloneNode(true);
 
   clonedCloud.style.left = getRandomNumber(1, 98) + "dvw";
   clonedCloud.style.top = getRandomNumber(1, 32) + "dvh";
   clonedCloud.style.width = getRandomNumber(4, 9) + "rem";;
-  clonedCloud.style.opacity = getRandomNumber(0.9, 1);
+  clonedCloud.style.opacity = getRandomNumber(0.8, 1);
 
   return clonedCloud;
 }
