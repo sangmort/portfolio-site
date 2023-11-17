@@ -860,10 +860,6 @@ button.tab:focus {
 		font-size: 17px;
 	}
 
-	#cloud-container {
-		height: 35dvh;
-	}
-
 	#treeline {
 		position: absolute;
 		top: 0;
