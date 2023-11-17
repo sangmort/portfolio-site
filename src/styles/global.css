@@ -1052,23 +1052,12 @@ button.tab:focus {
 
 	.hamburger {
 		position: fixed;
-		right: 2rem;
-	}
-
-	.navbar-links a {
-		display: block;
-		padding: 2.5rem 3rem;
-		width: 100%;
-		text-align: right;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-size: 2rem;
-		font-weight: 500;
+		right: 1rem;
 	}
 
 	#wrapper {
 		margin: 0 auto;
-		width: calc(100dvw - 6rem);
+		width: calc(100dvw - 3rem);
 	}
 
 	.navbar-default {
