@@ -1,3 +1,4 @@
+
 // Script changes site from light to dark mode via button
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
@@ -16,8 +17,8 @@ function initializeTheme() {
     setTheme(storedTheme);
     updateIcons(storedTheme);
   } else {
-    setTheme("light");
-    updateIcons("light");
+    setTheme("dark");
+    updateIcons("dark");
   }
 }
 
