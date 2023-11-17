@@ -15,6 +15,7 @@ if (screenWidth < 800) {
 }
 
 const duplicateClouds = () => {
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < numberOfCopies; i++) {
     let clonedCloud;
     const randomTypeOfCloud = Math.floor(Math.random() * 3);
@@ -32,8 +33,10 @@ const duplicateClouds = () => {
     clonedCloud.style.width = getRandomNumber(4, 10) + "rem";
     clonedCloud.style.opacity = getRandomNumber(0.9, 1);
 
-    container.appendChild(clonedCloud);
+    fragment.appendChild(clonedCloud);
   }
+
+  container.appendChild(fragment);
 };
 
 duplicateClouds();
