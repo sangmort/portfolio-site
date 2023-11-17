@@ -262,7 +262,7 @@ body {
 header {
 	display: grid;
 	position: relative;
-	top: 25dvh;
+	top: 30dvh;
 	transition: transform 0.3s ease;
 	z-index: 1000;
 }
@@ -338,7 +338,6 @@ header {
 	height: 3.5rem;
 	animation: 0.7s ease navbarEntrance;
 	font-size: 1.125rem;
-
 	background: var(--sticky-nav-bg);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
