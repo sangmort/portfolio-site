@@ -1,6 +1,6 @@
 :root,
 html[data-theme="light"] {
-	--primary-color: #005C5C;
+	--primary-color: #005c5c;
 	--secondary-color: #c9dcdd;
 	--primary-font-color: #444444;
 	--secondary-font-color: #222838;
@@ -12,21 +12,21 @@ html[data-theme="light"] {
 	--cloud-bg-color-2: rgb(197, 255, 255);
 	--cloud-bg-color-3: rgb(63, 203, 228);
 	--cloud-bg-glow: rgb(252, 255, 240);
-	--tree-color-1: #81D4F0;
+	--tree-color-1: #81d4f0;
 	/* background mountain */
 	--tree-color-2: #9cdbee;
 	/* foreground mountain */
-	--tree-color-3: #A0E0EF;
+	--tree-color-3: #a0e0ef;
 	/* furthest bg trees */
-	--tree-color-4: #AFE6EF;
+	--tree-color-4: #afe6ef;
 	/* 2nd furthest bg trees */
-	--tree-color-5: #BFEDEE;
+	--tree-color-5: #bfedee;
 	/* furthest midground trees */
-	--tree-color-6: #CEF3EE;
+	--tree-color-6: #cef3ee;
 	/* midground trees */
 	--tree-color-7: #f4fdf8;
 	/* extra shading */
-	--tree-color-8: #EDFFED;
+	--tree-color-8: #edffed;
 	/* foreground trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
 	--star-visibility: hidden;
@@ -41,7 +41,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-	--primary-color: #00AEFF;
+	--primary-color: #00aeff;
 	--secondary-color: #1c4253;
 	--primary-font-color: #e2e9ee;
 	--secondary-font-color: #cee3f1;
@@ -53,15 +53,15 @@ html[data-theme="dark"] {
 	--cloud-bg-color-2: rgb(0, 99, 165);
 	--cloud-bg-color-3: rgb(0, 30, 85);
 	--cloud-bg-glow: rgb(0, 117, 212);
-	--tree-color-1: #1B3964;
+	--tree-color-1: #1b3964;
 	/* background mountain */
 	--tree-color-2: #183657;
 	/* foreground mountain */
 	--tree-color-3: #1a4268;
 	/* furthest bg trees */
-	--tree-color-4: #112C42;
+	--tree-color-4: #112c42;
 	/* 2nd furthest bg trees */
-	--tree-color-5: #0E2837;
+	--tree-color-5: #0e2837;
 	/* furthest midground trees */
 	--tree-color-6: #0b202c;
 	/* midground trees */
@@ -113,7 +113,6 @@ body {
 	overflow-x: hidden;
 	line-height: 1.5rem;
 }
-
 
 /* SkyHeader Styling */
 #cloud-container {
@@ -172,7 +171,7 @@ body {
 .star {
 	position: absolute;
 	visibility: var(--star-visibility);
-	opacity: .8;
+	opacity: 0.8;
 	z-index: 0;
 	animation: animateStars 5s linear infinite;
 	fill: var(--sky-orb-stroke-color);
@@ -195,7 +194,7 @@ body {
 #sky-orb path.a {
 	fill: var(--sky-orb-color);
 	stroke: var(--sky-orb-stroke-color);
-	stroke-width: .5;
+	stroke-width: 0.5;
 }
 
 #sky-orb path.b {
@@ -255,7 +254,7 @@ body {
 #treeline path.g {
 	fill: url(#treelineGradient7);
 	stroke: var(--tree-color-7);
-	stroke-width: .3;
+	stroke-width: 0.3;
 	filter: blur(0.05rem);
 }
 
@@ -293,7 +292,7 @@ header {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	transition: .7s all;
+	transition: 0.7s all;
 	background: none;
 	padding: 0.5rem 0;
 	width: 100%;
@@ -302,7 +301,7 @@ header {
 
 .navbar-links a {
 	display: inline-block;
-	padding: 0.25rem .75rem;
+	padding: 0.25rem 0.75rem;
 	color: var(--secondary-font-color);
 	font-weight: 600;
 	filter: drop-shadow(0 0 5px var(--tree-color-8));
@@ -312,7 +311,7 @@ header {
 .navbar-links a:focus {
 	transition: all 0.2s;
 	border-radius: 0.25rem;
-	opacity: .9;
+	opacity: 0.9;
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
 }
@@ -337,7 +336,7 @@ header {
 	background-color: var(--primary-bg-color);
 	width: 58rem;
 	height: 3.5rem;
-	animation: .7s ease navbarEntrance;
+	animation: 0.7s ease navbarEntrance;
 	font-size: 1.125rem;
 
 	background: var(--sticky-nav-bg);
@@ -381,7 +380,7 @@ a.home {
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	margin: .5rem .75rem;
+	margin: 0.5rem 0.75rem;
 	border: 0px solid var(--primary-color);
 	border-radius: 0.5rem;
 	background: none;
@@ -596,13 +595,13 @@ p code {
 .tag>a {
 	border-radius: 0.25rem;
 	background-color: var(--primary-color);
-	padding: 0.25rem .75rem;
+	padding: 0.25rem 0.75rem;
 	text-decoration: none;
 	color: var(--primary-bg-color);
 	font-size: 1.125rem;
 	font-weight: 400;
 	text-transform: uppercase;
-	transition: all ease .3s;
+	transition: all ease 0.3s;
 }
 
 .tag>a:hover,
@@ -620,9 +619,9 @@ p code {
 }
 
 .accordion-button::before {
-	content: '»';
+	content: "»";
 	font-size: 1.75rem;
-	margin-right: .5rem;
+	margin-right: 0.5rem;
 	display: inline-block;
 	transform: translateY(-5px);
 	transition: transform 0.2s ease-out;
@@ -649,7 +648,7 @@ p code {
 	padding: 1rem 2rem;
 	background-color: var(--secondary-bg-color);
 	border-top: 4px solid var(--primary-bg-color);
-	border-radius: 0 0 .2rem .2rem;
+	border-radius: 0 0 0.2rem 0.2rem;
 }
 
 /* About Skills Sections */
@@ -657,7 +656,7 @@ p code {
 .tabs-container {
 	display: grid;
 	display: grid;
-	grid-template-columns: .5fr 2fr;
+	grid-template-columns: 0.5fr 2fr;
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
@@ -673,9 +672,9 @@ p code {
 	cursor: pointer;
 	background-color: var(--primary-bg-color);
 	text-align: right;
-	padding: 1rem .75rem 1rem 0;
+	padding: 1rem 0.75rem 1rem 0;
 	height: 4rem;
-	font-size: .8rem;
+	font-size: 0.8rem;
 	border: 0;
 	border-right: 2px solid var(--primary-bg-color);
 	text-transform: uppercase;
@@ -686,7 +685,7 @@ p code {
 	color: var(--primary-font-color);
 	/* background-color: var(--secondary-bg-color); */
 	border-right: 2px solid var(--secondary-color);
-	border-radius: .25rem 0 0 .25rem;
+	border-radius: 0.25rem 0 0 0.25rem;
 }
 
 button.tab:active,
@@ -694,7 +693,7 @@ button.tab:focus {
 	color: var(--primary-font-color);
 	/* background-color: var(--secondary-bg-color); */
 	border-right: 2px solid var(--primary-color);
-	border-radius: .25rem 0 0 .25rem;
+	border-radius: 0.25rem 0 0 0.25rem;
 }
 
 .tab-content-container {
@@ -702,17 +701,15 @@ button.tab:focus {
 	grid-template-columns: 1fr;
 	background-color: var(--primary-bg-color);
 	gap: 0px;
-	border-radius: 0 .25rem .25rem 0;
+	border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .tab-content {
 	display: none;
-	padding: .75rem 1.5rem;
+	padding: 0.75rem 1.5rem;
 	height: 20rem;
 	/* background-color: var(--secondary-bg-color); */
 }
-
-
 
 .skills>h3 {
 	font-size: 1.25rem;
@@ -748,7 +745,6 @@ button.tab:focus {
 	justify-content: flex-end;
 	font-size: 0.75rem;
 }
-
 
 /* Animations */
 @keyframes animateClouds {
@@ -811,7 +807,7 @@ button.tab:focus {
 
 	25% {
 		transform: translateY(-75%);
-		opacity: 0.20;
+		opacity: 0.2;
 	}
 
 	50% {
@@ -850,11 +846,27 @@ button.tab:focus {
 		font-size: 17px;
 	}
 
+	#wrapper {
+		top: 5dvh;
+		margin: 0 auto;
+		width: calc(100dvw - 10rem);
+	}
+
 	#treeline {
 		position: absolute;
-		top: 0;
+		top: 7rem;
 		z-index: 10;
 		width: 100dvw;
+	}
+
+	#sky-orb {
+		top: 10rem;
+	}
+
+	.cloud1,
+	.cloud2,
+	.cloud3 {
+		max-width: 8rem;
 	}
 
 	.navbar-default {
@@ -877,7 +889,7 @@ button.tab:focus {
 	#header-logo {
 		height: 4.5rem;
 		stroke: var(--tree-color-8);
-		stroke-width: .5;
+		stroke-width: 0.5;
 		fill: var(--secondary-font-color);
 		filter: drop-shadow(2px 4px 8px var(--tree-color-8));
 	}
@@ -1009,12 +1021,6 @@ button.tab:focus {
 		display: none;
 	}
 
-	#wrapper {
-		top: 3dvh;
-		margin: 0 auto;
-		width: calc(100dvw - 10rem);
-	}
-
 	.skills-layout {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -1032,6 +1038,26 @@ button.tab:focus {
 		font-size: 16px;
 	}
 
+	#wrapper {
+		margin: 0 auto;
+		width: calc(100dvw - 3rem);
+	}
+
+	#sky-orb {
+		top: 6rem;
+	}
+
+	.cloud1,
+	.cloud2,
+	.cloud3 {
+		max-width: 7rem;
+	}
+
+	.navbar-default {
+		padding: 0;
+		height: 5rem;
+	}
+
 	header {
 		margin: 0 auto;
 		width: calc(100dvw - 3rem);
@@ -1047,22 +1073,12 @@ button.tab:focus {
 
 	nav>div.navbar-links.expanded>.close-navigation {
 		display: block;
-		padding: 2rem .25rem 0 0;
+		padding: 2rem 0.25rem 0 0;
 	}
 
 	.hamburger {
 		position: fixed;
 		right: 1rem;
-	}
-
-	#wrapper {
-		margin: 0 auto;
-		width: calc(100dvw - 3rem);
-	}
-
-	.navbar-default {
-		padding: 0;
-		height: 5rem;
 	}
 
 	.skills-layout {
