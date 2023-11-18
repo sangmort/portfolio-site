@@ -350,10 +350,10 @@ header {
 	margin: 0 auto;
 	border-bottom: 1px solid var(--secondary-color);
 	background-color: var(--primary-bg-color);
-	width: 58rem;
-	height: 3.5rem;
+	width: 100dvw;
+	height: 5rem;
 	animation: 0.7s ease navbarEntrance;
-	font-size: 1.125rem;
+	font-size: 1.0625rem;
 	background: var(--sticky-nav-bg);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);

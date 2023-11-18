@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       stickyNavbar.style.top = "0";
     } else if (window.scrollY < scrollThreshold) {
       stickyNavbar.style.visibility = "hidden";
-      stickyNavbar.style.top = "-60%";
+      stickyNavbar.style.top = "-5.065rem";
     }
   });
 });
