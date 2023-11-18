@@ -93,6 +93,7 @@ html {
 	font-size: 20px;
 	font-weight: 500;
 	scroll-behavior: smooth;
+	transition: transform 1s;
 }
 
 /* Control content width */
@@ -343,7 +344,7 @@ header {
 #sticky {
 	display: flex;
 	position: fixed;
-	transition: opacity 0s linear;
+	transition: opacity 0s linear, all .3s ease-in-out;
 	visibility: hidden;
 	z-index: 900;
 	margin: 0 auto;

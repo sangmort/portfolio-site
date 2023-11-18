@@ -11,41 +11,41 @@ const pathParallaxEffects = [
   { element: svgPaths[1], direction: "up", speed: 0.3 },
   { element: svgPaths[2], direction: "up", speed: 0.5 },
   { element: svgPaths[3], direction: "up", speed: 0.7 },
-  { element: svgPaths[4], direction: "up", speed: 0.9 },
-  { element: svgPaths[5], direction: "up", speed: 1.1 },
-  { element: svgPaths[6], direction: "up", speed: 1.3 },
-  { element: wrapper, direction: "up", speed: 2 },
+  { element: svgPaths[4], direction: "up", speed: 1.2 },
+  { element: svgPaths[5], direction: "up", speed: 1.6 },
+  { element: svgPaths[6], direction: "up", speed: 1.4 },
+  { element: wrapper, direction: "up", speed: 2.2 },
   {
     element: header,
     direction: "up",
-    speed: 2,
+    speed: 2.2,
     desktopOnly: true,
   },
 ];
 
 const svgElement = document.querySelector("#treeline");
-const initialViewportHeight = window.innerHeight;
-const parallaxScrollThreshold = initialViewportHeight * 0.33;
+const parallaxScrollThreshold = window.innerHeight * 0.33;
 
 // Tracks if SVG should be hidden
 let hideSVG = false;
 
 // Wait for user to scroll
-window.addEventListener("scroll", () => {
+// Function to handle animation frame
+function animate() {
   const scrollY = window.scrollY;
 
   // Hide the SVG if the user scrolls past viewport, keep top path visible to stop bottom SVGs from showing
   if (scrollY > parallaxScrollThreshold) {
     if (!hideSVG) {
-      svgElement.style.visibility = "visible";
-      svgPaths[6].style.visibility = `visible`;
+      svgElement.style.visibility = "hidden";
+      svgPaths[6].style.visibility = "visible";
       hideSVG = true;
     }
     // Show the SVG if the user scrolls back up
   } else {
     if (hideSVG) {
       svgElement.style.visibility = "visible";
-      svgPaths[6].style.visibility = `visible`;
+      svgPaths[6].style.visibility = "visible";
       hideSVG = false;
     }
 
@@ -75,4 +75,10 @@ window.addEventListener("scroll", () => {
       }
     });
   }
-});
+
+  // Request next animation frame
+  requestAnimationFrame(animate);
+}
+
+// Call to start animation loop
+animate();
