@@ -773,9 +773,38 @@ button.tab:focus {
 }
 
 /* Contact Form */
-input:focus,
-textarea:focus {
-  outline: 2px solid #007bff;
+#contactForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#contactForm input[type=text], #contactForm input[type="email"], #contactForm textarea {
+	background-color: var(--primary-bg-color);
+	border-bottom: 2px solid var(--secondary-bg-color);
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+	padding: 1rem .5rem;
+	box-sizing: border-box;
+}
+
+#contactForm input[type=submit] {
+	background-color: var(--primary-font-color);
+	color: var(--primary-bg-color);
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: .75rem .25rem;
+	border: none;
+	border-radius: .2rem;
+	cursor: pointer;
+  }
+
+  #contactForm input[type=text]:focus,
+  #contactForm input[type="email"]:focus, #contactForm textarea:focus {
+  border-bottom: 2px solid var(--primary-color);
+  outline: none;
 }
 
 .error {
@@ -784,6 +813,7 @@ textarea:focus {
 
 
 /* Blog footer */
+
 #blog-footer {
 	display: flex;
 	flex-direction: column;
