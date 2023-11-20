@@ -881,6 +881,13 @@ button.tab:focus {
 	font-size: 0.75rem;
 }
 
+/* Site Footer */
+.footer-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
 /* Animations */
 @keyframes animateClouds {
 
