@@ -86,6 +86,7 @@ html[data-theme="dark"] {
 }
 
 html {
+	transition: transform 1s;
 	background-color: var(--primary-bg-color);
 	width: var(--100-device-width);
 	color: var(--primary-font-color);
@@ -93,7 +94,6 @@ html {
 	font-size: 20px;
 	font-weight: 500;
 	scroll-behavior: smooth;
-	transition: transform 1s;
 }
 
 /* Control content width */
@@ -197,7 +197,6 @@ body {
 	z-index: 0;
 	animation: animateStars 5s linear infinite;
 	fill: var(--sky-orb-stroke-color);
-	/* will-change: opacity, filter; */
 	filter: drop-shadow(0 0 2px var(--sky-orb-stroke-color));
 }
 
@@ -232,9 +231,9 @@ body {
 
 #treeline {
 	position: absolute;
+	top: 3rem;
 	z-index: 10;
 	width: 100%;
-	top: 3rem;
 }
 
 #treeline path {
@@ -332,8 +331,8 @@ header {
 .navbar-links a:hover,
 .navbar-links a:focus {
 	transition: all 0.2s;
-	border-radius: 0.25rem;
 	opacity: 0.9;
+	border-radius: 0.25rem;
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
 }
@@ -355,12 +354,12 @@ header {
 	z-index: 900;
 	margin: 0 auto;
 	border-bottom: 1px solid var(--secondary-color);
+	background: var(--sticky-nav-bg);
 	background-color: var(--primary-bg-color);
 	width: 100dvw;
 	height: 5rem;
 	animation: 0.7s ease navbarEntrance;
 	font-size: 1.0625rem;
-	background: var(--sticky-nav-bg);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
 }
@@ -449,8 +448,8 @@ a.home {
 a[data-hs-anchor="true"] {
 	display: block;
 	position: relative;
-	visibility: hidden;
 	top: -3.5rem;
+	visibility: hidden;
 }
 
 /* #Links */
@@ -471,9 +470,9 @@ h6 {
 
 h1 {
 	margin-bottom: 4rem;
+	text-align: center;
 	line-height: 2rem;
 	font-size: 2.5rem;
-	text-align: center;
 	font-weight: 700;
 }
 
@@ -525,14 +524,13 @@ p:not(:last-of-type)+h6 {
 
 section {
 	min-height: 95dvh;
-
 }
 
 /* Paragraph Spacing */
 p {
+	margin: 0 auto;
 	margin-bottom: 1.25rem;
 	line-height: 1.5rem;
-	margin: 0 auto;
 }
 
 *+p {
@@ -623,15 +621,15 @@ p code {
 }
 
 .tag>a {
+	transition: all ease 0.3s;
 	border-radius: 0.25rem;
 	background-color: var(--primary-color);
 	padding: 0.25rem 0.75rem;
+	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--primary-bg-color);
 	font-size: 1.125rem;
 	font-weight: 400;
-	text-transform: uppercase;
-	transition: all ease 0.3s;
 }
 
 .tag>a:hover,
@@ -649,13 +647,13 @@ p code {
 }
 
 .accordion-button::before {
-	content: "»";
-	font-size: 1.75rem;
-	margin-right: 0.5rem;
 	display: inline-block;
 	transform: translateY(-5px);
 	transition: transform 0.2s ease-out;
+	margin-right: 0.5rem;
 	vertical-align: middle;
+	font-size: 1.75rem;
+	content: "»";
 }
 
 .accordion-button.rotate-icon::before {
@@ -663,33 +661,31 @@ p code {
 }
 
 .accordion-button {
+	border: 1px solid var(--secondary-bg-color);
+	border-radius: 0.2rem;
+	background-color: var(--secondary-bg-color);
 	cursor: pointer;
 	padding: 1rem 1.5rem;
-	font-size: 1.25rem;
 	text-align: left;
 	color: var(--primary-font-color);
-	border: 1px solid var(--secondary-bg-color);
-	background-color: var(--secondary-bg-color);
-	border-radius: 0.2rem;
+	font-size: 1.25rem;
 }
 
 .accordion-content {
 	display: none;
-	padding: 1rem 2rem;
-	background-color: var(--secondary-bg-color);
 	border-top: 4px solid var(--primary-bg-color);
 	border-radius: 0 0 0.2rem 0.2rem;
+	background-color: var(--secondary-bg-color);
+	padding: 1rem 2rem;
 }
 
 /* About Skills Sections */
-
 .tabs-container {
 	display: grid;
-	display: grid;
-	grid-template-columns: 0.5fr 2fr;
 	grid-template-rows: 1fr;
-	grid-column-gap: 0px;
+	grid-template-columns: 0.5fr 2fr;
 	grid-row-gap: 0px;
+	grid-column-gap: 0px;
 }
 
 .vertical-tabs {
@@ -699,46 +695,43 @@ p code {
 }
 
 .tab {
-	cursor: pointer;
-	background-color: var(--primary-bg-color);
-	text-align: right;
-	padding: 1rem 0.75rem 1rem 0;
-	height: 4rem;
-	font-size: 0.8rem;
 	border: 0;
 	border-right: 2px solid var(--primary-bg-color);
+	background-color: var(--primary-bg-color);
+	cursor: pointer;
+	padding: 1rem 0.75rem 1rem 0;
+	height: 4rem;
+	text-align: right;
 	text-transform: uppercase;
 	color: var(--primary-font-color);
+	font-size: 0.8rem;
 }
 
 .tab:hover {
-	color: var(--primary-font-color);
-	/* background-color: var(--secondary-bg-color); */
 	border-right: 2px solid var(--secondary-color);
 	border-radius: 0.25rem 0 0 0.25rem;
+	color: var(--primary-font-color);
 }
 
 button.tab:active,
 button.tab:focus {
-	color: var(--primary-font-color);
-	/* background-color: var(--secondary-bg-color); */
 	border-right: 2px solid var(--primary-color);
 	border-radius: 0.25rem 0 0 0.25rem;
+	color: var(--primary-font-color);
 }
 
 .tab-content-container {
 	display: grid;
 	grid-template-columns: 1fr;
+	border-radius: 0 0.25rem 0.25rem 0;
 	background-color: var(--primary-bg-color);
 	gap: 0px;
-	border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .tab-content {
 	display: none;
 	padding: 0.75rem 1.5rem;
 	height: 20rem;
-	/* background-color: var(--secondary-bg-color); */
 }
 
 .skills>h3 {
@@ -764,13 +757,13 @@ button.tab:focus {
 /* Hide elements for non-screen readers */
 .visually-hidden {
 	position: absolute;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 	width: 1px;
 	height: 1px;
-	margin: -1px;
-	padding: 0;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
-	border: 0;
 }
 
 /* Contact Form */
@@ -792,22 +785,21 @@ button.tab:focus {
 }
 
 #contactForm label {
+	flex-direction: row;
 	text-transform: uppercase;
 	font-size: .9rem;
-	flex-direction: row;
-	color: var(--secondary-color)
 }
 
 #contactForm input,
 #contactForm textarea {
-	background-color: var(--primary-bg-color);
-	color: var(--primary-font-color);
-	border: none;
-	font-size: 1rem;
-	font-weight: 500;
-	line-height: 2rem;
 	box-sizing: border-box;
 	margin: .25rem .25rem 1.5rem .25rem;
+	border: none;
+	background-color: var(--primary-bg-color);
+	line-height: 2rem;
+	color: var(--primary-font-color);
+	font-size: 1rem;
+	font-weight: 500;
 }
 
 #contactForm input {
@@ -816,57 +808,55 @@ button.tab:focus {
 
 #contactForm textarea,
 #contactForm textarea:focus {
-	line-height: 4ex;
+	outline: none;
+	border: none;
 	background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--secondary-bg-color) 0);
 	background-size: 100% 4ex;
 	overflow-y: hidden;
 	resize: none;
-	border: none;
-	outline: none;
+	line-height: 4ex;
 }
 
 #contactForm textarea:focus {
-	line-height: 4ex;
+	outline: none;
+	border: none;
 	background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--primary-color) 0);
 	background-size: 100% 4ex;
 	overflow-y: hidden;
 	resize: none;
-	border: none;
-	outline: none;
+	line-height: 4ex;
 }
 
 #contactForm input[type=submit] {
-	background-color: var(--secondary-bg-color);
-	color: var(--primary-font-color);
-	text-transform: uppercase;
-	font-size: 1rem;
-	padding: .75rem .25rem;
+	grid-column: span 2;
 	border: none;
 	border-radius: .2rem;
+	background-color: var(--secondary-bg-color);
 	cursor: pointer;
-	grid-column: span 2;
+	padding: .75rem .25rem;
+	text-transform: uppercase;
+	color: var(--primary-font-color);
+	font-size: 1rem;
 }
 
 #contactForm input[type=submit]:hover,
 #contactForm input[type=submit]:active,
 #contactForm input[type=submit]:focus {
 	background-color: var(--primary-font-color);
-	color: var(--primary-bg-color);
 	cursor: pointer;
+	color: var(--primary-bg-color);
 }
 
 #contactForm input:focus {
-	border-bottom: 2px solid var(--primary-color);
 	outline: none;
+	border-bottom: 2px solid var(--primary-color);
 }
 
 .error {
 	color: #dc3545;
 }
 
-
 /* Blog footer */
-
 #blog-footer {
 	display: flex;
 	flex-direction: column;
@@ -875,11 +865,7 @@ button.tab:focus {
 }
 
 .copyright {
-	display: flex;
-	bottom: 0;
-	align-items: flex-end;
-	justify-content: flex-end;
-	font-size: 0.75rem;
+	padding-bottom: 1.25rem;
 }
 
 /* Site Footer */
@@ -890,18 +876,16 @@ button.tab:focus {
 }
 
 .social-links a {
-	text-decoration: none;
-	color: var(--primary-color);
-	font-weight: 900;
 	display: flex;
 	align-items: center;
 	padding: .25rem 1rem;
-
+	text-decoration: none;
+	color: var(--primary-color);
+	font-weight: 900;
 }
 
 .social-links svg {
 	margin-right: .5rem;
-
 }
 
 .footer-links {
@@ -909,11 +893,6 @@ button.tab:focus {
 	flex-direction: row;
 	justify-content: space-evenly;
 	margin-bottom: 1rem;
-}
-
-.copyright {
-	padding-bottom: 1.25rem;
-	color: var(--secondary-font-color)
 }
 
 /* Animations */
@@ -954,18 +933,15 @@ button.tab:focus {
 	0%,
 	100% {
 		opacity: 1;
-		/* filter: drop-shadow(0px 0px 3px var(--sky-orb-color)); */
 	}
 
 	25%,
 	75% {
 		opacity: 0.75;
-		/* filter: drop-shadow(0px 0px 2px var(--sky-orb-color)); */
 	}
 
 	50% {
 		opacity: 0.5;
-		/* filter: drop-shadow(0px 0px 1px var(--sky-orb-color)); */
 	}
 }
 
@@ -1043,11 +1019,11 @@ button.tab:focus {
 		display: flex;
 		position: relative;
 		flex-direction: row;
+		align-content: flex-end;
 		align-items: center;
 		justify-content: space-between;
 		height: fit-content;
 		font-size: 1.25rem;
-		align-content: flex-end;
 	}
 
 	header {
@@ -1209,15 +1185,14 @@ button.tab:focus {
 	}
 
 	header {
-		top: 1rem;
 		margin: 0 auto;
-		width: calc(100dvw - 10rem);
+		width: calc(100dvw - 4rem);
 	}
 
 	#wrapper {
+		top: 4rem;
 		margin: 0 auto;
 		width: calc(100dvw - 4rem);
-		top: 4rem;
 	}
 
 	#sky-orb {
@@ -1233,11 +1208,6 @@ button.tab:focus {
 	.navbar-default {
 		padding: 0;
 		height: 5rem;
-	}
-
-	header {
-		margin: 0 auto;
-		width: calc(100dvw - 4rem);
 	}
 
 	#header-logo {
@@ -1262,14 +1232,12 @@ button.tab:focus {
 		grid-template-columns: repeat(1, 1fr);
 	}
 
-	/* Remove gap from contact form */
 	#contactForm {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 0rem;
 	}
 
-	/* Make contact form inputs 1 column */
 	#contactForm .form-input-column-grouping {
 		display: grid;
 		grid-column: span 2;
