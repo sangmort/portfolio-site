@@ -133,15 +133,15 @@ const pageTitle = "About";
     <form id="contactForm" aria-labelledby="contact-aria">
       <h3 id="contact-aria" class="visually-hidden">Contact Form</h2>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" minlength="4" maxlength="25" required aria-describedby="nameError" />
+      <input type="text" id="name" name="name" minlength="4" maxlength="25" required aria-describedby="nameError" placeholder="Name" />
       <span id="nameError" class="error" role="alert" aria-live="assertive"></span>
     
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required aria-describedby="emailError" />
+      <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="email@example.com"/>
       <span id="emailError" class="error" role="alert" aria-live="assertive"></span>
     
       <label for="message">Message:</label>
-      <textarea id="message" name="message" minlength="10" required aria-describedby="messageError"></textarea>
+      <textarea id="message" name="message" minlength="10" required aria-describedby="messageError" placeholder="Hi, I'm reaching out to discuss an opportunity."></textarea>
       <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
     
       <input type="submit" value="Submit" aria-label="Submit form" />
