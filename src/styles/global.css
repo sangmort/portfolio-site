@@ -772,6 +772,16 @@ button.tab:focus {
 	border: 0;
 }
 
+/* Contact Form */
+input:focus,
+textarea:focus {
+  outline: 2px solid #007bff;
+}
+
+.error {
+  color: #dc3545;
+}
+
 
 /* Blog footer */
 #blog-footer {
