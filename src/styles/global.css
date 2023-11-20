@@ -778,8 +778,7 @@ button.tab:focus {
 	flex-direction: column;
 }
 
-#contactForm input[type=text],
-#contactForm input[type="email"],
+#contactForm input,
 #contactForm textarea {
 	background-color: var(--primary-bg-color);
 	color: var(--primary-font-color);
@@ -790,8 +789,7 @@ button.tab:focus {
 	margin: .25rem .25rem 1.5rem .25rem; 
 }
 
-#contactForm input[type=text],
-#contactForm input[type="email"] {
+#contactForm input {
 	border-bottom: 2px solid var(--secondary-bg-color);
 }
 
@@ -821,19 +819,8 @@ button.tab:focus {
 	cursor: pointer;
 }
 
-#contactForm input[type=text]:focus,
-#contactForm input[type="email"]:focus {
+#contactForm input:focus {
 	border-bottom: 2px solid var(--primary-color);
-	outline: none;
-}
-
-#contactForm textarea:focus {
-    line-height: 4ex;
-    background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--secondary-color) 0);
-    background-size: 100% 4ex;
-    overflow-y: hidden;
-    resize: none;
-    border: none;
 	outline: none;
 }
 
