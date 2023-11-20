@@ -155,11 +155,17 @@ body {
 	animation: animateClouds3 950s linear infinite;
 }
 
-.cloud1 path.a,.cloud2 path.a,.cloud3 path.a,.cloud4 path.a {
+.cloud1 path.a,
+.cloud2 path.a,
+.cloud3 path.a,
+.cloud4 path.a {
 	fill: var(--cloud-main-color);
 }
 
-.cloud1 path.b,.cloud2 path.b,.cloud3 path.b,.cloud4 path.b {
+.cloud1 path.b,
+.cloud2 path.b,
+.cloud3 path.b,
+.cloud4 path.b {
 	fill: var(--cloud-shadow-color);
 }
 
@@ -752,6 +758,20 @@ button.tab:focus {
 	padding: 1.5rem;
 	min-height: 24rem;
 }
+
+/* A11y */
+/* Hide elements for non-screen readers */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
 
 /* Blog footer */
 #blog-footer {
