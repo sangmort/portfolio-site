@@ -130,20 +130,86 @@ const pageTitle = "About";
 
   <section id="contact">
     <h2>Get in Touch</h2>
-
-    <form id="contactForm" action="your_server_processing_script" method="post">
+    <form id="contactForm" aria-labelledby="contact-aria">
+      <h3 id="contact-aria" class="visually-hidden">Contact Form</h2>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
+      <input type="text" id="name" name="name" minlength="4" maxlength="25" required aria-describedby="nameError" />
+      <span id="nameError" class="error" role="alert" aria-live="assertive"></span>
+    
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
+      <input type="email" id="email" name="email" required aria-describedby="emailError" />
+      <span id="emailError" class="error" role="alert" aria-live="assertive"></span>
+    
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <div class="g-recaptcha" data-sitekey="your_recaptcha_site_key"></div>
-
-      <button type="submit">Submit</button>
+      <textarea id="message" name="message" minlength="10" required aria-describedby="messageError"></textarea>
+      <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
+    
+      <input type="submit" value="Submit" aria-label="Submit form" />
     </form>
+    <style>
+      input:focus,
+      textarea:focus {
+        outline: 2px solid #007bff;
+      }
+
+      .error {
+        color: #dc3545;
+      }
+
+      /* Hide heading for non-screen readers */
+      .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    </style>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", (event) => {
+        const name = document.getElementById("name") as HTMLInputElement;
+        const email = document.getElementById("email") as HTMLInputElement;
+        const message = document.getElementById("message") as HTMLTextAreaElement;
+    
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+    
+        const showError = (element: HTMLElement, message: string) => {
+          element.textContent = message;
+          element.style.display = "block";
+          element.setAttribute("aria-live", "assertive");
+        };
+    
+        const hideError = (element: HTMLElement) => {
+          element.textContent = "";
+          element.style.display = "none";
+        };
+    
+        if (name.value.length < 4 || name.value.length > 25) {
+          showError(nameError, "Name must be between 4 and 25 characters");
+          event.preventDefault();
+        } else {
+          hideError(nameError);
+        }
+    
+        if (!email.validity.valid) {
+          showError(emailError, "Email is not valid");
+          event.preventDefault();
+        } else {
+          hideError(emailError);
+        }
+    
+        if (message.value.length < 10) {
+          showError(messageError, "Message must be at least 10 characters long");
+          event.preventDefault();
+        } else {
+          hideError(messageError);
+        }
+      });
+    </script>
   </section>
 </BaseLayout>
