@@ -1,9 +1,9 @@
 :root,
 html[data-theme="light"] {
 	--primary-color: #005c5c;
-	--secondary-color: #c9dcdd;
+	--secondary-color: #a9c4c5;
 	--primary-font-color: #444444;
-	--secondary-font-color: #222838;
+	--secondary-font-color: #495064;
 	--primary-bg-color: var(--tree-color-7);
 	--secondary-bg-color: #e9f1ec;
 	--cloud-main-color: #eaffff;
@@ -635,7 +635,7 @@ p code {
 
 .tag>a:hover,
 .tag>a:focus {
-	background-color: var(--secondary-color);
+	background-color: var(--secondary-bg-color);
 	text-decoration: none;
 	color: var(--primary-color);
 }
@@ -778,12 +778,21 @@ button.tab:focus {
 	flex-direction: column;
 }
 
+#contactForm label {
+	text-transform: uppercase;
+	font-size: .9rem;
+	display: flex;
+	flex-direction: row;
+	color: var(--secondary-color)
+}
+
 #contactForm input,
 #contactForm textarea {
 	background-color: var(--primary-bg-color);
 	color: var(--primary-font-color);
 	border: none;
 	font-size: 1rem;
+	font-weight: 500;
 	line-height: 2rem;
 	box-sizing: border-box;
 	margin: .25rem .25rem 1.5rem .25rem; 
