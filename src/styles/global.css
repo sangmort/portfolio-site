@@ -780,15 +780,15 @@ button.tab:focus {
 	gap: 1rem;
 }
 
-#contactForm .form-input-column-grouping{
+#contactForm .form-input-column-grouping {
 	display: flex;
 	flex-direction: column;
 }
 
 #contactForm .form-input-column-grouping-span2 {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-column: span 2;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-column: span 2;
 }
 
 #contactForm label {
@@ -884,17 +884,17 @@ button.tab:focus {
 
 /* Site Footer */
 .social-links {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	margin-bottom: 1rem;
 }
 
 .social-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 900;
-    display: flex;
-    align-items: center;
+	text-decoration: none;
+	color: var(--primary-color);
+	font-weight: 900;
+	display: flex;
+	align-items: center;
 	padding: .25rem 1rem;
 
 }
@@ -1206,6 +1206,12 @@ button.tab:focus {
 		margin: 0 auto;
 		overflow-x: hidden;
 		font-size: 16px;
+	}
+
+	header {
+		top: 1rem;
+		margin: 0 auto;
+		width: calc(100dvw - 10rem);
 	}
 
 	#wrapper {
