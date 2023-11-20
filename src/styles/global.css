@@ -520,12 +520,11 @@ p:not(:last-of-type)+h6 {
 
 /* Section Spacing */
 *+section {
-	margin-bottom: 5rem;
+	padding: 8rem 0;
 }
 
 section {
-	padding: 8rem 0;
-	height: 95dvh;
+	min-height: 95dvh;
 
 }
 
