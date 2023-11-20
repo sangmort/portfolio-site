@@ -1071,7 +1071,7 @@ button.tab:focus {
 	}
 
 	.theme-toggle {
-		margin: 1rem 5.25rem;
+		margin: 1rem 5.5rem;
 		filter: drop-shadow(2px 4px 8px var(--tree-color-8));
 	}
 
@@ -1086,7 +1086,7 @@ button.tab:focus {
 
 	.hamburger {
 		position: fixed;
-		right: 4.5rem;
+		right: 5rem;
 		transition: transform 400ms;
 		z-index: 9000;
 		cursor: pointer;
@@ -1240,7 +1240,7 @@ button.tab:focus {
 	}
 
 	.theme-toggle {
-		margin: 1rem 4.5rem;
+		margin: 1rem 5rem;
 	}
 
 	nav>div.navbar-links.expanded>.close-navigation {
