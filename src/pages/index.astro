@@ -162,45 +162,45 @@ const pageTitle = "About";
       </div>
 
       <div class="form-input-column-grouping">
-      <label for="phone">Phone Number:</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        pattern="[0-9]+"
-        minlength="10"
-        maxlength="15"
-        required
-        aria-describedby="phoneError"
-        placeholder="123-456-7890"
-      />
-      <span id="phoneError" class="error" role="alert" aria-live="assertive"></span>
-    </div>
-    
-    <div class="form-input-column-grouping">
-      <label for="organization">Organization:</label>
-      <input
-        type="text"
-        id="organization"
-        name="organization"
-        maxlength="50"
-        aria-describedby="organizationError"
-        placeholder="Organization"
-      />
-      <span id="organizationError" class="error" role="alert" aria-live="assertive"></span>
-    </div>
-    <div class="form-input-column-grouping-span2">
-      <label for="message">Message:</label>
-      <textarea
-        id="message"
-        name="message"
-        minlength="10"
-        maxlength="400"
-        rows="6"
-        required
-        aria-describedby="messageError"
-        placeholder="Hi, I'm reaching out to discuss an opportunity."></textarea>
-      <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]+"
+          minlength="10"
+          maxlength="15"
+          required
+          aria-describedby="phoneError"
+          placeholder="123-456-7890"
+        />
+        <span id="phoneError" class="error" role="alert" aria-live="assertive"></span>
+      </div>
+
+      <div class="form-input-column-grouping">
+        <label for="organization">Organization:</label>
+        <input
+          type="text"
+          id="organization"
+          name="organization"
+          maxlength="50"
+          aria-describedby="organizationError"
+          placeholder="Organization"
+        />
+        <span id="organizationError" class="error" role="alert" aria-live="assertive"></span>
+      </div>
+      <div class="form-input-column-grouping-span2">
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          minlength="10"
+          maxlength="375"
+          rows="6"
+          required
+          aria-describedby="messageError"
+          placeholder="Hi, I'm reaching out to discuss an opportunity."></textarea>
+        <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
       </div>
       <input type="submit" value="Submit" aria-label="Submit form" />
     </form>
