@@ -524,7 +524,7 @@ p:not(:last-of-type)+h6 {
 }
 
 section {
-	padding-top: 8rem;
+	padding: 8rem 0;
 }
 
 /* Paragraph Spacing */
