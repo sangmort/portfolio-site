@@ -778,37 +778,63 @@ button.tab:focus {
 	flex-direction: column;
 }
 
-#contactForm input[type=text], #contactForm input[type="email"], #contactForm textarea {
+#contactForm input[type=text],
+#contactForm input[type="email"],
+#contactForm textarea {
 	background-color: var(--primary-bg-color);
-	border-bottom: 2px solid var(--secondary-bg-color);
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	margin-bottom: 1rem;
-	font-size: 1.25rem;
-	padding: 1rem .5rem;
+	color: var(--primary-font-color);
+	border: none;
+	margin-bottom: 1.5rem;
+	font-size: 1rem;
+	line-height: 2rem;
 	box-sizing: border-box;
 }
 
+#contactForm input[type=text],
+#contactForm input[type="email"] {
+	border-bottom: 2px solid var(--secondary-bg-color);
+	padding: 0 0.5rem;
+}
+
+#contactForm textarea, #contactForm textarea:focus {
+	padding: 0 .5rem;
+	line-height: 1.5rem;
+	background-image: linear-gradient(transparent, transparent calc(1.5rem - .1rem), var(--secondary-bg-color) 0);
+	background-size: 100% 1.5rem;
+	overflow-y: hidden;
+	border: none;
+}
+
 #contactForm input[type=submit] {
-	background-color: var(--primary-font-color);
-	color: var(--primary-bg-color);
+	background-color: var(--secondary-bg-color);
+	color: var(--primary-font-color);
 	text-transform: uppercase;
 	font-size: 1rem;
 	padding: .75rem .25rem;
 	border: none;
 	border-radius: .2rem;
 	cursor: pointer;
-  }
+}
 
-  #contactForm input[type=text]:focus,
-  #contactForm input[type="email"]:focus, #contactForm textarea:focus {
-  border-bottom: 2px solid var(--primary-color);
-  outline: none;
+#contactForm input[type=submit]:hover, #contactForm input[type=submit]:active, #contactForm input[type=submit]:focus  {
+	background-color: var(--primary-font-color);
+	color: var(--primary-bg-color);
+	cursor: pointer;
+}
+
+#contactForm input[type=text]:focus,
+#contactForm input[type="email"]:focus {
+	border-bottom: 2px solid var(--primary-color);
+	outline: none;
+}
+
+#contactForm textarea:focus {
+	background-image: linear-gradient(transparent, transparent calc(2rem - 2px), var(--primary-font-color) 0px);
+	outline: none;
 }
 
 .error {
-  color: #dc3545;
+	color: #dc3545;
 }
 
 
