@@ -132,27 +132,77 @@ const pageTitle = "About";
     <h2>Get in Touch</h2>
     <form id="contactForm" aria-labelledby="contact-aria">
       <h3 id="contact-aria" class="visually-hidden">Contact Form</h3>
-      
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" minlength="4" maxlength="25" required aria-describedby="nameError" placeholder="Name" />
-      <span id="nameError" class="error" role="alert" aria-live="assertive"></span>
-    
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="email@example.com"/>
-      <span id="emailError" class="error" role="alert" aria-live="assertive"></span>
 
+      <div class="form-input-column-grouping">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          minlength="4"
+          maxlength="25"
+          required
+          aria-describedby="nameError"
+          placeholder="Name"
+        />
+        <span id="nameError" class="error" role="alert" aria-live="assertive"></span>
+      </div>
+
+      <div class="form-input-column-grouping">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          aria-describedby="emailError"
+          placeholder="email@example.com"
+        />
+        <span id="emailError" class="error" role="alert" aria-live="assertive"></span>
+      </div>
+
+      <div class="form-input-column-grouping">
       <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]+" minlength="10" maxlength="15" required aria-describedby="phoneError" placeholder="123-456-7890"/>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]+"
+        minlength="10"
+        maxlength="15"
+        required
+        aria-describedby="phoneError"
+        placeholder="123-456-7890"
+      />
       <span id="phoneError" class="error" role="alert" aria-live="assertive"></span>
+    </div>
 
-      <label for="organization">Organization:</label>
-      <input type="text" id="organization" name="organization" maxlength="50" aria-describedby="organizationError" placeholder="Organization"/>
-      <span id="organizationError" class="error" role="alert" aria-live="assertive"></span>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" minlength="10" maxlength="400" rows="6" required aria-describedby="messageError" placeholder="Hi, I'm reaching out to discuss an opportunity."></textarea>
-      <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
     
+    <div class="form-input-column-grouping">
+      <label for="organization">Organization:</label>
+      <input
+        type="text"
+        id="organization"
+        name="organization"
+        maxlength="50"
+        aria-describedby="organizationError"
+        placeholder="Organization"
+      />
+      <span id="organizationError" class="error" role="alert" aria-live="assertive"></span>
+    </div>
+    <div class="form-input-column-grouping-span2">
+      <label for="message">Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        minlength="10"
+        maxlength="400"
+        rows="6"
+        required
+        aria-describedby="messageError"
+        placeholder="Hi, I'm reaching out to discuss an opportunity."></textarea>
+      <span id="messageError" class="error" role="alert" aria-live="assertive"></span>
+      </div>
       <input type="submit" value="Submit" aria-label="Submit form" />
     </form>
     <script>
@@ -162,31 +212,31 @@ const pageTitle = "About";
         const phone = document.getElementById("phone") as HTMLInputElement;
         const organization = document.getElementById("organization") as HTMLInputElement;
         const message = document.getElementById("message") as HTMLTextAreaElement;
-    
+
         const nameError = document.getElementById("nameError");
         const emailError = document.getElementById("emailError");
         const phoneError = document.getElementById("phoneError");
         const organizationError = document.getElementById("organizationError");
         const messageError = document.getElementById("messageError");
-    
+
         const showError = (element: HTMLElement, message: string) => {
           element.textContent = message;
           element.style.display = "block";
           element.setAttribute("aria-live", "assertive");
         };
-    
+
         const hideError = (element: HTMLElement) => {
           element.textContent = "";
           element.style.display = "none";
         };
-    
+
         if (name.value.length < 4 || name.value.length > 25) {
           showError(nameError, "Name must be between 4 and 25 characters");
           event.preventDefault();
         } else {
           hideError(nameError);
         }
-    
+
         if (!email.validity.valid) {
           showError(emailError, "Email is not valid");
           event.preventDefault();
@@ -207,7 +257,7 @@ const pageTitle = "About";
         } else {
           hideError(organizationError);
         }
-    
+
         if (message.value.length < 10) {
           showError(messageError, "Message must be at least 10 characters long");
           event.preventDefault();

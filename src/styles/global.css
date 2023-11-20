@@ -774,14 +774,25 @@ button.tab:focus {
 
 /* Contact Form */
 #contactForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+#contactForm .form-input-column-grouping{
 	display: flex;
 	flex-direction: column;
+}
+
+#contactForm .form-input-column-grouping-span2 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-column: span 2;
 }
 
 #contactForm label {
 	text-transform: uppercase;
 	font-size: .9rem;
-	display: flex;
 	flex-direction: row;
 	color: var(--secondary-color)
 }
@@ -795,20 +806,32 @@ button.tab:focus {
 	font-weight: 500;
 	line-height: 2rem;
 	box-sizing: border-box;
-	margin: .25rem .25rem 1.5rem .25rem; 
+	margin: .25rem .25rem 1.5rem .25rem;
 }
 
 #contactForm input {
 	border-bottom: 2px solid var(--secondary-bg-color);
 }
 
-#contactForm textarea, #contactForm textarea:focus {
-    line-height: 4ex;
-    background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--secondary-bg-color) 0);
-    background-size: 100% 4ex;
-    overflow-y: hidden;
-    resize: none;
-    border: none;
+#contactForm textarea,
+#contactForm textarea:focus {
+	line-height: 4ex;
+	background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--secondary-bg-color) 0);
+	background-size: 100% 4ex;
+	overflow-y: hidden;
+	resize: none;
+	border: none;
+	outline: none;
+}
+
+#contactForm textarea:focus {
+	line-height: 4ex;
+	background-image: linear-gradient(transparent, transparent calc(4ex - .1rem), var(--primary-color) 0);
+	background-size: 100% 4ex;
+	overflow-y: hidden;
+	resize: none;
+	border: none;
+	outline: none;
 }
 
 #contactForm input[type=submit] {
@@ -820,9 +843,12 @@ button.tab:focus {
 	border: none;
 	border-radius: .2rem;
 	cursor: pointer;
+	grid-column: span 2;
 }
 
-#contactForm input[type=submit]:hover, #contactForm input[type=submit]:active, #contactForm input[type=submit]:focus  {
+#contactForm input[type=submit]:hover,
+#contactForm input[type=submit]:active,
+#contactForm input[type=submit]:focus {
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
 	cursor: pointer;
