@@ -1220,4 +1220,17 @@ button.tab:focus {
 	.skills-layout {
 		grid-template-columns: repeat(1, 1fr);
 	}
+
+	/* Remove gap from contact form */
+	#contactForm {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0rem;
+	}
+
+	/* Make contact form inputs 1 column */
+	#contactForm .form-input-column-grouping {
+		display: grid;
+		grid-column: span 2;
+	}
 }
