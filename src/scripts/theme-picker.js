@@ -17,6 +17,7 @@ function toggleTheme() {
 // Initialize theme based on user's system preference or preference in local storage
 function initializeTheme() {
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  console.log("Prefers Dark Mode:", prefersDarkMode);
   const storedTheme = localStorage.getItem("theme");
 
   if (storedTheme) {
