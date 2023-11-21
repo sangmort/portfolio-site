@@ -587,7 +587,7 @@ blockquote,
 q {
 	margin-bottom: 2rem;
 	margin-left: 1rem;
-	border-left: 2px solid red;
+	border-left: 2px solid var(--primary-color);
 	padding-left: 1rem;
 	quotes: none;
 }
