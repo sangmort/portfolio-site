@@ -282,6 +282,8 @@ body {
 	filter: blur(0.05rem);
 }
 
+
+
 /* Header to allow centering the navbar after scroll*/
 header {
 	display: grid;
@@ -297,6 +299,11 @@ header {
 	height: 12rem;
 	fill: var(--secondary-font-color);
 	filter: drop-shadow(0 0 6px var(--tree-color-7));
+}
+
+/* Removes a:link hover underline from header-logo link hover */
+.navbar-default a:hover {
+	border-bottom: none;
 }
 
 /* navigation */
@@ -464,7 +471,7 @@ a {
 	text-decoration: none;
 	color: var(--primary-color);
 	font-weight: 800;
-	border-bottom: 2px solid transparent;
+	border-bottom: 0px solid transparent;
 }
 
 a:hover,
@@ -1100,6 +1107,7 @@ button.tab:focus {
 		stroke-width: 0.5;
 		fill: var(--secondary-font-color);
 		filter: drop-shadow(2px 4px 8px var(--tree-color-8));
+
 	}
 
 	#hide-on-desktop {
