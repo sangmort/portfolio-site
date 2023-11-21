@@ -333,8 +333,10 @@ header {
 
 .navbar-links a:hover,
 .navbar-links a:focus,
-.footer-links a:hover,
-.social-links a:hover {
+.navbar-links a:active,
+.social-links a:hover,
+.social-links a:focus,
+.social-links a:active {
 	transition: all 0.2s;
 	border-radius: 0.25rem;
 	opacity: 0.9;
@@ -465,10 +467,12 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
-a:hover, a:focus, a:active {
-    transition: all 0.2s;
-    opacity: 0.9;
-    border-bottom: 2px solid var(--secondary-font-color);
+a:hover,
+a:focus,
+a:active {
+	transition: all 0.2s;
+	opacity: 0.9;
+	border-bottom: 2px solid var(--secondary-font-color);
 }
 
 
@@ -921,7 +925,9 @@ button.tab:focus {
 	margin-right: .5rem;
 }
 
-.social-links>a:hover>svg>path {
+.social-links>a:hover>svg>path,
+.social-links>a:active>svg>path,
+.social-links>a:focus>svg>path {
 	margin-right: .5rem;
 	fill: var(--primary-bg-color);
 }
