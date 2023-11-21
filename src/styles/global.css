@@ -829,8 +829,18 @@ button.tab:focus {
 	text-transform: uppercase;
 	font-size: .9rem;
 	flex-direction: row;
-	color: var(--secondary-color)
+	color: var(--secondary-font-color);
 }
+
+/* contactForm placeholders */
+#contactForm input::placeholder::focus, #contactForm textarea::placeholder {
+	color: var(--secondary-color);
+}
+
+/* contactForm placholders - hide on focus */
+#contactForm input:focus::placeholder, #contactForm textarea:focus::placeholder {
+	visibility: hidden;
+  }
 
 #contactForm input,
 #contactForm textarea {
