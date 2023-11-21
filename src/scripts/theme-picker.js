@@ -20,10 +20,11 @@ function initializeTheme() {
   console.log("Prefers Dark Mode:", prefersDarkMode);
   const storedTheme = localStorage.getItem("theme");
 
-  if (storedTheme) {
-    setTheme(storedTheme);
-  } else {
+  if (prefersDarkMode) {
     setTheme(prefersDarkMode ? "dark" : "light");
+
+  } else {
+    setTheme(storedTheme);
   }
 
   updateIcons();
@@ -57,4 +58,7 @@ toggles.forEach((toggle) => {
   });
 });
 
-initializeTheme();
+document.addEventListener("DOMContentLoaded", function () {
+  initializeTheme();
+});
+
