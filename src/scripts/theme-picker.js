@@ -1,36 +1,26 @@
-// Script changes site from light to dark mode via button &/or
-// user-preference at the system level
-
-// Sets the theme in document's attribute & local storage to remember user's preference
+// Set the theme in document's attribute & local storage
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
 }
 
-// Switch between light & dark theme based on current theme
+// Toggle between light & dark theme based on current theme
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute("data-theme");
   const targetTheme = currentTheme === "light" ? "dark" : "light";
   setTheme(targetTheme);
 }
 
-// Initialize theme based on user's system preference or preference in local storage
+// Initialize theme based on user's system preference or local storage
 function initializeTheme() {
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  console.log("Prefers Dark Mode:", prefersDarkMode);
   const storedTheme = localStorage.getItem("theme");
 
-  if (prefersDarkMode) {
-    setTheme(prefersDarkMode ? "dark" : "light");
-
-  } else {
-    setTheme(storedTheme);
-  }
-
+  setTheme(prefersDarkMode ? "dark" : storedTheme);
   updateIcons();
 }
 
-// Updates sun & moon icons based on current theme
+// Update sun & moon icons based on the current theme
 function updateIcons() {
   const buttons = document.querySelectorAll(".theme-toggle");
   const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -39,17 +29,12 @@ function updateIcons() {
     const sun = button.querySelector(".sun");
     const moon = button.querySelector(".moon");
 
-    if (currentTheme === "dark") {
-      sun.classList.add("visible");
-      moon.classList.remove("visible");
-    } else {
-      sun.classList.remove("visible");
-      moon.classList.add("visible");
-    }
+    sun.classList.toggle("visible", currentTheme === "dark");
+    moon.classList.toggle("visible", currentTheme === "light");
   });
 }
 
-// Toggle theme & update icons when theme toggle buttons are clicked
+// Event listener for theme toggle buttons
 const toggles = document.querySelectorAll(".theme-toggle");
 toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {
@@ -58,7 +43,5 @@ toggles.forEach((toggle) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  initializeTheme();
-});
-
+// Event listener for document ready
+document.addEventListener("DOMContentLoaded", initializeTheme);
