@@ -30,6 +30,7 @@ Notes on things that need to be done, or have been done, for future reference.
 		- Allows user to stay in their browser, vs opening their native OS mail application, resulting in less frustration.
 	- Allows email validation and rate limiting can be employed.
 	- Allows spam protection to be employed.
+- [ ] After deployment to Cloudlare, enable Cloudflare Auto Minify for HTML, JS, & CSS for performance
 
 ---
 
