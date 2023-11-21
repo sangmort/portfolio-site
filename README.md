@@ -1,5 +1,5 @@
-# Portfolio/Resume Website of Oumaima Seham Yassen
-Also known as **Osy**.
+# Portfolio/Resume Website of Osy
+Oumaima Seham Yassen, also known as **Osy**.
 
 --- 
 ## Development Notes
@@ -12,6 +12,11 @@ Notes on things that need to be done, or have been done, for future reference.
 	- When user clicks outside of navigation pane to close navigation, the close button remains a X instead of reverting to a hamburger.
 - [ ] IpadOS Horizontal Anchor Scroll
     - On Ipad Pro, when tablet is in horizontal orientation, first click to `#about` anchor link does not scroll to top of the `<section>` but ~halfway down the section instead.
+- [ ] Untrue System-Triggered Dark Mode Colors
+    - When user prefers dark mode is set and auto triggers theme switch to dark mode, not all defined CSS variable colours are respected. 
+		- ex; in Chrome the clouds are much brighter coloured & there is a stroke around the foreground trees
+- [ ] Moon animation on load. 
+	- When light theme is default, the `.theme-icon` animation is triggered on the Moon SVG on initial load, when it should only be triggered on button click.
 
 ---
 
@@ -20,7 +25,7 @@ Notes on things that need to be done, or have been done, for future reference.
 	- Better UX & efficiency to get back to the top:
 		- On desktop, as there is no "home" link in the navigation
 		- On mobile, as "home" in navigation link reloads the entire page
-- [ ] Contact Form *In-Progress*
+- [ ] Contact Form *- In-Progress, will finalize on deployment*
 	- Better UX for the user then clicking a `mailto:` link.
 		- Allows user to stay in their browser, vs opening their native OS mail application, resulting in less frustration.
 	- Allows email validation and rate limiting can be employed.
