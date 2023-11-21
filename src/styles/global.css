@@ -814,6 +814,7 @@ button.tab:focus {
 	gap: 1rem;
 }
 
+/* layout */
 #contactForm .form-input-column-grouping {
 	display: flex;
 	flex-direction: column;
@@ -825,6 +826,7 @@ button.tab:focus {
 	grid-column: span 2;
 }
 
+/* labels */
 #contactForm label {
 	text-transform: uppercase;
 	font-size: .9rem;
@@ -832,12 +834,12 @@ button.tab:focus {
 	color: var(--secondary-font-color);
 }
 
-/* contactForm placeholders */
+/* placeholders */
 #contactForm input::placeholder::focus, #contactForm textarea::placeholder {
 	color: var(--secondary-color);
 }
 
-/* contactForm placholders - hide on focus */
+/* placholders - hide on focus */
 #contactForm input:focus::placeholder, #contactForm textarea:focus::placeholder {
 	visibility: hidden;
   }
@@ -858,6 +860,7 @@ button.tab:focus {
 	border-bottom: 2px solid var(--secondary-bg-color);
 }
 
+/* text area lined background */
 #contactForm textarea,
 #contactForm textarea:focus {
 	line-height: 4ex;
