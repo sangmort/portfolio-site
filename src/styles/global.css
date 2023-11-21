@@ -164,10 +164,10 @@ body {
 	fill: var(--cloud-main-color);
 }
 
-.cloud1 path.b,
-.cloud2 path.b,
-.cloud3 path.b,
-.cloud4 path.b {
+.cloud1>path.b,
+.cloud2>path.b,
+.cloud3>path.b,
+svg.cloud4>path.b {
 	fill: var(--cloud-shadow-color);
 }
 
@@ -803,7 +803,7 @@ button.tab:focus {
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
+	clip-path: rect(0, 0, 0, 0);
 	border: 0;
 }
 
@@ -1136,7 +1136,6 @@ button.tab:focus {
 		transition: transform 400ms;
 		z-index: 9000;
 		cursor: pointer;
-		-webkit-tap-highlight-color: transparent;
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
