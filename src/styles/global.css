@@ -332,7 +332,9 @@ header {
 }
 
 .navbar-links a:hover,
-.navbar-links a:focus {
+.navbar-links a:focus,
+.footer-links a:hover,
+.social-links a:hover {
 	transition: all 0.2s;
 	border-radius: 0.25rem;
 	opacity: 0.9;
@@ -459,8 +461,16 @@ a[data-hs-anchor="true"] {
 a {
 	text-decoration: none;
 	color: var(--primary-color);
-	font-weight: 900;
+	font-weight: 800;
+	border-bottom: 2px solid transparent;
 }
+
+a:hover, a:focus, a:active {
+    transition: all 0.2s;
+    opacity: 0.9;
+    border-bottom: 2px solid var(--secondary-font-color);
+}
+
 
 /* Headings */
 h2,
@@ -744,9 +754,9 @@ button.tab:focus {
 }
 
 .tab.active-tab {
-    color: var(--primary-font-color);
-    border-right: 2px solid var(--primary-color);
-    border-radius: 0.25rem 0 0 0.25rem;
+	color: var(--primary-font-color);
+	border-right: 2px solid var(--primary-color);
+	border-radius: 0.25rem 0 0 0.25rem;
 }
 
 .skills>h3 {
@@ -909,7 +919,11 @@ button.tab:focus {
 
 .social-links svg {
 	margin-right: .5rem;
+}
 
+.social-links>a:hover>svg>path {
+	margin-right: .5rem;
+	fill: var(--primary-bg-color);
 }
 
 .footer-links {
@@ -918,6 +932,11 @@ button.tab:focus {
 	justify-content: space-evenly;
 	margin-bottom: 1rem;
 }
+
+.footer-links a {
+	padding: .25rem 1rem;
+}
+
 
 .copyright {
 	padding-bottom: 1.25rem;
