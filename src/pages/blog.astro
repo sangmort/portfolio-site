@@ -6,8 +6,10 @@ const pageTitle = "Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <section>
   <p>The thoughts behing a front-end dev.</p>
   <ul>
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
+</section>
 </BaseLayout>
