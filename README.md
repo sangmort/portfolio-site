@@ -53,3 +53,4 @@ Notes on things that need to be done, or have been done, for future reference.
 - [x] Refactor to use a single SVG with multiple circle paths inside of it for each star.
 - [x] Reduce .ico size and fix web manifest URL causing redirects.
 - [x] Add `will-change: filter;` on rules that use `filter` keyframes animations for performance.
+- [x] Change the CSS property of `.star` to `display: none;` instead of `visibility:hidden;` so DOM is not needlessly loading invisible assets.  

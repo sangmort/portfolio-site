@@ -29,7 +29,7 @@ html[data-theme="light"] {
 	--tree-color-8: #edffed;
 	/* foreground trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
-	--star-visibility: hidden;
+	--star-visibility: none;
 	--sky-orb-color: #fffde6;
 	--sky-orb-color-2: var(--sky-orb-color);
 	--sky-orb-stroke-color: #fffbd8;
@@ -71,7 +71,7 @@ html[data-theme="dark"] {
 	--tree-color-8: #04131b;
 	/* foreground trees */
 	--100-device-width: calc(1dvw - var(--scrollbarWidth) / 100);
-	--star-visibility: visible;
+	--star-visibility: block;
 	--sky-orb-color: #eaf3ff;
 	--sky-orb-color-2: #dce4f5;
 	--sky-orb-stroke-color: #cff5ff;
@@ -194,7 +194,7 @@ svg.cloud4>path.b {
 
 .star {
 	position: absolute;
-	visibility: var(--star-visibility);
+	display: var(--star-visibility);
 	opacity: 0.8;
 	z-index: 0;
 	animation: animateStars 5s linear infinite;
