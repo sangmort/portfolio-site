@@ -236,7 +236,7 @@ svg.cloud4>path.b {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
-	top: 3rem;
+	top: 0;
 }
 
 #treeline path {
