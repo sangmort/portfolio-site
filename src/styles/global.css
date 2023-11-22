@@ -367,12 +367,12 @@ header {
 	visibility: hidden;
 	z-index: 900;
 	margin: 0 auto;
-	border-bottom: 1px solid var(--secondary-color);
+	border-bottom: 1px solid var(--secondary-bg-color);
 	background-color: var(--primary-bg-color);
 	width: 100dvw;
-	height: 5rem;
+	height: 4.125rem;
 	animation: 0.7s ease navbarEntrance;
-	font-size: 1.0625rem;
+	font-size: 1rem;
 	background: var(--sticky-nav-bg);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
