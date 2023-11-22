@@ -21,6 +21,8 @@ Notes on things that need to be done, or have been done, for future reference.
 ---
 
 ### To-Do
+- [ ] Resume download button
+- [ ] UI Adjustments for XL size screens
 - [ ] Back to Top floating button
 	- Better UX & efficiency to get back to the top:
 		- On desktop, as there is no "home" link in the navigation
