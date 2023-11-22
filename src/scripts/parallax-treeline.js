@@ -37,7 +37,7 @@ function animate() {
   // Hide the SVG if the user scrolls past viewport, keep top path visible to stop bottom SVGs from showing
   if (scrollY > parallaxScrollThreshold) {
     if (!hideSVG) {
-      svgElement.style.visibility = "hidden";
+      svgElement.style.visibility = "visible";
       svgPaths[6].style.visibility = "visible";
       hideSVG = true;
     }
