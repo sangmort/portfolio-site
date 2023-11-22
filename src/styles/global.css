@@ -722,7 +722,7 @@ button.accordion-button.rotate-icon:focus {
     padding: 2rem 0rem;
 }
 
-.vertical-tabs {
+.horizontal-tabs {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

@@ -1,4 +1,4 @@
-// Vertical Tabs
+// Horizontal Tabs
 document.addEventListener('DOMContentLoaded', function () {
   let tabs = document.querySelectorAll('.tab');
   tabs.forEach(function (tab) {
