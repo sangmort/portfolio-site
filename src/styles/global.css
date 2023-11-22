@@ -349,6 +349,7 @@ header {
 	opacity: 0.9;
 	background-color: var(--primary-font-color);
 	color: var(--primary-bg-color);
+	border: none;
 }
 
 /* Allows #sticky to be centered  */
