@@ -724,6 +724,11 @@ button.accordion-button:hover, button.accordion-button.rotate-icon:hover, button
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	border-right: 1px solid var(--secondary-bg-color);
+}
+
+.tab-content h3 {
+	font-size: 1.5rem;
 }
 
 .tab {
