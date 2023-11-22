@@ -54,7 +54,7 @@ function animate() {
       const { element, direction, speed, desktopOnly } = effect;
 
       // Check if the effect should be applied only on desktop
-      if (desktopOnly && window.innerWidth < 1300) {
+      if (desktopOnly && window.innerWidth < 1400) {
         return;
       }
 
