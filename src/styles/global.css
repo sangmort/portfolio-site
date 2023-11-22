@@ -713,6 +713,17 @@ button.accordion-button.rotate-icon:focus {
 }
 
 /* About Skills Sections */
+.secondary-bg-color {
+	background-color: var(--secondary-bg-color);
+	padding: .75rem 1.5rem;
+	border-radius: .2rem;
+}
+
+.secondary-bg-color p  {
+	padding: .25rem 0;
+	margin-bottom: 0;
+}
+
 .tabs-container {
     display: grid;
     grid-template-columns: 1fr;
