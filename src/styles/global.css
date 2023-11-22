@@ -105,7 +105,19 @@ html {
 	transition: transform 0.3s ease;
 	z-index: 100;
 	margin: 0 auto;
+	width: 90dvw;
+	max-width: 80rem;
+}
+
+section {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.inner-wrapper {
 	width: 40dvw;
+	max-width: 40rem;
+	margin: 0 auto;
 }
 
 body {
@@ -795,6 +807,16 @@ button.accordion-button.rotate-icon:focus {
 .tab.active-tab {
 	color: var(--primary-font-color);
 	border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* Portfolio */
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: .9rem;
+    gap: .5rem;
 }
 
 /* A11y */
