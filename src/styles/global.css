@@ -696,9 +696,12 @@ p code {
 	border-radius: 0.2rem;
 }
 
-button.accordion-button:hover, button.accordion-button.rotate-icon:hover, button.accordion-button.rotate-icon:active, button.accordion-button.rotate-icon:focus   {
-    color: var(--primary-bg-color);
-    background-color: var(--primary-font-color);
+button.accordion-button:hover,
+button.accordion-button.rotate-icon:hover,
+button.accordion-button.rotate-icon:active,
+button.accordion-button.rotate-icon:focus {
+	color: var(--primary-bg-color);
+	background-color: var(--primary-font-color);
 }
 
 .accordion-content {
@@ -710,58 +713,45 @@ button.accordion-button:hover, button.accordion-button.rotate-icon:hover, button
 }
 
 /* About Skills Sections */
-
 .tabs-container {
-	display: grid;
-	display: grid;
-	grid-template-columns: 0.5fr 2fr;
-	grid-template-rows: 1fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 2rem 0rem;
 }
 
 .vertical-tabs {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
-	border-right: 1px solid var(--secondary-bg-color);
-}
-
-.tab-content h3 {
-	font-size: 1.25rem;
 }
 
 .tab {
+	display: flex;
 	cursor: pointer;
 	background-color: var(--primary-bg-color);
-	text-align: right;
-	padding: 1rem 0.75rem 1rem 0;
-	height: 4rem;
+	text-align: center;
+	padding: 1rem;
 	font-size: 0.8rem;
 	border: 0;
-	border-right: 2px solid var(--primary-bg-color);
+	border-bottom: 2px solid var(--secondary-bg-color);
 	text-transform: uppercase;
 	color: var(--primary-font-color);
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
 }
 
 .tab:hover {
 	color: var(--primary-font-color);
-	/* background-color: var(--secondary-bg-color); */
-	border-right: 2px solid var(--secondary-color);
-	border-radius: 0.25rem 0 0 0.25rem;
-}
-
-button.tab:active,
-button.tab:focus {
-	color: var(--primary-font-color);
-	/* background-color: var(--secondary-bg-color); */
-	border-right: 2px solid var(--primary-color);
-	border-radius: 0.25rem 0 0 0.25rem;
+	border-bottom: 2px solid var(--secondary-color);
 }
 
 .tab-content-container {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 2fr;
 	background-color: var(--primary-bg-color);
 	gap: 0px;
 	border-radius: 0 0.25rem 0.25rem 0;
@@ -769,15 +759,30 @@ button.tab:focus {
 
 .tab-content {
 	display: none;
-	padding: 0.75rem 1.5rem;
-	height: 20rem;
-	/* background-color: var(--secondary-bg-color); */
+	padding: 1.5rem 1.5rem;
+	height: 15rem;
+}
+
+
+.tab-content h3 {
+	font-size: 1.125rem;
+	margin-bottom: .75rem;
+}
+
+.tab-content p {
+	font-size: .9rem;
+	margin-bottom: 1rem;
+	line-height: 1.25rem;
+	margin-left: .75rem;
+}
+
+.tab-content ul {
+	margin-left: 1.5rem;
 }
 
 .tab.active-tab {
 	color: var(--primary-font-color);
-	border-right: 2px solid var(--primary-color);
-	border-radius: 0.25rem 0 0 0.25rem;
+	border-bottom: 2px solid var(--primary-color);
 }
 
 /* A11y */
@@ -821,14 +826,16 @@ button.tab:focus {
 }
 
 /* placeholders */
-#contactForm input::placeholder::focus, #contactForm textarea::placeholder {
+#contactForm input::placeholder::focus,
+#contactForm textarea::placeholder {
 	color: var(--secondary-color);
 }
 
 /* placholders - hide on focus */
-#contactForm input:focus::placeholder, #contactForm textarea:focus::placeholder {
+#contactForm input:focus::placeholder,
+#contactForm textarea:focus::placeholder {
 	visibility: hidden;
-  }
+}
 
 #contactForm input,
 #contactForm textarea {
