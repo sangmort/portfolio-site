@@ -115,10 +115,17 @@ html {
 
 /* Breaks each section into 2 columns */
 section {
-	min-height: 95dvh;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
+    min-height: 95dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background-color: var(--primary-bg-color);
+    width: 100dvw;
+}
+
+/* section spacing */
+*+section {
+	padding: 10rem 6rem;
 }
 
 /* First & second column styling */
@@ -577,11 +584,6 @@ p:not(:last-of-type)+h6 {
 	padding-top: 2rem;
 }
 
-/* Section Spacing */
-*+section {
-	padding: 10rem 0;
-}
-
 /* Paragraph Spacing */
 p {
 	margin-bottom: 1.25rem;
@@ -858,7 +860,7 @@ button.accordion-button.rotate-icon:focus {
 	padding: 1rem .5rem;
 }
 
-/* layout */
+/* Contactform layout */
 #contactForm .form-input-column-grouping {
 	display: flex;
 	flex-direction: column;
