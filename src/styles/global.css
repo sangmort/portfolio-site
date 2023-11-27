@@ -136,6 +136,13 @@ section {
 	grid-column: 2;
 }
 
+/* When div nees to span two columns */
+.span2 {
+	grid-column: span 2;
+	border-top: 1px solid red; 
+	padding-top: 4rem;
+}
+
 body {
 	position: relative;
 	margin: 0 auto;
@@ -572,7 +579,7 @@ p:not(:last-of-type)+h6 {
 
 /* Section Spacing */
 *+section {
-	padding: 6rem 0;
+	padding: 10rem 0;
 }
 
 /* Paragraph Spacing */
