@@ -100,9 +100,7 @@ html {
 
 /* Layout */
 #wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows:auto;
+	display: flex;
 	position: relative;
 	top: 37rem;
 	transition: transform 0.3s ease;
@@ -110,27 +108,32 @@ html {
 	margin: 0 auto;
 	width: 90dvw;
 	max-width: 80rem;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 /* Breaks each section into 2 columns */
 section {
-    min-height: 95dvh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+	min-height: 95dvh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
 }
 
-/* First column styling */
-.column-one {
-	width: 40dvw;
-	max-width: 40rem;
-	margin: 0 auto;
-}
-
-/* Second column styling */
+/* First & second column styling */
+.column-one,
 .column-two {
-	width: 40dvw;
-	max-width: 40rem;
 	margin: 0 auto;
+	width: 100%;
+}
+
+.column-one {
+	grid-column: 1;
+}
+
+.column-two {
+	grid-column: 2;
 }
 
 body {
@@ -967,10 +970,10 @@ button.accordion-button.rotate-icon:focus {
 
 /* Site Footer */
 #wrapper footer {
-    display: grid;
-    align-items: end;
-    grid-column: span 2;
-    justify-items: center;
+	display: grid;
+	align-items: end;
+	grid-column: span 2;
+	justify-items: center;
 }
 
 .social-links {
@@ -1026,7 +1029,7 @@ button.accordion-button.rotate-icon:focus {
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-	height:auto;
+	height: auto;
 	width: 11px;
 }
 
