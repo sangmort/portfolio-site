@@ -100,6 +100,9 @@ html {
 
 /* Control content width */
 #wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:auto;
 	position: relative;
 	top: 37rem;
 	transition: transform 0.3s ease;
@@ -110,12 +113,16 @@ html {
 }
 
 section {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	margin-bottom: 8rem;
 }
 
 .column-one {
+	width: 40dvw;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+.column-two {
 	width: 40dvw;
 	max-width: 40rem;
 	margin: 0 auto;
@@ -959,6 +966,13 @@ button.accordion-button.rotate-icon:focus {
 }
 
 /* Site Footer */
+#wrapper footer {
+    display: grid;
+    align-items: end;
+    grid-column: span 2;
+    justify-items: center;
+}
+
 .social-links {
 	display: flex;
 	justify-content: center;
