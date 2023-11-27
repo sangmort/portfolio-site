@@ -18,7 +18,11 @@ const { pageTitle } = Astro.props;
     <link rel="manifest" href="/portfolio-site/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    />
     <link
       rel="stylesheet"
       media="print"
@@ -27,10 +31,13 @@ const { pageTitle } = Astro.props;
     />
     <!-- no-JS fallback -->
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"/>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      />
     </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta name="description" content="Portfolio website of Oumaima Seham Yassen, aka Osy.">
+    <meta name="description" content="Portfolio website of Oumaima Seham Yassen, aka Osy." />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
@@ -41,14 +48,13 @@ const { pageTitle } = Astro.props;
     <div id="outer-wrapper">
       <StickyNavigation />
     </div>
-    <main>
-      <div id="wrapper">
+    <div id="wrapper">
+      <main>
         <h1>{pageTitle}</h1>
         <slot />
-        <Footer />
-      </div>
-    </main>
-
+      </main>
+      <Footer />
+    </div>
     <script>
       import "../scripts/parallax-treeline.js";
       import "../scripts/hamburger.js";
