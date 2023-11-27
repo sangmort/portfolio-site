@@ -112,6 +112,7 @@ html {
 section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 8rem;
 }
 
 .inner-wrapper {
@@ -556,7 +557,7 @@ p:not(:last-of-type)+h6 {
 
 /* Section Spacing */
 *+section {
-	padding: 8rem 0;
+	padding: 6rem 0;
 }
 
 section {
