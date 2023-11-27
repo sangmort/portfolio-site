@@ -150,6 +150,15 @@ section {
 	padding-top: 4rem;
 }
 
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 body {
 	position: relative;
 	margin: 0 auto;
