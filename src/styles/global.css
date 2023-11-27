@@ -98,7 +98,7 @@ html {
 	transition: transform 1s;
 }
 
-/* Control content width */
+/* Layout */
 #wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -112,16 +112,21 @@ html {
 	max-width: 80rem;
 }
 
+/* Breaks each section into 2 columns */
 section {
-	margin-bottom: 8rem;
+    min-height: 95dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+/* First column styling */
 .column-one {
 	width: 40dvw;
 	max-width: 40rem;
 	margin: 0 auto;
 }
 
+/* Second column styling */
 .column-two {
 	width: 40dvw;
 	max-width: 40rem;
@@ -565,11 +570,6 @@ p:not(:last-of-type)+h6 {
 /* Section Spacing */
 *+section {
 	padding: 6rem 0;
-}
-
-section {
-	min-height: 95dvh;
-
 }
 
 /* Paragraph Spacing */
