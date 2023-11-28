@@ -388,7 +388,7 @@ header {
 	margin: 0 auto;
 	border-bottom: 1px solid var(--secondary-bg-color);
 	background: var(--sticky-nav-bg);
-	background-color: var(--primary-bg-color);
+	background-color: var(--sticky-nav-bg);
 	width: 100dvw;
 	height: 4.125rem;
 	animation: 0.7s ease navbarEntrance;
