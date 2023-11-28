@@ -606,7 +606,6 @@ p:not(:last-of-type)+h6 {
 p {
 	margin-bottom: 1.25rem;
 	line-height: 1.5rem;
-	margin: 0 auto;
 }
 
 *+p {
