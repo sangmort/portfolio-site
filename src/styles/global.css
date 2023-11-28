@@ -155,8 +155,6 @@ section {
 /* When div nees to span two columns */
 .span2 {
 	grid-column: span 2;
-	border-top: 1px solid red; 
-	padding-top: 4rem;
 }
 
 /* Gallery */
