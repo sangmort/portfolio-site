@@ -151,10 +151,7 @@ section {
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 1rem;
+    gap: 1.75rem;
 }
 /* Download buttons */
 .download {
