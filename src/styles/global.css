@@ -728,7 +728,7 @@ button.accordion-button.rotate-icon:focus {
 .tab-content {
     display: none;
     padding: 1.5rem 1.5rem;
-    height: 13rem;
+    height: 12rem;
 }
 .tab-content h3 {
 	margin-bottom: .75rem;
