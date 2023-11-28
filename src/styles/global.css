@@ -795,33 +795,36 @@ button.accordion-button.rotate-icon:focus {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	background-color: var(--secondary-bg-color);
+	/* border-bottom: 2px solid var(--primary-bg-color); */
 }
 
 .tab {
 	display: flex;
 	cursor: pointer;
-	background-color: var(--primary-bg-color);
+	background-color: var(--secondary-bg-color);
 	text-align: center;
-	padding: 1rem;
+	padding: 1.25rem 1rem;
 	font-size: 0.8rem;
 	border: 0;
-	border-bottom: 2px solid var(--secondary-bg-color);
+	border-bottom: 4px solid var(--primary-bg-color);
 	text-transform: uppercase;
 	color: var(--primary-font-color);
 	justify-content: center;
 	flex-direction: row;
+	width: 100%;
 	align-items: center;
 }
 
 .tab:hover {
 	color: var(--primary-font-color);
-	border-bottom: 2px solid var(--secondary-color);
+	border-bottom: 4px solid var(--secondary-color);
 }
 
 .tab-content-container {
 	display: grid;
 	grid-template-columns: 2fr;
-	background-color: var(--primary-bg-color);
+	background-color: var(--secondary-bg-color);
 	gap: 0px;
 	border-radius: 0 0.25rem 0.25rem 0;
 }
@@ -851,7 +854,7 @@ button.accordion-button.rotate-icon:focus {
 
 .tab.active-tab {
 	color: var(--primary-font-color);
-	border-bottom: 2px solid var(--primary-color);
+	border-bottom: 4px solid var(--primary-color);
 }
 
 
