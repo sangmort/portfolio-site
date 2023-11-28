@@ -719,6 +719,7 @@ p code {
     display: flex;
     flex-direction: column;
     margin: 0 0 2rem 0;
+	height: 10rem;
 }
 
 .accordion-button::before {
