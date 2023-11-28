@@ -99,17 +99,18 @@ html {
 }
 /* Layout */
 #wrapper {
-	display: flex;
-	position: relative;
-	top: 37rem;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-content: center;
-	transition: transform 0.3s ease;
-	z-index: 100;
-	margin: 0 auto;
-	width: 90dvw;
-	max-width: 80rem;
+    display: flex;
+    position: relative;
+    top: 90dvh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    margin: 0 auto;
+    width: 100dvw;
+    max-width: 100%;
+    background-color: var(--primary-bg-color);
 }
 section > h2 {
 	grid-column: span 2;
@@ -124,6 +125,7 @@ section {
 	margin-bottom: 10rem;
 	background-color: var(--primary-bg-color);
 	width: 90dvw;
+	max-width: 86rem;
 	gap: 2rem;
 }
 
