@@ -774,6 +774,10 @@ button.accordion-button.rotate-icon:focus {
 	padding: 1rem .5rem;
 	gap: 0 1rem;
 }
+
+#contactForm h3 {
+	grid-column: span 2;
+}
 /* Contactform layout */
 #contactForm .form-input-column-grouping {
 	display: flex;
