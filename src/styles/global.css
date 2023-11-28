@@ -160,6 +160,14 @@ section {
     justify-content: flex-end;
 }
 
+/* Download buttons */
+.download {
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	text-transform: uppercase;
+	width: 50%; 
+}
+
 body {
 	position: relative;
 	margin: 0 auto;
