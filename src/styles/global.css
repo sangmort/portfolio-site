@@ -177,6 +177,7 @@ section {
 }
 
 body {
+	background-color: var(--primary-bg-color);
 	position: relative;
 	margin: 0 auto;
 	width: auto;
