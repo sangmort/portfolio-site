@@ -149,11 +149,12 @@ section {
 }
 /* Gallery */
 .gallery {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 /* Download buttons */
 .download {
