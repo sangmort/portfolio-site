@@ -28,3 +28,14 @@ document.querySelectorAll(".accordion").forEach((accordion) => {
     accordionButton.classList.toggle("rotate-icon", !isExpanded);
   }
 });
+
+// Expand the first accordion by default
+const firstAccordion = document.querySelector(".accordion");
+const firstAccordionButton = firstAccordion.querySelector(".accordion-button");
+const firstAccordionContent = firstAccordion.querySelector(`#${firstAccordionButton.getAttribute("aria-controls")}`);
+
+// Set initial state to expanded
+firstAccordionButton.setAttribute("aria-expanded", "true");
+firstAccordionContent.style.visibility = "visible";
+firstAccordionContent.style.display = "block";
+firstAccordionButton.classList.add("rotate-icon");
