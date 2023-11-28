@@ -113,6 +113,13 @@ html {
 	align-content: center;
 }
 
+section > h2 {
+	margin: 0;
+	grid-column: span 2;
+	border-bottom: 1px solid var(--primary-color);
+	padding-bottom: 2rem;
+}
+
 /* Breaks each section into 2 columns */
 section {
     min-height: 95dvh;
@@ -783,12 +790,12 @@ button.accordion-button.rotate-icon:focus {
 }
 
 .tabs-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 2fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-	padding: 2rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0rem;
 }
 
 .horizontal-tabs {
