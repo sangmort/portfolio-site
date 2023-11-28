@@ -755,12 +755,14 @@ button.accordion-button.rotate-icon:focus {
 }
 
 .accordion-content {
-	display: none;
-	padding: 1rem 2rem;
-	background-color: var(--secondary-bg-color);
-	border-top: 4px solid var(--primary-bg-color);
-	border-radius: 0 0 0.2rem 0.2rem;
+    visibility: hidden;
+	display: block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-bg-color);
+    border-top: 4px solid var(--primary-bg-color);
+    border-radius: 0 0 0.2rem 0.2rem;
 }
+
 
 /* About Skills Sections */
 .secondary-bg-color {
