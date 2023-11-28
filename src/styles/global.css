@@ -122,7 +122,6 @@ section > h2 {
 
 /* Breaks each section into 2 columns */
 section {
-    min-height: 95dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
