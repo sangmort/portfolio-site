@@ -7,9 +7,16 @@ const pageTitle = "Blog";
 
 <BaseLayout pageTitle={pageTitle}>
   <section>
-  <p>The thoughts behing a front-end dev.</p>
-  <ul>
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-  </ul>
-</section>
+    <div class="column-one">
+      <p><strong>Please don't mind the dust, this page is still heavily under construction.</strong></p>
+      <p>Just a taste of the thoughts behind a frontend dev.</p>
+
+    </div>
+    <div class="column-two">
+      <ul>
+        <h2>Posts</h2>
+        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

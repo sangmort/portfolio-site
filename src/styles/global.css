@@ -630,7 +630,14 @@ p code {
 	padding: 0.05rem 0.4rem;
 	color: var(--inline-code-font-color);
 }
-/* tags */
+
+/* Blog */
+#blog {
+	width: 60dvw;
+	max-width: 50rem;
+}
+
+/* Tags */
 .tags-layout {
 	display: flex;
 	flex-wrap: wrap;
