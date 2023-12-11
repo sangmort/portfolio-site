@@ -4,7 +4,7 @@ title: "CSS: Targeting the last paragraph and next heading..."
 pubDate: 2023-10-17
 description: "Targeting the last paragraph before a heading"
 author: "Osy"
-tags: ["CSS", "HTML5", "Code"]
+tags: ["CSS", "HTML", "Code"]
 ---
 
 ## Introduction
