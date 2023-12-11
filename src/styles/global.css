@@ -175,7 +175,7 @@ section {
 	opacity: .5;
 }
 
-a.download:hover {
+a.download:hover, a.download:focus, a.download:active {
 	padding: 1rem 2rem;
 	width: 50%;
 	text-transform: uppercase;
