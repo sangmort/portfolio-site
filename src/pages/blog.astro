@@ -2,6 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
+
+// Sort posts by date in descending order
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate).getTime();
+  const dateB = new Date(b.frontmatter.pubDate).getTime();
+  return dateB - dateA;
+});
+
 const pageTitle = "Blog";
 ---
 
@@ -10,12 +18,11 @@ const pageTitle = "Blog";
     <div class="column-one">
       <p><strong>Please don't mind the dust, this page is still heavily under construction.</strong></p>
       <p>Just a taste of the thoughts behind a frontend dev.</p>
-
     </div>
     <div class="column-two">
       <ul>
         <h2>Posts</h2>
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
       </ul>
     </div>
   </section>
