@@ -10,6 +10,9 @@ const sortedPosts = allPosts.sort((a, b) => {
   return dateB - dateA;
 });
 
+// Collect unique tags
+const uniqueTags = Array.from(new Set(sortedPosts.flatMap((post) => post.frontmatter.tags)));
+
 const pageTitle = "Blog";
 ---
 
@@ -20,10 +23,20 @@ const pageTitle = "Blog";
       <p>Just a taste of the thoughts behind a frontend dev.</p>
     </div>
     <div class="column-two">
+      <h2>Posts</h2>
       <ul>
-        <h2>Posts</h2>
         {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
       </ul>
+      <h2>Tags</h2>
+      <div class="tags-layout">
+        {
+          uniqueTags.map((tag) => (
+            <p class="tag">
+              <a href={`/portfolio-site/tags/${tag}`}>{tag}</a>
+            </p>
+          ))
+        }
+      </div>
     </div>
   </section>
 </BaseLayout>
