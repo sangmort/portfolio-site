@@ -155,13 +155,39 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 1.75rem;
 }
-/* Download buttons */
+/* Download links */
+#download-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
 .download {
 	padding: 1rem 2rem;
 	width: 50%;
 	text-transform: uppercase;
 	font-size: 1rem;
+	background-color: var(--widget-bg-color);
+	border: 1px solid var(--secondary-color);
+	border-radius: .125rem;
+	margin: 0 auto;
+	text-align: center;
+	opacity: .5;
 }
+
+a.download:hover {
+	padding: 1rem 2rem;
+	width: 50%;
+	text-transform: uppercase;
+	font-size: 1rem;
+	background-color: var(--secondary-bg-color);
+	border: 1px solid var(--secondary-color);
+	opacity: 1;
+	transition: .5s all;
+	color: var(--primary-font-color);
+}
+
+
 body {
 	position: relative;
 	margin: 0 auto;
