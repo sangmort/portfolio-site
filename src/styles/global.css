@@ -1055,9 +1055,9 @@ button.accordion-button.rotate-icon:focus {
 }
 
 /* Blog footer */
-#blog-footer {
+footer#blog-footer > * {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: flex-start;
 	padding: 3rem 0;
 }
