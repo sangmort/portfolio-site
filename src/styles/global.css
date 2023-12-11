@@ -795,6 +795,13 @@ button.accordion-button.rotate-icon:focus {
 	overflow: hidden;
 	clip-path: rect(0, 0, 0, 0);
 }
+
+/* Get In Touch */
+/* Reduce spacing of contact list paragraphs */
+#contact-list > li > p {
+    margin-bottom: .125rem;
+}
+
 /* Contact Form */
 #contactForm {
 	display: grid;
