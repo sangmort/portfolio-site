@@ -140,6 +140,13 @@ section {
 	padding: 7rem 6rem;
 }
 
+/* Footnotes styling */
+section.footnotes {
+    width: 60dvw;
+    max-width: 50rem;
+    padding: 3rem 0;
+}
+
 
 /* adjusts about section custom spacing for better layout centering */
 section#about {
