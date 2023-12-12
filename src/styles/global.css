@@ -2,8 +2,8 @@
 html[data-theme="light"] {
 	--primary-color: #005c5c;
 	--secondary-color: #a9c4c5;
-	--primary-font-color: #242424;
-	--secondary-font-color: #373c4d;
+	--primary-font-color: #181818;
+	--secondary-font-color: #8f9199;
 	--primary-bg-color: var(--tree-color-7);
 	--secondary-bg-color: #e9f1ec;
 	--widget-bg-color: #eef7f1;
@@ -36,6 +36,7 @@ html[data-theme="light"] {
 	--sky-orb-stroke-color: #fffbd8;
 	--fireflies-color-1: #c3ffa0;
 	--fireflies-color-2: #8cc521;
+	--navigation-link-color: #1f323a;
 	--sticky-nav-bg: #f4fdf8c9;
 	--mobile-nav-bg: rgb(227 255 242 / 61%);
 	--mobile-nav-border: 1px solid rgb(227 255 242 / 100%);
@@ -79,6 +80,7 @@ html[data-theme="dark"] {
 	--sky-orb-stroke-color: #cff5ff;
 	--fireflies-color-1: #ffe600;
 	--fireflies-color-2: #ffce2c;
+	--navigation-link-color: #c7d8e4;
 	--mobile-nav-bg: rgba(20, 30, 46, 0.61);
 	--mobile-nav-border: 1px solid rgba(20, 30, 46, 1);
 	--sticky-nav-bg: #071620c9;
@@ -402,7 +404,7 @@ header {
 #header-logo {
 	margin: 0;
 	height: 12rem;
-	fill: var(--secondary-font-color);
+	fill: var(--navigation-link-color);
 	filter: drop-shadow(0 0 6px var(--tree-color-7));
 }
 
@@ -438,8 +440,8 @@ header {
 .navbar-links a {
 	display: inline-block;
 	padding: 0.25rem 0.75rem;
-	color: var(--secondary-font-color);
-	font-weight: 600;
+	color: var(--navigation-link-color);
+	font-weight: 800;
 	filter: drop-shadow(0 0 5px var(--tree-color-8));
 }
 
@@ -511,7 +513,7 @@ a.home {
 
 .sunny path,
 .moony path {
-	fill: var(--primary-font-color);
+	fill: var(--navigation-link-color);
 }
 
 /* Theme Icon Toggle */
@@ -668,51 +670,50 @@ strong {
 }
 
 /* Lists */
-ol {
-	margin-left: .75rem;
-	list-style: decimal;
-	margin-bottom: 1rem;
+li {
+	padding: .125rem .5rem;
+	margin: .25rem 1rem;
 }
 
-ol > li::marker {
+li p {
+	margin: .5rem 0;
+}
+
+ul li::marker {
+	content: "—";
+}
+
+ul li::marker, ol li::marker {
+	display: list-item;
 	color: var(--secondary-font-color);
 }
 
-ul {
-	margin-bottom: 1rem;
+
+li > ol, li > ul {
+	padding: 0rem 0 .75rem 0;
+	/* margin-bottom: 2rem; */
 }
 
-ul>li {
-	display: block;
+ol {
+	list-style: decimal;
 }
 
-ul>li>ul {
-	display: block;
-}
+/* li + li, ul > li, ol > li {
+	margin: 2.5rem;
+} */
 
-ol>li {
-	margin-left: 0.75rem;
+/* Fix spacing after last list item in nested list */
+ol li ol li:last-of-type, ul li ul li:last-of-type {
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* Spacing after last list item */
 ol>li:last-child:not(ol > li > ol > li),
 ul>li:last-child:not(ul > li > ul > li) {
-	padding-bottom: 2rem;
+	padding-bottom: 4rem;
 }
 
-/* long dash for unordered list items */
-ul>li::before {
-	margin: 0 0.5rem 0 0;
-	content: "—";
-	color: var(--secondary-font-color);
-}
-
-/* long dash for sublist items */
-ul>li>ul>li::before {
-	margin: 0 0.5rem 0 0;
-	content: "—";
-	color: var(--secondary-font-color);
-}
 
 /* Tasklist markdown styling */
 /* Style dash from before checkbox */
@@ -721,16 +722,16 @@ li.task-list-item::before {
 }
 
 /* Display list layout normally */
-ul.contains-task-list > li {
+ul.contains-task-list>li {
 	list-style: none;
 	display: block;
 }
 
 /* Nested sub-lists */
 .contains-task-list>li>ul {
-    list-style: none;
-    padding-left: 1.5rem;
-    margin: .25rem 0;
+	list-style: none;
+	padding-left: 1.5rem;
+	margin: .25rem 0;
 }
 
 /* Checkboxes */
@@ -745,7 +746,7 @@ ul.contains-task-list > li {
 
 /* SNested task list items */
 .contains-task-list .task-list-item {
-    margin: .125rem 0;
+	margin: .125rem 0;
 }
 
 /* Blockquote */
