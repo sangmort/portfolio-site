@@ -630,7 +630,7 @@ p:not(:last-of-type)+h3,
 p:not(:last-of-type)+h4,
 p:not(:last-of-type)+h5,
 p:not(:last-of-type)+h6 {
-	padding-top: 2rem;
+	padding-top: 3rem;
 }
 
 /* Paragraph Spacing */
@@ -656,7 +656,13 @@ strong {
 
 /* Lists */
 ol {
-	margin-left: 1rem;
+	margin-left: .75rem;
+	list-style: decimal;
+	margin-bottom: 1rem;
+}
+
+ul {
+	margin-bottom: 1rem;
 }
 
 ul>li {
@@ -671,7 +677,7 @@ ol>li {
 /* Spacing after last list item */
 ol>li:last-child:not(ol > li > ol > li),
 ul>li:last-child:not(ul > li > ul > li) {
-	margin-bottom: 2rem;
+	padding-bottom: 2rem;
 }
 
 /* long dash for unordered list items */
