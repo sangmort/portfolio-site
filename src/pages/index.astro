@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Projects from "../components/Projects.astro";
 const pageTitle = "About";
 ---
 
@@ -188,34 +189,7 @@ const pageTitle = "About";
       </p>
     </div>
     <div class="column-two span2">
-      <div id="project-container">
-        <div class="project">
-          <h3>Personal Site</h3>
-          <p>
-            Look familiar? It should, this is the site you're on right now. Features dynamic day/night mode,
-            programaticaly generated stars & clouds, SVG manipulations, animations, sticky navigation, parallax effect,
-            accordion, and horizontal tabs, all coded out by yours truly.
-          </p>
-        </div>
-
-        <div class="project">
-          <h3>Roc - CSS Framework Sandbox</h3>
-          <p>
-            A tool for testing CSS on all the various HTML elements, created to help devs who are developing classless
-            CSS frameworks by providing instant visual feedback. Features a shadow dom navigation bar, ability to upload
-            your own style sheet.
-          </p>
-        </div>
-
-        <div class="project">
-          <h3>Multi Discord Avatar Previewer</h3>
-          <p>
-            Sick of uploading images one-at a time to discord to see how your avatar would look? I was too, so I made
-            this little tool. Allows you to upload and compare multiple images as avatars, in both light & dark theme,
-            all at once.
-          </p>
-        </div>
-      </div>
+    <Projects/>
     </div>
   </section>
 
@@ -232,7 +206,9 @@ const pageTitle = "About";
           <p>Connect with me on <a href="https://www.linkedin.com/in/osyassen/" target="_blank">LinkedIn</a>.</p>
         </li>
         <li>
-          <p>Explore my code and see what I'm up to on <a href="https://github.com/sangmort" target="_blank">Github</a>.</p>
+          <p>
+            Explore my code and see what I'm up to on <a href="https://github.com/sangmort" target="_blank">Github</a>.
+          </p>
         </li>
         <li>
           <p>For email, simply use the provided contact form.</p>
