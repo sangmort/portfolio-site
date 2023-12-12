@@ -140,6 +140,12 @@ section {
 	padding: 7rem 6rem;
 }
 
+
+/* adjusts about section custom spacing for better layout centering */
+section#about {
+    padding-top: 10.5rem;
+}
+
 /* First & second column styling */
 .column-one,
 .column-two {
