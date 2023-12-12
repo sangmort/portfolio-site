@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Steel Tabs - A Pittsburgh Steeler's themed tab experience"
-pubDate: 2023-10-16
+pubDate: 2023-12-11
 description: "Project information for Steel Tabs."
 author: "Osy"
 tags: ["CSS", "JavaScript", "HTML", "Browser Extension"]
