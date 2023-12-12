@@ -4,7 +4,7 @@ title: "Steel Tabs - A Pittsburgh Steeler's themed tab experience"
 pubDate: 2023-12-11
 description: "Project information for Steel Tabs."
 author: "Osy"
-tags: ["CSS", "JavaScript", "HTML", "Browser Extension"]
+tags: ["Project", "CSS", "JavaScript", "HTML", "Browser Extension"]
 ---
 
 Steel Tabs is a fun project that transforms the new tab experience in Chrome and Firefox. This extension replaces the default "new tab" content with a beautifully styled Steelers-themed page that generates random "Tomlinisms"[^1]. 
