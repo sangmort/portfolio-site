@@ -683,8 +683,11 @@ ul {
 }
 
 ul>li {
-	display: flex;
-	flex-direction: row;
+	display: block;
+}
+
+ul>li>ul {
+	display: block;
 }
 
 ol>li {
