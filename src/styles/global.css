@@ -947,7 +947,7 @@ button.accordion-button.rotate-icon:focus {
 #contactForm {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding: 1rem .5rem;
+	padding: 0 .5rem 1rem .5rem;
 	gap: 0 1rem;
 }
 
