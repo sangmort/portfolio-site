@@ -749,6 +749,11 @@ ul.contains-task-list>li {
 	margin: .125rem 0;
 }
 
+/* Footnotes */
+section.footnotes {
+	display: block;
+}
+
 /* Blockquote */
 blockquote,
 q {
