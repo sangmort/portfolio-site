@@ -1,5 +1,4 @@
 # Portfolio/Resume Website of Osy
-Oumaima Seham Yassen, also known as **Osy**.
 
 --- 
 ## Development Notes
