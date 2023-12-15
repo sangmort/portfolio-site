@@ -656,6 +656,11 @@ li p {
 	line-height: 1.75rem;
 }
 
+article p + ul, article p + h4 {
+	margin-top: -1.5rem;
+}
+
+
 /* Markdown Styling */
 
 /* Superscript */
@@ -682,7 +687,7 @@ strong {
 /* Lists */
 li {
 	padding: 0 .5rem;
-	margin: .85rem 1rem;
+	margin: .5rem 1rem;
 	line-height: 1.6rem;
 }
 
@@ -834,6 +839,7 @@ article pre {
 article pre+p {
 	padding-top: 1.5rem;
 	border-top: 1px solid var(--secondary-bg-color);
+	width: 100%;
 }
 
 article h2 {
@@ -841,6 +847,7 @@ article h2 {
 	width: 100%;
 	padding-bottom: 2rem;
 	grid-row: span 1;
+	margin-top: 4rem;
 }
 
 article h2+* {
