@@ -122,8 +122,6 @@ $themes: (
     stripe-06: $gold,
     stripe-07: $black,
     jersey-side-color: $black,
-    jersey-width: 100dvw,
-    loader-bg: #101820,
   ),
   // etc.
 )
@@ -131,7 +129,7 @@ $themes: (
 
 This JavaScript sets the theme, handles changes when a radio button is selected, and listens for theme changes. 
 
-The selected theme is stored in the local storage, the page's default theme is set on load, and the corresponding label for the selected theme is "checked."
+The selected theme is stored in local storage, the page's default theme is set on load, and the corresponding label for the selected theme is "checked."
 
 ```js
   // Theme functionality
