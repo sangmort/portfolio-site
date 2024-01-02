@@ -5,7 +5,6 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
 
-
   <div id="blog">
     <article>
       <h1 id="blog-heading">{frontmatter.title}</h1>
@@ -13,7 +12,6 @@ const { frontmatter } = Astro.props;
       <slot />
 
       <footer id="blog-footer">
-
         <h2>Tags</h2>
         <div class="tags-layout">
           {
@@ -26,7 +24,10 @@ const { frontmatter } = Astro.props;
         </div>
       </footer>
     </article>
-
-
+    <blog-table-of-contents></blog-table-of-contents>
   </div>
+  
+  <script>
+    import "../scripts/blog-table-of-contents.js";
+  </script>
 </BaseLayout>
