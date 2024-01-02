@@ -2,7 +2,7 @@
 class BlogTableOfContents extends HTMLElement {
   constructor() {
     super();
-    this.appendChild(document.createElement("nav"));
+    this.appendChild(document.createElement("tableOfContentsNav"));
   }
 
   // Add navigation list directly to the container after cleaning up link text
@@ -11,14 +11,14 @@ class BlogTableOfContents extends HTMLElement {
     const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
 
     const navigationList = this.createNavigationList(headingsWithIDs);
-    this.querySelector("nav").appendChild(navigationList);
+    this.querySelector("tableOfContentsNav").appendChild(navigationList);
   }
 
   // Create navigation list from headings with IDs
   createNavigationList(headingsArray) {
     // Create a parent navbar <ul> for the generated heading links
     const navigationList = document.createElement("ul");
-    navigationList.classList.add("navbar");
+    navigationList.classList.add("tableOfContentsNavbar");
 
     let currentHeadingList = navigationList;
     let previousHeadingLevel = 2;
@@ -47,7 +47,7 @@ class BlogTableOfContents extends HTMLElement {
   // Create new <li> for the heading & Add link to it
   createNavItem(heading) {
     const navItem = document.createElement("li");
-    navItem.classList.add("nav-item");
+    navItem.classList.add("tableOfContentsNavItem");
 
     const navLink = this.createNavLink(heading);
     navItem.appendChild(navLink);
@@ -58,7 +58,7 @@ class BlogTableOfContents extends HTMLElement {
   // Create a new link anchor text & href for the heading
   createNavLink(heading) {
     const navLink = document.createElement("a");
-    navLink.classList.add("nav-link");
+    navLink.classList.add("tableOfContentsNavLink");
     navLink.textContent = heading.textContent;
     navLink.href = `#${heading.id}`;
 
@@ -68,7 +68,7 @@ class BlogTableOfContents extends HTMLElement {
   // Add the <li> containing the link to the current <ul>
   createSubmenuList(currentHeadingList) {
     const submenuList = document.createElement("ul");
-    if (currentHeadingList.classList.contains("navbar")) {
+    if (currentHeadingList.classList.contains("tableOfContentsNavbar")) {
       submenuList.classList.add("sub-menu");
     } else {
       submenuList.classList.add("nested-sub-menu");
@@ -91,3 +91,10 @@ class BlogTableOfContents extends HTMLElement {
 
 // Make this component usable with <dynamic-navigation></dynamic-navigation>
 customElements.define("blog-table-of-contents", BlogTableOfContents);
+
+const openModalButton = document.getElementById("openModalButton");
+const modalContainer = document.getElementById("modalContainer");
+
+openModalButton.addEventListener("click", () => {
+  modalContainer.style.display = "block";
+});

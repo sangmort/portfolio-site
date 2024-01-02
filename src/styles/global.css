@@ -840,16 +840,16 @@ blog-table-of-contents {
   }
 
 /* Makes the Table of Contents into Columns */
-  ul.navbar {
+  ul.tableOfContentsNavbar {
 	display: flex;
 	flex-direction: row;
   }
 
   button#openModalButton {
     position: fixed;
-	top: 50%;
-	right: 0%;
-	transform: translate(-50%, -50%);
+	display: block;
+	bottom: 5dvh;
+	right: 2dvw;
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
