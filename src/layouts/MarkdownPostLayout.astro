@@ -4,7 +4,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-
   <div id="blog">
     <article>
       <h1 id="blog-heading">{frontmatter.title}</h1>
@@ -24,9 +23,21 @@ const { frontmatter } = Astro.props;
         </div>
       </footer>
     </article>
+  </div>
+  <button id="openModalButton">Table of Contents</button>
+
+  <div id="modalContainer" style="display: none;">
     <blog-table-of-contents></blog-table-of-contents>
   </div>
-  
+  <script>
+    const openModalButton = document.getElementById("openModalButton");
+    const modalContainer = document.getElementById("modalContainer");
+
+    openModalButton.addEventListener("click", () => {
+      modalContainer.style.display = "block";
+    });
+  </script>
+
   <script>
     import "../scripts/blog-table-of-contents.js";
   </script>

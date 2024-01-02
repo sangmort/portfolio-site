@@ -830,6 +830,30 @@ blog-table-of-contents {
 	margin-top:4rem;
 }
 
+#modalContainer {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--secondary-bg-color);
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  ul.navbar {
+	display: flex;
+	flex-direction: row;
+  }
+
+  button#openModalButton {
+    position: fixed;
+    right: 10dvh;
+    bottom: 10dvh;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
 /* Blog content layout */
 article {
 	display: grid;
