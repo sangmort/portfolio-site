@@ -5,11 +5,10 @@ class BlogTableOfContents extends HTMLElement {
     this.appendChild(document.createElement("tableOfContentsNav"));
   }
 
-  // Add navigation list directly to the container after cleaning up link text
+  // Add navigation list directly to the container
   connectedCallback() {
     //extract page headings from ID
     const headingsWithIDs = Array.from(document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"));
-
     const navigationList = this.createNavigationList(headingsWithIDs);
     this.querySelector("tableOfContentsNav").appendChild(navigationList);
   }
@@ -62,6 +61,9 @@ class BlogTableOfContents extends HTMLElement {
     navLink.textContent = heading.textContent;
     navLink.href = `#${heading.id}`;
 
+    // Add event listener to close modal when link is clicked
+    navLink.addEventListener("click", closeModalOnLinkClick);
+
     return navLink;
   }
 
@@ -89,12 +91,25 @@ class BlogTableOfContents extends HTMLElement {
   }
 }
 
-// Make this component usable with <dynamic-navigation></dynamic-navigation>
+// Make this component usable with <blog-table-of-contents></blog-table-of-contents>
 customElements.define("blog-table-of-contents", BlogTableOfContents);
 
+// Button to open modal
 const openModalButton = document.getElementById("openModalButton");
+// Modal container
 const modalContainer = document.getElementById("modalContainer");
+// Button to close modal
+const closeModalButton = document.getElementById("closeModalButton");
 
 openModalButton.addEventListener("click", () => {
   modalContainer.style.display = "block";
 });
+
+closeModalButton.addEventListener("click", () => {
+  modalContainer.style.display = "none";
+});
+
+// Function to close modal when link inside modal is clicked
+function closeModalOnLinkClick() {
+  modalContainer.style.display = "none";
+}
