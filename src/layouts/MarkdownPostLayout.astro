@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
     ></button
   >
   <h2>Table of Contents</h2>
-  <blog-table-of-contents></blog-table-of-contents>
+  <div id="tableOfContentsContainer"></div>
 </div>
 <div id="overlay"></div>
 <BaseLayout pageTitle={frontmatter.title}>
@@ -38,5 +38,7 @@ const { frontmatter } = Astro.props;
       </footer>
     </article>
   </div>
-<script src="../scripts/blog-table-of-contents.js"></script>;
 </BaseLayout>
+<script>
+  import "../scripts/blog-table-of-contents.js";
+</script>
