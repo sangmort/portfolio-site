@@ -656,7 +656,8 @@ li p {
 	line-height: 1.75rem;
 }
 
-article p + ul, article p + h4 {
+article p+ul,
+article p+h4 {
 	margin-top: -1.5rem;
 }
 
@@ -814,51 +815,95 @@ article hr {
 /* Blog */
 
 #blog {
-    width: 100dvw;
-    max-width: 60rem;
-    margin: 0 auto;
+	width: 100dvw;
+	max-width: 60rem;
+	margin: 0 auto;
 }
 
 /* Table of Contents */
 blog-table-of-contents {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem .25rem;
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem .25rem;
 }
 
+/* Popup Modal */
 #modalContainer {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: var(--secondary-bg-color);
+	background-color: var(--primary-bg-color);
 	padding: 1rem;
-	box-shadow: 0 0 10px var(--widget-bg-color);
+	box-shadow: 0 0 .5rem var(--widget-bg-color);
 	border-radius: .2rem;
 	z-index: 1001;
-  }
+}
 
 /* Makes the Table of Contents into Columns */
-  ul.tableOfContentsNavbar {
+ul.tableOfContentsNavbar {
 	display: flex;
 	flex-direction: row;
-  }
+}
 
-  button#openModalButton {
-    position: fixed;
+/* Overlay behind Table of Contents */
+#overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--secondary-bg-color);
+	opacity: .8;
+	z-index: 1000;
+}
+
+button#openModalButton {
+	position: fixed;
 	display: block;
 	bottom: 5dvh;
 	right: 2dvw;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
+	width: 8.5rem;
+	height: 4.5rem;
 	text-transform: uppercase;
-	font-size: .75rem;
-	background-color: var(--cloud-bg-color-1);
-	border: none;
+	font-size: 1rem;
+	color: var(--primary-color);
+	font-weight: 800;
+	line-height: 1.125rem;
+	background-color: var(--widget-bg-color);
+	border: 1px solid var(--secondary-color);
+	border-radius: .125rem;
+	text-align: center;
+	opacity: .5;
+	box-shadow: 0 0 1rem var(--secondary-bg-color);
 	z-index: 1000;
+	letter-spacing: .02rem;
 }
+
+button#openModalButton:hover {
+	position: fixed;
+	display: block;
+	bottom: 5dvh;
+	right: 2dvw;
+	width: 8.5rem;
+	height: 4.5rem;
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: var(--primary-color);
+	font-weight: 800;
+	line-height: 1.125rem;
+	background-color: var(--widget-bg-color);
+	border: 1px solid var(--secondary-color);
+	border-radius: .125rem;
+	text-align: center;
+	opacity: .5;
+	box-shadow: 0 0 1rem var(--primary-bg-color);
+	z-index: 1000;
+	letter-spacing: .02rem;
+}
+
 
 /* Blog content layout */
 article {
@@ -935,8 +980,8 @@ article .tags-layout {
 }
 
 /* Spacing between blog content & tags on blog page */
-ul + h2 {
-    margin-top: 4rem;
+ul+h2 {
+	margin-top: 4rem;
 }
 
 

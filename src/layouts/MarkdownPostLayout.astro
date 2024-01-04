@@ -4,7 +4,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <button id="openModalButton">Table of Contents</button>
-
 <div id="modalContainer" style="display: none;">
   <a id="closeModalButton">
     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="50" height="50"
@@ -16,7 +15,7 @@ const { frontmatter } = Astro.props;
   >
   <blog-table-of-contents></blog-table-of-contents>
 </div>
-
+<div id="overlay"></div>
 <BaseLayout pageTitle={frontmatter.title}>
   <div id="blog">
     <article>

@@ -1,4 +1,4 @@
-// Creates a custom HTML element without using shadow DOM
+// Creates a custom HTML element
 class BlogTableOfContents extends HTMLElement {
   constructor() {
     super();
@@ -22,7 +22,7 @@ class BlogTableOfContents extends HTMLElement {
     let currentHeadingList = navigationList;
     let previousHeadingLevel = 2;
 
-    // If current heading has a higher level than previous heading, create a new submenu list
+    // If the current heading has a higher level than the previous heading, create a new submenu list
     headingsArray.forEach((heading) => {
       const currentHeadingLevel = parseInt(heading.tagName[1]);
       if (currentHeadingLevel > previousHeadingLevel) {
@@ -43,7 +43,7 @@ class BlogTableOfContents extends HTMLElement {
     return navigationList;
   }
 
-  // Create new <li> for the heading & Add link to it
+  // Create a new <li> for the heading & Add link to it
   createNavItem(heading) {
     const navItem = document.createElement("li");
     navItem.classList.add("tableOfContentsNavItem");
@@ -94,22 +94,30 @@ class BlogTableOfContents extends HTMLElement {
 // Make this component usable with <blog-table-of-contents></blog-table-of-contents>
 customElements.define("blog-table-of-contents", BlogTableOfContents);
 
-// Button to open modal
+// Buttons & Overlay Variables
 const openModalButton = document.getElementById("openModalButton");
-// Modal container
 const modalContainer = document.getElementById("modalContainer");
-// Button to close modal
 const closeModalButton = document.getElementById("closeModalButton");
+const overlay = document.getElementById("overlay");
 
 openModalButton.addEventListener("click", () => {
   modalContainer.style.display = "block";
+  overlay.style.display = "block";
 });
 
 closeModalButton.addEventListener("click", () => {
   modalContainer.style.display = "none";
+  overlay.style.display = "none";
 });
 
-// Function to close modal when link inside modal is clicked
+// Close modal when link inside modal is clicked
 function closeModalOnLinkClick() {
   modalContainer.style.display = "none";
+  overlay.style.display = "none";
 }
+
+// Close modal when clicking outside modal / on overlay
+overlay.addEventListener("click", () => {
+  modalContainer.style.display = "none";
+  overlay.style.display = "none";
+});
