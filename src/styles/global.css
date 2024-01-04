@@ -86,6 +86,7 @@ html[data-theme="dark"] {
 	--inline-code-font-color: #dddddd;
 }
 * {
+	font-family: "Poppins", sans-serif;
 	scrollbar-width: thin;
 	scrollbar-color: var(--secondary-color) var(--tree-color-7);
 }
@@ -741,46 +742,36 @@ ul.tableOfContentsNavbar {
 	height: 100%;
 }
 button#openModalButton {
+	transition: .2s all ease;
 	display: block;
 	position: fixed;
 	right: 2dvw;
 	bottom: 5dvh;
-	opacity: .5;
+	opacity: .75;
 	z-index: 1000;
 	border: 1px solid var(--secondary-color);
-	border-radius: .125rem;
-	box-shadow: 0 0 1rem var(--secondary-bg-color);
-	background-color: var(--widget-bg-color);
+	border-radius: .25rem;
+	box-shadow: 0 0 rem var(--secondary-font-color);
+	background-color: var(--primary-font-color);
+	transform: translate(0%, 0%);
 	width: 8.5rem;
-	height: 4.5rem;
+	height: 4rem;
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 1.125rem;
-	letter-spacing: .02rem;
-	color: var(--primary-color);
+	color: var(--primary-bg-color);
 	font-size: 1rem;
-	font-weight: 800;
+	font-weight: 600;
 }
-button#openModalButton:hover {
-	display: block;
-	position: fixed;
-	right: 2dvw;
-	bottom: 5dvh;
-	opacity: .5;
-	z-index: 1000;
-	border: 1px solid var(--secondary-color);
-	border-radius: .125rem;
-	box-shadow: 0 0 2.5rem var(--primary-color);
-	background-color: var(--widget-bg-color);
-	width: 8.5rem;
-	height: 4.5rem;
-	text-align: center;
-	text-transform: uppercase;
-	line-height: 1.125rem;
-	letter-spacing: .02rem;
+button#openModalButton:hover, button#openModalButton:active, button#openModalButton:focus {
+	opacity: 1;
+	transition: .3s all;
+	border: 1px solid var(--primary-bg-color);
+	box-shadow: 0 .5rem 1.5rem var(--primary-color);
+	background-color: var(--primary-bg-color);
+	transform: translate(0%, -10%);
 	color: var(--primary-color);
-	font-size: 1rem;
-	font-weight: 800;
+	cursor: pointer;
 }
 /* Blog content layout */
 article {
