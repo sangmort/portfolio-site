@@ -1349,7 +1349,15 @@ button.accordion-button.rotate-icon:focus {
 		top: 13rem;
 		margin: 0 auto;
 		width: calc(100dvw - 10rem);
+		background-color: transparent;
 	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		background-color: transparent;
+	}
+
 	#treeline {
 		position: absolute;
 		top: 7rem;
@@ -1475,7 +1483,7 @@ button.accordion-button.rotate-icon:focus {
 	}
 	.navbar-links a:hover,
 	.navbar-links a:focus {
-		width: 105%;
+		width: 65%;
 	}
 	.navbar-links.expanded {
 		display: flex;
@@ -1498,6 +1506,18 @@ button.accordion-button.rotate-icon:focus {
 	}
 	h1 {
 		margin-top: 5rem;
+	}
+
+	.gallery {
+		justify-items: center;
+	}
+
+	.tabs-container, #accordion-1, h3#resume-download, h3#contact-aria {
+		padding-top: 2rem;
+	}
+
+	.tab-content-container {
+		height: 18rem;
 	}
 }
 /* Responsive Phone/Small */
@@ -1543,6 +1563,13 @@ button.accordion-button.rotate-icon:focus {
 		position: fixed;
 		right: 2rem;
 	}
+
+	.gallery {
+		justify-items: center;
+		grid-template-columns: 1fr;
+	}
+
+
 	.skills-layout {
 		grid-template-columns: repeat(1, 1fr);
 	}
