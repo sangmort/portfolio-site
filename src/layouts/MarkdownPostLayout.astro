@@ -3,7 +3,10 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<button id="openModalButton">Table of Contents</button>
+
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <button id="openModalButton">Table of Contents</button>
 
 
   <div id="modalContainer" style="display: none;">
@@ -20,8 +23,6 @@ const { frontmatter } = Astro.props;
   </div>
 
 <div id="overlay"></div>
-
-<BaseLayout pageTitle={frontmatter.title}>
   <div id="blog">
     <article>
       <h1 id="blog-heading">{frontmatter.title}</h1>
