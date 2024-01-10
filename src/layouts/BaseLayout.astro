@@ -17,7 +17,6 @@ const { pageTitle } = Astro.props;
     <link rel="apple-touch-icon" href="/portfolio-site/favicon-192x192.png" />
     <link rel="manifest" href="/portfolio-site/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preload"
       as="style"
@@ -25,9 +24,9 @@ const { pageTitle } = Astro.props;
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       media="print"
       onload="this.onload=null;this.removeAttribute('media');"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     />
     <!-- no-JS fallback -->
     <noscript>
@@ -36,6 +35,7 @@ const { pageTitle } = Astro.props;
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       />
     </noscript>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="description" content="Portfolio website of Oumaima Seham Yassen, aka Osy." />
     <meta name="generator" content={Astro.generator} />
