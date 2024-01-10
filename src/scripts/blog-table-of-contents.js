@@ -1,4 +1,5 @@
 window.addEventListener("load", function () {
+    console.log("Testing 123");
     let openModalButton = document.getElementById("openModalButton");
     let modalContainer = document.getElementById("modalContainer");
     let closeModalButton = document.getElementById("closeModalButton");
